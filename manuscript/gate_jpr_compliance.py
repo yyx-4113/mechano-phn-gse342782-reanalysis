@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 _ROOT = Path(__file__).resolve().parents[1]
-MD_PATH = _ROOT / "manuscript" / "manuscript_v1.1.4.md"
+MD_PATH = _ROOT / "manuscript" / "manuscript_v1.1.5.md"
 
 PASS = 0
 FAIL = 0

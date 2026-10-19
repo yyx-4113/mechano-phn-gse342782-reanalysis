@@ -17,7 +17,7 @@ from itertools import combinations
 _ROOT = Path(__file__).resolve().parents[1]
 RES = str(_ROOT / "analysis" / "results" / "layer1")
 RAW = str(_ROOT / "analysis" / "data" / "raw")
-MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.4.md")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.5.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -284,6 +284,32 @@ present("ATF3 injury marker reported", "ATF3")
 present("route dependence is magnitude not direction", "magnitude rather than direction")
 present("substrate stiffness limitation", "Substrate stiffness")
 present("PHN donor metadata statement", "not present in the deposited GEO metadata")
+
+# ---- Round-4 补报：N1 自身分量 + 归一化稳健性（产物 layer1_norm_robustness.json）----
+NR = _json.load(open(str(_ROOT / "analysis" / "results" / "layer1" / "layer1_norm_robustness.json"), encoding="utf-8"))
+N1 = NR["HZexo_vs_CtrlExo"]["N1_voltage_gated_control"]["library_size_cpm"]
+numchk("N1 module diff (component of the E1-N1 benchmark)", "-0.156", N1["diff"])
+numchk("N1 permutation P", "0.151", N1["perm_p"])
+claim_ge("N1 NOT significant (P >= 0.05)", 0.05, N1["perm_p"])
+E1M = NR["HZexo_vs_CtrlExo"]["E1_classical_nociceptor"]["median_of_ratios"]
+M3M = NR["HZexo_vs_CtrlExo"]["M3_ecm_integrin_hippo"]["median_of_ratios"]
+numchk("E1 diff under median-of-ratios", "-0.194", E1M["diff"])
+numchk("E1 permutation P under MoR", "0.015", E1M["perm_p"])
+claim_le("E1 remains significant under MoR (P <= 0.05)", 0.05, E1M["perm_p"])
+numchk("M3 diff under median-of-ratios", "-0.024", M3M["diff"])
+claim_ge("M3 remains null under MoR (P >= 0.05)", 0.05, M3M["perm_p"])
+numchk("ribosomal library share control", "3.23", NR["ribosomal_gene_share_pct"]["ctrl_exo_mean"])
+numchk("ribosomal library share HZ", "4.22", NR["ribosomal_gene_share_pct"]["hz_exo_mean"])
+present("normalization robustness reported", "median-of-ratios")
+present("N1 component reported", "N1 itself shifted by -0.156")
+
+# ---- Round-4 补报 II：解耦对称性 / 基线口径 / rESWT 引用 / 拼写统一 ----
+present("mRNA-function decoupling applied symmetrically to PIEZO2", "do not read the M1 null as refuting")
+present("'fully compatible' softened with testability caveat", "remains open")
+present("PIEZO2 adult-DRG expression baseline corrected", "widely expressed across adult human DRG")
+present("rESWT dataset [12] cited in text", "rESWT")
+present("PIEZO2 cross-experiment baseline disclosed", "245.2 versus 164.1")
+present("hyphenated mechano-transduction spelling removed", "mechanotransduction literature points")
 
 # ---- 汇总 ----
 fails = [r for r in results if str(r[2]).startswith("FAIL")]

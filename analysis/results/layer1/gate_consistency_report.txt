@@ -1,4 +1,4 @@
-consistency gate v3: 119 assertions, 0 failures
+consistency gate v3: 137 assertions, 0 failures
 PASS	primary M3 diff	expected=-0.04887804878732682
 PASS	primary M3 perm p	expected=0.4219114219114219
 PASS	primary M3 q	expected=0.46153846153846156
@@ -118,3 +118,21 @@ PASS	ATF3 injury marker reported	expected=ATF3
 PASS	route dependence is magnitude not direction	expected=magnitude rather than direction
 PASS	substrate stiffness limitation	expected=Substrate stiffness
 PASS	PHN donor metadata statement	expected=not present in the deposited GEO metadata
+PASS	N1 module diff (component of the E1-N1 benchmark)	expected=-0.1558
+PASS	N1 permutation P	expected=0.1509
+PASS	N1 NOT significant (P >= 0.05)	expected=true=0.1509 >= claimed_floor 0.05
+PASS	E1 diff under median-of-ratios	expected=-0.1942
+PASS	E1 permutation P under MoR	expected=0.0152
+PASS	E1 remains significant under MoR (P <= 0.05)	expected=true=0.0152 <= claimed_ceil 0.05
+PASS	M3 diff under median-of-ratios	expected=-0.0236
+PASS	M3 remains null under MoR (P >= 0.05)	expected=true=0.6428 >= claimed_floor 0.05
+PASS	ribosomal library share control	expected=3.233
+PASS	ribosomal library share HZ	expected=4.217
+PASS	normalization robustness reported	expected=median-of-ratios
+PASS	N1 component reported	expected=N1 itself shifted by -0.156
+PASS	mRNA-function decoupling applied symmetrically to PIEZO2	expected=do not read the M1 null as refuting
+PASS	'fully compatible' softened with testability caveat	expected=remains open
+PASS	PIEZO2 adult-DRG expression baseline corrected	expected=widely expressed across adult human DRG
+PASS	rESWT dataset [12] cited in text	expected=rESWT
+PASS	PIEZO2 cross-experiment baseline disclosed	expected=245.2 versus 164.1
+PASS	hyphenated mechano-transduction spelling removed	expected=mechanotransduction literature points

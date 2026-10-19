@@ -1,7 +1,7 @@
 PASS  abstract block present
 PASS  abstract <= 300 words (actual 300)  [limit 300, got 300]
 PASS  keywords count 3-6 (actual 6)  [postherpetic neuralgia; mechanical allodynia; mechanotransduction; PIEZO2; varicella-zoster virus; extracellular vesicles]
-PASS  reference numbering contiguous 1..N (N=20)
+PASS  reference numbering contiguous 1..N (N=21)
 PASS  no British-spelling residue  [clean]
 PASS  Figure 1 cited in text
 PASS  Figure 2a cited in text

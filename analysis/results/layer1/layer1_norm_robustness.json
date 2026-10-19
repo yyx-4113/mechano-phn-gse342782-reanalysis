@@ -1,0 +1,172 @@
+{
+  "note": "Post hoc robustness check (Round-4 review). CPM is scale-invariant, so the comparison is done at matched scale: library-size-normalised CPM vs median-of-ratios-normalised CPM, both then log2(1+CPM).",
+  "ribosomal_gene_share_pct": {
+    "n_ribosomal_genes": 138,
+    "ctrl_exo_mean": 3.233,
+    "hz_exo_mean": 4.217
+  },
+  "mor_genes_used": 17922,
+  "mor_size_factors": {
+    "C11": 1.0671,
+    "C15": 1.1051,
+    "C18": 0.8978,
+    "C2": 1.0365,
+    "C20": 0.9586,
+    "C21": 1.0409,
+    "C5": 0.8997,
+    "P1": 0.8343,
+    "P10": 0.9823,
+    "P4": 0.9517,
+    "P7": 0.9244,
+    "P9": 0.9661,
+    "S17": 1.0074,
+    "S24": 0.8777,
+    "S27": 1.1593,
+    "S34": 1.0701,
+    "S44": 1.2905,
+    "S45": 1.0993,
+    "S62": 1.022
+  },
+  "HZexo_vs_CtrlExo": {
+    "M1_mechanogated_channels": {
+      "library_size_cpm": {
+        "diff": -0.078,
+        "perm_p": 0.1131,
+        "welch_p": 0.1209,
+        "n_permutations": 3432,
+        "genes_used": 9
+      },
+      "median_of_ratios": {
+        "diff": -0.0582,
+        "perm_p": 0.2016,
+        "welch_p": 0.2159,
+        "n_permutations": 3432,
+        "genes_used": 9
+      }
+    },
+    "M2_membrane_cytoskeleton": {
+      "library_size_cpm": {
+        "diff": -0.1483,
+        "perm_p": 0.0682,
+        "welch_p": 0.0678,
+        "n_permutations": 3432,
+        "genes_used": 20
+      },
+      "median_of_ratios": {
+        "diff": -0.1185,
+        "perm_p": 0.1008,
+        "welch_p": 0.1079,
+        "n_permutations": 3432,
+        "genes_used": 20
+      }
+    },
+    "M3_ecm_integrin_hippo": {
+      "library_size_cpm": {
+        "diff": -0.0489,
+        "perm_p": 0.4219,
+        "welch_p": 0.4199,
+        "n_permutations": 3432,
+        "genes_used": 56
+      },
+      "median_of_ratios": {
+        "diff": -0.0236,
+        "perm_p": 0.6428,
+        "welch_p": 0.6631,
+        "n_permutations": 3432,
+        "genes_used": 56
+      }
+    },
+    "M4_mechano_effectors": {
+      "library_size_cpm": {
+        "diff": -0.0278,
+        "perm_p": 0.4615,
+        "welch_p": 0.5009,
+        "n_permutations": 3432,
+        "genes_used": 25
+      },
+      "median_of_ratios": {
+        "diff": 0.0073,
+        "perm_p": 0.8246,
+        "welch_p": 0.8294,
+        "n_permutations": 3432,
+        "genes_used": 25
+      }
+    },
+    "E1_classical_nociceptor": {
+      "library_size_cpm": {
+        "diff": -0.2196,
+        "perm_p": 0.0128,
+        "welch_p": 0.0111,
+        "n_permutations": 3432,
+        "genes_used": 18
+      },
+      "median_of_ratios": {
+        "diff": -0.1942,
+        "perm_p": 0.0152,
+        "welch_p": 0.0138,
+        "n_permutations": 3432,
+        "genes_used": 18
+      }
+    },
+    "N1_voltage_gated_control": {
+      "library_size_cpm": {
+        "diff": -0.1558,
+        "perm_p": 0.1509,
+        "welch_p": 0.1563,
+        "n_permutations": 3432,
+        "genes_used": 17
+      },
+      "median_of_ratios": {
+        "diff": -0.1332,
+        "perm_p": 0.1935,
+        "welch_p": 0.1999,
+        "n_permutations": 3432,
+        "genes_used": 17
+      }
+    },
+    "N2_olfactory_control": {
+      "library_size_cpm": {
+        "diff": -0.0221,
+        "perm_p": 0.0058,
+        "welch_p": 0.0064,
+        "n_permutations": 3432,
+        "genes_used": 13
+      },
+      "median_of_ratios": {
+        "diff": -0.0209,
+        "perm_p": 0.0105,
+        "welch_p": 0.0099,
+        "n_permutations": 3432,
+        "genes_used": 13
+      }
+    },
+    "N3_ribosomal_control": {
+      "library_size_cpm": {
+        "diff": 0.3914,
+        "perm_p": 0.0017,
+        "welch_p": 0.0005,
+        "n_permutations": 3432,
+        "genes_used": 17
+      },
+      "median_of_ratios": {
+        "diff": 0.4282,
+        "perm_p": 0.0017,
+        "welch_p": 0.0004,
+        "n_permutations": 3432,
+        "genes_used": 17
+      }
+    }
+  },
+  "interaction_E1_minus_M1": {
+    "library_size_cpm": {
+      "diff": -0.1417,
+      "perm_p": 0.0017,
+      "n_permutations": 3432
+    },
+    "median_of_ratios": {
+      "diff": -0.136,
+      "perm_p": 0.0017,
+      "n_permutations": 3432
+    }
+  }
+}
