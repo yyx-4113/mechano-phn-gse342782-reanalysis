@@ -1,0 +1,14 @@
+# WorkBuddy project memory (not part of the reproducibility package)
+.workbuddy/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Downloaded but unused raw data (not referenced by the manuscript)
+analysis/data/raw/GSE64345*
+
+# Local editor / OS cruft
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+{
+  "generated": "2026-10-19",
+  "algorithm": "sha256",
+  "repository": "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis",
+  "tag": "v1.0.0",
+  "files": {
+    ".github\\workflows\\release.yml": "0c33ecd835c8ca87402b8c26929e9f93b998e6fcf961a2d2b695ef4ed1efb33c",
+    "analysis\\config\\mtp_panel.json": "6d4f2bc844e68a7277879157f0210bcfd6bfd42a055a51de385382f2b4e60e3c",
+    "analysis\\data\\raw\\GSE342782_Processed_DirectInf_neuronHD10s_BulkSeq_Counts.csv.gz": "93aa468acfeab8a2045a09fb24b734627d630226e77573fd867d43e8ca87004e",
+    "analysis\\data\\raw\\GSE342782_SeraExoTreatedHD10sBulkSeq_counts.csv.gz": "21bdde38d8f812a680a22ec60bc2d52f101398d5d4bfef5a6e686aee726bfdff",
+    "analysis\\data\\raw\\GSE342782_series_matrix.txt.gz": "d6a0a67e3c3d528c3598194937e55e3a7afa08e7ec028237ef4f90630d4274bc",
+    "analysis\\data\\raw\\_download.sh": "cea57a71c5b06c9b32d36685ec1ee395c1287054509c3b436ddcb282002f0209",
+    "analysis\\results\\layer1\\MANIFEST.json": "e84bf27043fb02e6de5a9e5753e7810707264d1e53d95f1d3c7d04e3bf609adf",
+    "analysis\\results\\layer1\\gate_consistency_report.txt": "751dfb98813e7b2c0962a9dbe5426d86a8d192f205faad142089eee1648bbbd4",
+    "analysis\\results\\layer1\\layer1_cci.csv": "6ea4ada95e3ffd45e41bc2e5e1cb5b64cd0fdfb502982685340bb07df3c8c929",
+    "analysis\\results\\layer1\\layer1_diag.json": "27d4d99e2f9ffda074124c115b528a7c8dba61998bb4c3bfaa4845dd6fc49959",
+    "analysis\\results\\layer1\\layer1_module_scores.csv": "303122748fa9181d576460f5327377f03cf1ddbba5e3b69f571fe662799836c3",
+    "analysis\\results\\layer1\\layer1_results.json": "543fa25c95dcd11eda232a3a7d5632ba792fd86ddcc5a67e5e04a65ee4f99c8b",
+    "analysis\\results\\layer1\\fig\\fig1_design.png": "b923718a298686e24be94ceab343865ccbc157127f071bd3fdecdbba39ece2a9",
+    "analysis\\results\\layer1\\fig\\fig2a_module_scores.png": "04db65962a4a442bd845db5861d809abe9b2e4a96b091863c7013ea79155e9d6",
+    "analysis\\results\\layer1\\fig\\fig2b_cci.png": "e380b831652220e9b017888b6f955181538f12358d39ca6d1c9f9b5c366bef3e",
+    "analysis\\results\\layer1\\fig\\fig2c_E1_genes.png": "730b7e707b5097b932477f0bb5652bed9f5425a65ec1cf594bd8c4f42c28d8e2",
+    "analysis\\results\\layer1\\fig\\fig2d_dissociation.png": "998e6575e1cc202edd0c34ae072766691df53a2dce1a6076a33c0ca53df1a440",
+    "analysis\\scripts\\fig_extra.py": "5e4331b5b0f2a14e54d9f62803985d552c5d1143b3acdff6d1fd5f11e3854e3f",
+    "analysis\\scripts\\fig_layer1.py": "17b16f74e9a42e36caa4c9bbac61f34431599705981b4eedfbc6debf5dd3db96",
+    "analysis\\scripts\\layer1_diag.py": "74c797faed272837d06ee468ef6be7b58619d4a5d1114f2d74b32fdef4957df5",
+    "analysis\\scripts\\layer1_mechano.py": "20caf29ade6db05fc7a9a0cec2b00f67d107bb52d0785039e2e8d7a4b0edf3e7",
+    "manuscript\\build_docx.py": "d10310707fb6f334dfdde05fb6bf42fe4376d251f66b6b528bbc5a9537574123",
+    "manuscript\\gate_consistency.py": "85c2222cb4cf03fa5c8128f45439127893ed8e6fc5d127cf29d39178b6ff8061",
+    "manuscript\\manuscript_v1.0.0.docx": "5cb678034c501d0f44ce5aaa7ea6c9f08bc26d9edd2dc136468f88c5ae3143a8",
+    "manuscript\\manuscript_v1.0.0.md": "7361354d3d61e4e8730f45f8a06ecaac3109a46fbe9b970756d5ca86acd85e45"
+  }
+}

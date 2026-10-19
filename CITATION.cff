@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite the manuscript and the source dataset."
+title: "Route-dependent transcriptional effects of VZV and patient serum exosomes on ion-channel programmes in human sensory neurons: a pre-registered reanalysis of GSE342782"
+authors:
+  - family-names: Yang
+    given-names: Yongxin
+    orcid: "https://orcid.org/0009-0004-9698-6552"
+version: 1.0.0
+date-released: "2026-10-19"
+license: MIT
+repository-code: "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis"
+related-identifiers:
+  - identifier: GSE342782
+    type: other
+    description: "Source dataset (GEO): bulk RNA-seq of HD10 human sensory neurons under VZV infection and patient serum exosomes"
+  - identifier: 10.1002/ana.78352
+    type: doi
+    description: "Original publication describing GSE342782 (Annals of Neurology, 2026)"
+keywords:
+  - postherpetic neuralgia
+  - mechanical allodynia
+  - mechanotransduction
+  - PIEZO2
+  - varicella-zoster virus
+  - extracellular vesicles

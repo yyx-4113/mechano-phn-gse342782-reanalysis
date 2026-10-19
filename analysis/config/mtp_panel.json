@@ -1,0 +1,36 @@
+{
+  "panel_version": "mtp-frozen-2026-10-19",
+  "note": "MTP 四维 mechano-panel：分析前冻结，事后不得因结果增改。基因符号以 HUGO 为准。",
+  "M1_mechanogated_channels": {
+    "desc": "机械门控离子通道（机械痛觉转导核心）",
+    "genes": ["PIEZO1", "PIEZO2", "TRPV4", "STOML3", "KCNK2", "KCNK4", "TMEM150C", "P2RX3", "TRPA1"]
+  },
+  "M2_membrane_cytoskeleton": {
+    "desc": "膜-细胞骨架耦合 / 黏着斑机械传导",
+    "genes": ["ITGB1", "ITGB3", "ITGB4", "ITGA1", "ITGA2", "ITGA5", "ITGAV", "TLN1", "TLN2", "VCL", "ACTN1", "ACTN2", "FLNA", "FLNB", "PXN", "ZYX", "VASP", "EZR", "MSN", "RDX"]
+  },
+  "M3_ecm_integrin_hippo": {
+    "desc": "ECM — 整合素 — Hippo/YAP-TAZ 刚度程序轴（本项目主轴）",
+    "genes": ["COL1A1", "COL1A2", "COL2A1", "COL3A1", "COL4A1", "COL4A2", "COL5A1", "COL6A1", "FN1", "LAMA1", "LAMA2", "LAMB1", "LAMC1", "DCN", "LUM", "COMP", "LOX", "LOXL1", "LOXL2", "LOXL3", "LOXL4", "MMP2", "MMP3", "MMP9", "MMP14", "ADAMTS1", "ADAMTS5", "TIMP1", "TIMP2", "TIMP3", "PLOD1", "PLOD2", "P4HA1", "P4HA2", "PTK2", "ILK", "LIMS1", "FERMT1", "YAP1", "WWTR1", "TEAD1", "TEAD2", "TEAD3", "TEAD4", "LATS1", "LATS2", "SAV1", "MOB1A", "MOB1B", "STK3", "STK4", "AMOT", "AMOTL1", "AMOTL2", "NF2", "CYR61", "CTGF", "ANKRD1"]
+  },
+  "M4_mechano_effectors": {
+    "desc": "力学效应器 / 下游转导",
+    "genes": ["PTK2", "SRC", "YES1", "CRK", "CRKL", "ROCK1", "ROCK2", "RHOA", "RHOC", "CDC42", "MAPK14", "MAPK1", "MAPK3", "MAPK8", "MYH9", "MYH10", "TGFB1", "TGFB2", "TGFB3", "SMAD2", "SMAD3", "ACTA2", "CALD1", "TPM1", "VIM"]
+  },
+  "E1_classical_nociceptor": {
+    "desc": "经典电-化学伤害性通道（用于 CCI 对照，不含 M1 基因）",
+    "genes": ["SCN9A", "SCN10A", "SCN11A", "TRPV1", "TRPM8", "CACNA2D1", "CACNA2D2", "CACNA1H", "KCNQ2", "KCNQ3", "KCNS1", "ASIC1", "ASIC2", "ASIC3", "GRIN2B", "GRIA1", "GRIA2", "P2RX7"]
+  },
+  "N1_voltage_gated_control": {
+    "desc": "中性对照1：电压门控通道（神经元表达但非机械特异）",
+    "genes": ["SCN1A", "SCN2A", "SCN3A", "SCN4A", "SCN5A", "SCN8A", "KCNQ1", "KCNQ2", "KCNQ3", "CACNA1A", "CACNA1C", "CACNA1S", "CACNB2", "KCNA1", "KCND3", "HCN1", "HCN2"]
+  },
+  "N2_olfactory_control": {
+    "desc": "中性对照2：嗅觉受体（感觉神经元中预期低/不表达，验证富集特异性）",
+    "genes": ["OR1A1", "OR2A1", "OR4A15", "OR5A1", "OR6A1", "OR7A5", "OR8A1", "OR10A1", "OR10J5", "OR11H1", "OR13C1", "OR51B4", "OR52A1", "OR52B2", "OR52D1", "OR52E1"]
+  },
+  "N3_ribosomal_control": {
+    "desc": "中性对照3：核糖体蛋白（稳定管家基因，验证非全局上调假象）",
+    "genes": ["RPL3", "RPL4", "RPL5", "RPL6", "RPL7", "RPL8", "RPL9", "RPL10", "RPL11", "RPL12", "RPS3", "RPS4", "RPS5", "RPS6", "RPS7", "RPS8", "RPS9", "RPS10"]
+  }
+}

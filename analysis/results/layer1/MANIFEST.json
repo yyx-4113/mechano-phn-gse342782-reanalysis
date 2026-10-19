@@ -1,0 +1,9 @@
+{
+  "layer1_results.json": "992ec9ac0263e710d28b42224bad148c5bfab3ea3208f1dd6d6bf6aba8154cbe",
+  "layer1_module_scores.csv": "303122748fa9181d576460f5327377f03cf1ddbba5e3b69f571fe662799836c3",
+  "inputs": {
+    "DirectInf": "93aa468acfeab8a2045a09fb24b734627d630226e77573fd867d43e8ca87004e",
+    "SeraExo": "21bdde38d8f812a680a22ec60bc2d52f101398d5d4bfef5a6e686aee726bfdff",
+    "panel": "6d4f2bc844e68a7277879157f0210bcfd6bfd42a055a51de385382f2b4e60e3c"
+  }
+}

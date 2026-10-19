@@ -1,0 +1,1423 @@
+{
+  "w0": {
+    "PIEZO1": {
+      "DirectInf": {
+        "mean_cpm": 2.6415711734057443,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 1.8453723598379037
+      },
+      "SeraExo": {
+        "mean_cpm": 2.200928047590792,
+        "detect_frac_cpm1": 0.8947368421052632,
+        "mean_log2cpm": 1.6306419004743609
+      }
+    },
+    "PIEZO2": {
+      "DirectInf": {
+        "mean_cpm": 245.24481345116055,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 7.940007131607389
+      },
+      "SeraExo": {
+        "mean_cpm": 164.12664133207213,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 7.323959278866266
+      }
+    },
+    "TRPV4": {
+      "DirectInf": {
+        "mean_cpm": 0.2510684728271988,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.30819290217034495
+      },
+      "SeraExo": {
+        "mean_cpm": 0.1900965385752121,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.2393785115207988
+      }
+    },
+    "STOML3": {
+      "DirectInf": {
+        "mean_cpm": 0.0077465541640417334,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.010989341126896679
+      },
+      "SeraExo": {
+        "mean_cpm": 0.0,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.0
+      }
+    },
+    "ITGB1": {
+      "DirectInf": {
+        "mean_cpm": 323.64722081443693,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 8.342215265472761
+      },
+      "SeraExo": {
+        "mean_cpm": 360.2972370569434,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 8.495322107497637
+      }
+    },
+    "YAP1": {
+      "DirectInf": {
+        "mean_cpm": 1.9460386516501835,
+        "detect_frac_cpm1": 0.5,
+        "mean_log2cpm": 1.3764805255406396
+      },
+      "SeraExo": {
+        "mean_cpm": 1.0354102275859274,
+        "detect_frac_cpm1": 0.3157894736842105,
+        "mean_log2cpm": 0.801435414712272
+      }
+    },
+    "LOX": {
+      "DirectInf": {
+        "mean_cpm": 0.40983191571541683,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.48000109869904134
+      },
+      "SeraExo": {
+        "mean_cpm": 0.4020582907143972,
+        "detect_frac_cpm1": 0.05263157894736842,
+        "mean_log2cpm": 0.46640142996184125
+      }
+    },
+    "MMP9": {
+      "DirectInf": {
+        "mean_cpm": 0.10643129676456482,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.1342737916600406
+      },
+      "SeraExo": {
+        "mean_cpm": 0.0010747314537886573,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.0015348913726499274
+      }
+    },
+    "SCN9A": {
+      "DirectInf": {
+        "mean_cpm": 318.2743365610372,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 8.31373523669272
+      },
+      "SeraExo": {
+        "mean_cpm": 261.6522255029202,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 8.017232994654224
+      }
+    },
+    "TRPV1": {
+      "DirectInf": {
+        "mean_cpm": 122.2739155144934,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 6.9422029597697765
+      },
+      "SeraExo": {
+        "mean_cpm": 95.58305778522644,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 6.558381307148885
+      }
+    },
+    "COL1A1": {
+      "DirectInf": {
+        "mean_cpm": 0.8129151560765564,
+        "detect_frac_cpm1": 0.4166666666666667,
+        "mean_log2cpm": 0.7090743008339837
+      },
+      "SeraExo": {
+        "mean_cpm": 0.14371896197731843,
+        "detect_frac_cpm1": 0.0,
+        "mean_log2cpm": 0.18407385644802948
+      }
+    },
+    "FN1": {
+      "DirectInf": {
+        "mean_cpm": 7.728794342386983,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 3.1090529694939932
+      },
+      "SeraExo": {
+        "mean_cpm": 3.688910887040392,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 2.1804782357019246
+      }
+    }
+  },
+  "baseline": {
+    "PIEZO1": {
+      "mock_mean_log2cpm": 1.8453723598379037,
+      "ctrl_exo_mean_log2cpm": 1.6306419004743609
+    },
+    "PIEZO2": {
+      "mock_mean_log2cpm": 7.940007131607389,
+      "ctrl_exo_mean_log2cpm": 7.323959278866266
+    },
+    "TRPV4": {
+      "mock_mean_log2cpm": 0.30819290217034495,
+      "ctrl_exo_mean_log2cpm": 0.2393785115207988
+    },
+    "STOML3": {
+      "mock_mean_log2cpm": 0.010989341126896679,
+      "ctrl_exo_mean_log2cpm": 0.0
+    },
+    "ITGB1": {
+      "mock_mean_log2cpm": 8.342215265472761,
+      "ctrl_exo_mean_log2cpm": 8.495322107497637
+    },
+    "YAP1": {
+      "mock_mean_log2cpm": 1.3764805255406396,
+      "ctrl_exo_mean_log2cpm": 0.801435414712272
+    },
+    "LOX": {
+      "mock_mean_log2cpm": 0.48000109869904134,
+      "ctrl_exo_mean_log2cpm": 0.46640142996184125
+    },
+    "MMP9": {
+      "mock_mean_log2cpm": 0.1342737916600406,
+      "ctrl_exo_mean_log2cpm": 0.0015348913726499274
+    },
+    "SCN9A": {
+      "mock_mean_log2cpm": 8.31373523669272,
+      "ctrl_exo_mean_log2cpm": 8.017232994654224
+    },
+    "TRPV1": {
+      "mock_mean_log2cpm": 6.9422029597697765,
+      "ctrl_exo_mean_log2cpm": 6.558381307148885
+    },
+    "COL1A1": {
+      "mock_mean_log2cpm": 0.7090743008339837,
+      "ctrl_exo_mean_log2cpm": 0.18407385644802948
+    },
+    "FN1": {
+      "mock_mean_log2cpm": 3.1090529694939932,
+      "ctrl_exo_mean_log2cpm": 2.1804782357019246
+    }
+  },
+  "panel_missing": {
+    "M1_mechanogated_channels": [],
+    "M2_membrane_cytoskeleton": [],
+    "M3_ecm_integrin_hippo": [
+      "CYR61",
+      "CTGF"
+    ],
+    "M4_mechano_effectors": [],
+    "E1_classical_nociceptor": [],
+    "N1_voltage_gated_control": [],
+    "N2_olfactory_control": [
+      "OR6A1",
+      "OR10A1",
+      "OR13C1"
+    ],
+    "N3_ribosomal_control": [
+      "RPS4"
+    ]
+  },
+  "contrasts": {
+    "HZexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": {
+        "module": "M1_mechanogated_channels",
+        "genes_used": 9,
+        "genes_total": 9,
+        "mean_A(ctrl_exo)": 2.831050764380059,
+        "mean_B(hz_exo)": 2.753095446329297,
+        "diff_B_minus_A": -0.07795531805076195,
+        "t": -1.7172121355498902,
+        "p_ttest": 0.12087420329252929,
+        "p_wilcoxon": 0.25932400932400934,
+        "p_perm": 0.1094,
+        "perm_percentile": 5.5,
+        "top_genes": [
+          [
+            "PIEZO1",
+            -0.37426932815702174
+          ],
+          [
+            "P2RX3",
+            -0.30433001027954454
+          ],
+          [
+            "PIEZO2",
+            -0.282200002894057
+          ],
+          [
+            "KCNK4",
+            0.12855420883692137
+          ],
+          [
+            "TRPV4",
+            0.1246797841039485
+          ],
+          [
+            "KCNK2",
+            0.06442718138204395
+          ],
+          [
+            "TRPA1",
+            -0.03607735215356059
+          ],
+          [
+            "TMEM150C",
+            -0.022382343295593188
+          ]
+        ]
+      },
+      "M2_membrane_cytoskeleton": {
+        "module": "M2_membrane_cytoskeleton",
+        "genes_used": 20,
+        "genes_total": 20,
+        "mean_A(ctrl_exo)": 4.712977875026712,
+        "mean_B(hz_exo)": 4.564653309572165,
+        "diff_B_minus_A": -0.14832456545454686,
+        "t": -2.01884796440879,
+        "p_ttest": 0.06782606052429804,
+        "p_wilcoxon": 0.07284382284382285,
+        "p_perm": 0.068,
+        "perm_percentile": 3.4000000000000004,
+        "top_genes": [
+          [
+            "TLN2",
+            -0.5391811911117577
+          ],
+          [
+            "FLNA",
+            -0.49438184067590374
+          ],
+          [
+            "FLNB",
+            -0.37405078299397765
+          ],
+          [
+            "VCL",
+            -0.3414672612083125
+          ],
+          [
+            "EZR",
+            -0.3345829699657781
+          ],
+          [
+            "PXN",
+            -0.21017893875257876
+          ],
+          [
+            "ITGB3",
+            -0.18979801914438554
+          ],
+          [
+            "TLN1",
+            -0.18731896372560808
+          ]
+        ]
+      },
+      "M3_ecm_integrin_hippo": {
+        "module": "M3_ecm_integrin_hippo",
+        "genes_used": 56,
+        "genes_total": 58,
+        "mean_A(ctrl_exo)": 3.343077422220358,
+        "mean_B(hz_exo)": 3.294199373433031,
+        "diff_B_minus_A": -0.04887804878732682,
+        "t": -0.8353259740941015,
+        "p_ttest": 0.41992303587515856,
+        "p_wilcoxon": 0.6200466200466201,
+        "p_perm": 0.416,
+        "perm_percentile": 21.0,
+        "top_genes": [
+          [
+            "COL2A1",
+            0.6384037507528826
+          ],
+          [
+            "COL4A2",
+            -0.6267535651524838
+          ],
+          [
+            "ADAMTS1",
+            -0.47941202846098596
+          ],
+          [
+            "YAP1",
+            0.42538443040634816
+          ],
+          [
+            "LOXL2",
+            -0.39498250094692766
+          ],
+          [
+            "TEAD2",
+            0.39173633860397983
+          ],
+          [
+            "COL4A1",
+            -0.3807902071519651
+          ],
+          [
+            "TEAD1",
+            -0.339206133144053
+          ]
+        ]
+      },
+      "M4_mechano_effectors": {
+        "module": "M4_mechano_effectors",
+        "genes_used": 25,
+        "genes_total": 25,
+        "mean_A(ctrl_exo)": 6.0277805736730485,
+        "mean_B(hz_exo)": 5.999936543777037,
+        "diff_B_minus_A": -0.027844029896011868,
+        "t": -0.6940799423374943,
+        "p_ttest": 0.5008509558648311,
+        "p_wilcoxon": 0.45571095571095577,
+        "p_perm": 0.4598,
+        "perm_percentile": 23.16,
+        "top_genes": [
+          [
+            "CDC42",
+            0.31443085134420734
+          ],
+          [
+            "MYH10",
+            -0.30492701962857627
+          ],
+          [
+            "MYH9",
+            -0.2767227927777105
+          ],
+          [
+            "CRKL",
+            -0.2310951623996722
+          ],
+          [
+            "TGFB1",
+            0.2248478477265854
+          ],
+          [
+            "ROCK2",
+            -0.18695107809961709
+          ],
+          [
+            "MAPK1",
+            -0.18495046307053808
+          ],
+          [
+            "ACTA2",
+            0.17982844306597268
+          ]
+        ]
+      },
+      "E1_classical_nociceptor": {
+        "module": "E1_classical_nociceptor",
+        "genes_used": 18,
+        "genes_total": 18,
+        "mean_A(ctrl_exo)": 3.6858194431050486,
+        "mean_B(hz_exo)": 3.466182912530074,
+        "diff_B_minus_A": -0.21963653057497456,
+        "t": -3.1218256127955666,
+        "p_ttest": 0.011079531716308759,
+        "p_wilcoxon": 0.01748251748251748,
+        "p_perm": 0.0112,
+        "perm_percentile": 0.5599999999999999,
+        "top_genes": [
+          [
+            "TRPV1",
+            -0.5673453985902315
+          ],
+          [
+            "KCNS1",
+            -0.39303336355604857
+          ],
+          [
+            "SCN10A",
+            -0.38439166889496623
+          ],
+          [
+            "SCN9A",
+            -0.32311270486200083
+          ],
+          [
+            "CACNA1H",
+            -0.29719978027023775
+          ],
+          [
+            "ASIC2",
+            -0.29599714435034885
+          ],
+          [
+            "KCNQ2",
+            -0.2110581807121621
+          ],
+          [
+            "ASIC1",
+            -0.1812249923149727
+          ]
+        ]
+      },
+      "N1_voltage_gated_control": {
+        "module": "N1_voltage_gated_control",
+        "genes_used": 17,
+        "genes_total": 17,
+        "mean_A(ctrl_exo)": 3.062045714575031,
+        "mean_B(hz_exo)": 2.9062261134157765,
+        "diff_B_minus_A": -0.15581960115925453,
+        "t": -1.516741821891907,
+        "p_ttest": 0.15631993815072273,
+        "p_wilcoxon": 0.12820512820512822,
+        "p_perm": 0.1474,
+        "perm_percentile": 7.5,
+        "top_genes": [
+          [
+            "HCN1",
+            -0.4508153929444214
+          ],
+          [
+            "SCN8A",
+            -0.3258361842987654
+          ],
+          [
+            "SCN5A",
+            -0.24248209699280432
+          ],
+          [
+            "KCND3",
+            -0.217196716413532
+          ],
+          [
+            "KCNQ2",
+            -0.2110581807121621
+          ],
+          [
+            "SCN2A",
+            -0.21072764792026977
+          ],
+          [
+            "CACNA1A",
+            -0.19249577155202147
+          ],
+          [
+            "SCN3A",
+            -0.19210371104067026
+          ]
+        ]
+      },
+      "N2_olfactory_control": {
+        "module": "N2_olfactory_control",
+        "genes_used": 13,
+        "genes_total": 16,
+        "mean_A(ctrl_exo)": 0.0809719486533652,
+        "mean_B(hz_exo)": 0.058918381496652655,
+        "diff_B_minus_A": -0.022053567156712542,
+        "t": -3.3229553455947105,
+        "p_ttest": 0.006356981284308102,
+        "p_wilcoxon": 0.006993006993006993,
+        "p_perm": 0.0056,
+        "perm_percentile": 0.18,
+        "top_genes": [
+          [
+            "OR5A1",
+            -0.2904039810149702
+          ],
+          [
+            "OR7A5",
+            0.0043929618353164175
+          ],
+          [
+            "OR11H1",
+            -0.0006853538576093113
+          ],
+          [
+            "OR1A1",
+            0.0
+          ],
+          [
+            "OR2A1",
+            0.0
+          ],
+          [
+            "OR4A15",
+            0.0
+          ],
+          [
+            "OR8A1",
+            0.0
+          ],
+          [
+            "OR10J5",
+            0.0
+          ]
+        ]
+      },
+      "N3_ribosomal_control": {
+        "module": "N3_ribosomal_control",
+        "genes_used": 17,
+        "genes_total": 18,
+        "mean_A(ctrl_exo)": 8.855873335930756,
+        "mean_B(hz_exo)": 9.247314267642508,
+        "diff_B_minus_A": 0.3914409317117524,
+        "t": 4.689759835630626,
+        "p_ttest": 0.0005312974826489909,
+        "p_wilcoxon": 0.002331002331002331,
+        "p_perm": 0.0006,
+        "perm_percentile": 99.96000000000001,
+        "top_genes": [
+          [
+            "RPS7",
+            0.6326952241014112
+          ],
+          [
+            "RPS6",
+            0.6155718714006895
+          ],
+          [
+            "RPL9",
+            0.5923108798480197
+          ],
+          [
+            "RPS3",
+            0.5294175704918445
+          ],
+          [
+            "RPS10",
+            0.48434584974128825
+          ],
+          [
+            "RPL5",
+            0.45043315071116474
+          ],
+          [
+            "RPS8",
+            0.3983991686557715
+          ],
+          [
+            "RPS5",
+            0.3978127109192453
+          ]
+        ]
+      }
+    },
+    "PHNexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": {
+        "module": "M1_mechanogated_channels",
+        "genes_used": 9,
+        "genes_total": 9,
+        "mean_A(ctrl_exo)": 2.831050764380059,
+        "mean_B(phn_exo)": 2.712081827745492,
+        "diff_B_minus_A": -0.11896893663456698,
+        "t": -3.663826017199297,
+        "p_ttest": 0.0058465088891829445,
+        "p_wilcoxon": 0.01767676767676768,
+        "p_perm": 0.0078,
+        "perm_percentile": 0.58,
+        "top_genes": [
+          [
+            "PIEZO1",
+            -0.5133779103390195
+          ],
+          [
+            "PIEZO2",
+            -0.38344048396788644
+          ],
+          [
+            "P2RX3",
+            -0.3710887911043379
+          ],
+          [
+            "TRPV4",
+            0.1694694924926459
+          ],
+          [
+            "KCNK2",
+            0.09117678261392181
+          ],
+          [
+            "TMEM150C",
+            -0.029331432580271155
+          ],
+          [
+            "TRPA1",
+            -0.025959983293466393
+          ],
+          [
+            "KCNK4",
+            -0.00816810353269215
+          ]
+        ]
+      },
+      "M2_membrane_cytoskeleton": {
+        "module": "M2_membrane_cytoskeleton",
+        "genes_used": 20,
+        "genes_total": 20,
+        "mean_A(ctrl_exo)": 4.712977875026712,
+        "mean_B(phn_exo)": 4.534655863543614,
+        "diff_B_minus_A": -0.17832201148309768,
+        "t": -2.7270992364072675,
+        "p_ttest": 0.02245418916492483,
+        "p_wilcoxon": 0.030303030303030304,
+        "p_perm": 0.0284,
+        "perm_percentile": 1.46,
+        "top_genes": [
+          [
+            "TLN2",
+            -0.615854037103154
+          ],
+          [
+            "FLNB",
+            -0.4282137801285666
+          ],
+          [
+            "EZR",
+            -0.4020195898383685
+          ],
+          [
+            "VCL",
+            -0.3733758607859663
+          ],
+          [
+            "ITGB3",
+            -0.36638071431709485
+          ],
+          [
+            "FLNA",
+            -0.3625844426418121
+          ],
+          [
+            "TLN1",
+            -0.3481519275921423
+          ],
+          [
+            "PXN",
+            -0.19695339630288355
+          ]
+        ]
+      },
+      "M3_ecm_integrin_hippo": {
+        "module": "M3_ecm_integrin_hippo",
+        "genes_used": 56,
+        "genes_total": 58,
+        "mean_A(ctrl_exo)": 3.343077422220358,
+        "mean_B(phn_exo)": 3.3263366479340966,
+        "diff_B_minus_A": -0.016740774286261306,
+        "t": -0.1987287703980459,
+        "p_ttest": 0.8487226241350999,
+        "p_wilcoxon": 0.5303030303030304,
+        "p_perm": 0.8378,
+        "perm_percentile": 43.3,
+        "top_genes": [
+          [
+            "COL2A1",
+            1.3566216051359745
+          ],
+          [
+            "YAP1",
+            0.7122040048491072
+          ],
+          [
+            "COL4A2",
+            -0.6132796118606647
+          ],
+          [
+            "TEAD2",
+            0.4776933100430849
+          ],
+          [
+            "PLOD2",
+            0.45603993820405186
+          ],
+          [
+            "FN1",
+            -0.40362851059489957
+          ],
+          [
+            "P4HA1",
+            0.3801760859152763
+          ],
+          [
+            "WWTR1",
+            0.3526091631466238
+          ]
+        ]
+      },
+      "M4_mechano_effectors": {
+        "module": "M4_mechano_effectors",
+        "genes_used": 25,
+        "genes_total": 25,
+        "mean_A(ctrl_exo)": 6.0277805736730485,
+        "mean_B(phn_exo)": 5.951328531671232,
+        "diff_B_minus_A": -0.07645204200181688,
+        "t": -1.7552025299641183,
+        "p_ttest": 0.11339195698902069,
+        "p_wilcoxon": 0.148989898989899,
+        "p_perm": 0.1084,
+        "perm_percentile": 6.140000000000001,
+        "top_genes": [
+          [
+            "MYH10",
+            -0.4682932969778939
+          ],
+          [
+            "MYH9",
+            -0.4316087180294552
+          ],
+          [
+            "CDC42",
+            0.42440914527660034
+          ],
+          [
+            "SMAD3",
+            -0.3037771738662327
+          ],
+          [
+            "CRKL",
+            -0.25851276545981605
+          ],
+          [
+            "SRC",
+            -0.24911135821655694
+          ],
+          [
+            "ROCK2",
+            -0.24905656615298355
+          ],
+          [
+            "RHOC",
+            0.24541137495916132
+          ]
+        ]
+      },
+      "E1_classical_nociceptor": {
+        "module": "E1_classical_nociceptor",
+        "genes_used": 18,
+        "genes_total": 18,
+        "mean_A(ctrl_exo)": 3.6858194431050486,
+        "mean_B(phn_exo)": 3.4884176358150394,
+        "diff_B_minus_A": -0.19740180729000922,
+        "t": -4.244040883664265,
+        "p_ttest": 0.0017057750755723237,
+        "p_wilcoxon": 0.005050505050505051,
+        "p_perm": 0.004,
+        "perm_percentile": 0.22,
+        "top_genes": [
+          [
+            "TRPV1",
+            -0.48540666496644214
+          ],
+          [
+            "SCN10A",
+            -0.4190854402356092
+          ],
+          [
+            "KCNS1",
+            -0.37071187292756536
+          ],
+          [
+            "SCN9A",
+            -0.3311294343030129
+          ],
+          [
+            "KCNQ2",
+            -0.3131942506176655
+          ],
+          [
+            "KCNQ3",
+            -0.2948850042123137
+          ],
+          [
+            "CACNA1H",
+            -0.2652437030454724
+          ],
+          [
+            "CACNA2D2",
+            -0.2290187993240007
+          ]
+        ]
+      },
+      "N1_voltage_gated_control": {
+        "module": "N1_voltage_gated_control",
+        "genes_used": 17,
+        "genes_total": 17,
+        "mean_A(ctrl_exo)": 3.062045714575031,
+        "mean_B(phn_exo)": 2.8639212566690326,
+        "diff_B_minus_A": -0.19812445790599842,
+        "t": -2.7526528002863975,
+        "p_ttest": 0.023622647614317083,
+        "p_wilcoxon": 0.10606060606060606,
+        "p_perm": 0.0352,
+        "perm_percentile": 2.52,
+        "top_genes": [
+          [
+            "KCND3",
+            -0.48836780701892457
+          ],
+          [
+            "SCN8A",
+            -0.3468439274092425
+          ],
+          [
+            "HCN1",
+            -0.3379837623250743
+          ],
+          [
+            "CACNA1A",
+            -0.3148035708436643
+          ],
+          [
+            "KCNQ2",
+            -0.3131942506176655
+          ],
+          [
+            "KCNQ3",
+            -0.2948850042123137
+          ],
+          [
+            "CACNA1C",
+            -0.25786576274290507
+          ],
+          [
+            "KCNA1",
+            -0.24626111567031717
+          ]
+        ]
+      },
+      "N2_olfactory_control": {
+        "module": "N2_olfactory_control",
+        "genes_used": 13,
+        "genes_total": 16,
+        "mean_A(ctrl_exo)": 0.0809719486533652,
+        "mean_B(phn_exo)": 0.07315855726133091,
+        "diff_B_minus_A": -0.007813391392034283,
+        "t": -0.7724727597133105,
+        "p_ttest": 0.4662072693729955,
+        "p_wilcoxon": 0.4318181818181819,
+        "p_perm": 0.4228,
+        "perm_percentile": 20.16,
+        "top_genes": [
+          [
+            "OR5A1",
+            -0.15333756874755355
+          ],
+          [
+            "OR11H1",
+            0.03178986108930252
+          ],
+          [
+            "OR7A5",
+            0.013558776068304737
+          ],
+          [
+            "OR52B2",
+            0.0064148434935005095
+          ],
+          [
+            "OR1A1",
+            0.0
+          ],
+          [
+            "OR2A1",
+            0.0
+          ],
+          [
+            "OR4A15",
+            0.0
+          ],
+          [
+            "OR8A1",
+            0.0
+          ]
+        ]
+      },
+      "N3_ribosomal_control": {
+        "module": "N3_ribosomal_control",
+        "genes_used": 17,
+        "genes_total": 18,
+        "mean_A(ctrl_exo)": 8.855873335930756,
+        "mean_B(phn_exo)": 9.433274741614085,
+        "diff_B_minus_A": 0.5774014056833288,
+        "t": 5.953363495347053,
+        "p_ttest": 0.0003690726162008788,
+        "p_wilcoxon": 0.0025252525252525255,
+        "p_perm": 0.0002,
+        "perm_percentile": 100.0,
+        "top_genes": [
+          [
+            "RPS7",
+            0.985565035061855
+          ],
+          [
+            "RPL9",
+            0.8967873328447027
+          ],
+          [
+            "RPS6",
+            0.8883859313424392
+          ],
+          [
+            "RPS3",
+            0.7735099701015056
+          ],
+          [
+            "RPS10",
+            0.7457106848807431
+          ],
+          [
+            "RPS5",
+            0.6796871551165697
+          ],
+          [
+            "RPL5",
+            0.6753734109104954
+          ],
+          [
+            "RPS9",
+            0.5988790782655382
+          ]
+        ]
+      }
+    },
+    "VZV_vs_Mock": {
+      "M1_mechanogated_channels": {
+        "module": "M1_mechanogated_channels",
+        "genes_used": 9,
+        "genes_total": 9,
+        "mean_A(mock)": 2.8219876659091945,
+        "mean_B(vzv)": 2.7716198061533572,
+        "diff_B_minus_A": -0.05036785975583724,
+        "t": -2.270838338093671,
+        "p_ttest": 0.04655764245345769,
+        "p_wilcoxon": 0.04112554112554113,
+        "p_perm": 0.0514,
+        "perm_percentile": 2.54,
+        "top_genes": [
+          [
+            "PIEZO1",
+            -0.20371571820813328
+          ],
+          [
+            "KCNK4",
+            -0.16979802776063702
+          ],
+          [
+            "PIEZO2",
+            -0.14383765803451443
+          ],
+          [
+            "TMEM150C",
+            0.0999478017218145
+          ],
+          [
+            "P2RX3",
+            -0.08242034075588833
+          ],
+          [
+            "TRPA1",
+            0.06569549582786494
+          ],
+          [
+            "TRPV4",
+            -0.03874651178516436
+          ],
+          [
+            "KCNK2",
+            0.01881705298954324
+          ]
+        ]
+      },
+      "M2_membrane_cytoskeleton": {
+        "module": "M2_membrane_cytoskeleton",
+        "genes_used": 20,
+        "genes_total": 20,
+        "mean_A(mock)": 4.6679989567101625,
+        "mean_B(vzv)": 4.630471091451864,
+        "diff_B_minus_A": -0.037527865258298654,
+        "t": -1.092035625311178,
+        "p_ttest": 0.30132144133293814,
+        "p_wilcoxon": 0.30952380952380953,
+        "p_perm": 0.2866,
+        "perm_percentile": 14.84,
+        "top_genes": [
+          [
+            "FLNA",
+            -0.20385712211495743
+          ],
+          [
+            "TLN2",
+            -0.1939925102457556
+          ],
+          [
+            "TLN1",
+            -0.16260633474314545
+          ],
+          [
+            "RDX",
+            0.15749671378291907
+          ],
+          [
+            "EZR",
+            -0.12374607728596931
+          ],
+          [
+            "VCL",
+            -0.10735474172167336
+          ],
+          [
+            "ITGB3",
+            0.09748539517858762
+          ],
+          [
+            "ACTN2",
+            0.09150230443903307
+          ]
+        ]
+      },
+      "M3_ecm_integrin_hippo": {
+        "module": "M3_ecm_integrin_hippo",
+        "genes_used": 56,
+        "genes_total": 58,
+        "mean_A(mock)": 3.4793873315230948,
+        "mean_B(vzv)": 3.4916945991840254,
+        "diff_B_minus_A": 0.012307267660930599,
+        "t": 0.18852249330931842,
+        "p_ttest": 0.8542928255380309,
+        "p_wilcoxon": 1.0,
+        "p_perm": 0.846,
+        "perm_percentile": 57.940000000000005,
+        "top_genes": [
+          [
+            "COL1A1",
+            1.213077910384841
+          ],
+          [
+            "COL1A2",
+            0.6302230311549
+          ],
+          [
+            "COL3A1",
+            0.6125330846491188
+          ],
+          [
+            "MMP2",
+            -0.4164811699084945
+          ],
+          [
+            "FN1",
+            0.2992302845200272
+          ],
+          [
+            "LOXL1",
+            -0.28316771180552136
+          ],
+          [
+            "MMP9",
+            0.2685475833200812
+          ],
+          [
+            "LAMB1",
+            -0.2526523404776775
+          ]
+        ]
+      },
+      "M4_mechano_effectors": {
+        "module": "M4_mechano_effectors",
+        "genes_used": 25,
+        "genes_total": 25,
+        "mean_A(mock)": 5.966316657433,
+        "mean_B(vzv)": 5.91192175290219,
+        "diff_B_minus_A": -0.05439490453081053,
+        "t": -2.5838341891116707,
+        "p_ttest": 0.027601784307870244,
+        "p_wilcoxon": 0.06493506493506493,
+        "p_perm": 0.0242,
+        "perm_percentile": 1.3,
+        "top_genes": [
+          [
+            "VIM",
+            -0.2967580792746354
+          ],
+          [
+            "CDC42",
+            0.24807536212846948
+          ],
+          [
+            "MYH10",
+            -0.21107968004845645
+          ],
+          [
+            "CALD1",
+            -0.1875649115596021
+          ],
+          [
+            "TPM1",
+            -0.18744985452381258
+          ],
+          [
+            "RHOC",
+            0.1864543001841792
+          ],
+          [
+            "MAPK1",
+            -0.1644569023916338
+          ],
+          [
+            "ROCK1",
+            -0.16326205372446534
+          ]
+        ]
+      },
+      "E1_classical_nociceptor": {
+        "module": "E1_classical_nociceptor",
+        "genes_used": 18,
+        "genes_total": 18,
+        "mean_A(mock)": 3.9549525813970225,
+        "mean_B(vzv)": 3.9554216696360225,
+        "diff_B_minus_A": 0.00046908823899993735,
+        "t": 0.011969519617762806,
+        "p_ttest": 0.9907190777533653,
+        "p_wilcoxon": 1.0,
+        "p_perm": 0.9958,
+        "perm_percentile": 51.12,
+        "top_genes": [
+          [
+            "GRIN2B",
+            0.35730957958890763
+          ],
+          [
+            "ASIC2",
+            -0.2347532837671764
+          ],
+          [
+            "KCNQ3",
+            0.22302145258447703
+          ],
+          [
+            "KCNQ2",
+            -0.16007122719956257
+          ],
+          [
+            "P2RX7",
+            0.15477490153040718
+          ],
+          [
+            "SCN9A",
+            -0.15389387069692617
+          ],
+          [
+            "TRPV1",
+            -0.14873950844738726
+          ],
+          [
+            "SCN10A",
+            -0.10524302963630516
+          ]
+        ]
+      },
+      "N1_voltage_gated_control": {
+        "module": "N1_voltage_gated_control",
+        "genes_used": 17,
+        "genes_total": 17,
+        "mean_A(mock)": 3.24356068018782,
+        "mean_B(vzv)": 3.2414626353432507,
+        "diff_B_minus_A": -0.0020980448445691025,
+        "t": -0.07094642026077094,
+        "p_ttest": 0.9449030434595331,
+        "p_wilcoxon": 0.6991341991341992,
+        "p_perm": 0.9882,
+        "perm_percentile": 49.16,
+        "top_genes": [
+          [
+            "KCNA1",
+            0.28453891875709525
+          ],
+          [
+            "SCN5A",
+            -0.2573168721176966
+          ],
+          [
+            "KCNQ3",
+            0.22302145258447703
+          ],
+          [
+            "HCN2",
+            -0.1737830989383946
+          ],
+          [
+            "KCNQ2",
+            -0.16007122719956257
+          ],
+          [
+            "SCN1A",
+            0.14906104401160597
+          ],
+          [
+            "SCN8A",
+            -0.07898518219667228
+          ],
+          [
+            "SCN3A",
+            -0.07406805641324166
+          ]
+        ]
+      },
+      "N2_olfactory_control": {
+        "module": "N2_olfactory_control",
+        "genes_used": 13,
+        "genes_total": 16,
+        "mean_A(mock)": 0.074682744967143,
+        "mean_B(vzv)": 0.09909133640635713,
+        "diff_B_minus_A": 0.02440859143921413,
+        "t": 1.150466543152276,
+        "p_ttest": 0.3012818241812209,
+        "p_wilcoxon": 1.0,
+        "p_perm": 0.3722,
+        "perm_percentile": 81.72,
+        "top_genes": [
+          [
+            "OR2A1",
+            0.07724925776996797
+          ],
+          [
+            "OR52A1",
+            0.04299800039495293
+          ],
+          [
+            "OR5A1",
+            0.03451729389905889
+          ],
+          [
+            "OR1A1",
+            0.03296848043121193
+          ],
+          [
+            "OR7A5",
+            0.03248947369533257
+          ],
+          [
+            "OR52D1",
+            0.03248947369533257
+          ],
+          [
+            "OR52E1",
+            0.026165401372087616
+          ],
+          [
+            "OR8A1",
+            0.022158317534798636
+          ]
+        ]
+      },
+      "N3_ribosomal_control": {
+        "module": "N3_ribosomal_control",
+        "genes_used": 17,
+        "genes_total": 18,
+        "mean_A(mock)": 8.833175059650907,
+        "mean_B(vzv)": 8.972483224043046,
+        "diff_B_minus_A": 0.13930816439213878,
+        "t": 1.1469453742666054,
+        "p_ttest": 0.28255489591199107,
+        "p_wilcoxon": 0.48484848484848486,
+        "p_perm": 0.3786,
+        "perm_percentile": 80.72,
+        "top_genes": [
+          [
+            "RPS3",
+            0.36016281205445466
+          ],
+          [
+            "RPS7",
+            0.29571675638491257
+          ],
+          [
+            "RPL5",
+            0.274971767975412
+          ],
+          [
+            "RPL9",
+            0.2487834975680734
+          ],
+          [
+            "RPS5",
+            0.23884302136591273
+          ],
+          [
+            "RPS6",
+            0.23388754798437894
+          ],
+          [
+            "RPS10",
+            0.23257645672060878
+          ],
+          [
+            "RPL12",
+            0.2029410215864953
+          ]
+        ]
+      }
+    }
+  },
+  "CCI": {
+    "HZexo_vs_CtrlExo": {
+      "contrast": "HZexo_vs_CtrlExo",
+      "m1_n": 9,
+      "e1_n": 18,
+      "mean_CCI_A(ctrl_exo)": -5015.984126984125,
+      "mean_CCI_B(hz_exo)": -4933.2619047619055,
+      "diff_B_minus_A": 82.7222222222199,
+      "p_ttest": 0.8314168495736247,
+      "p_wilcoxon": 0.6200466200466201,
+      "p_perm": 0.8284,
+      "perm_percentile": 59.040000000000006
+    },
+    "PHNexo_vs_CtrlExo": {
+      "contrast": "PHNexo_vs_CtrlExo",
+      "m1_n": 9,
+      "e1_n": 18,
+      "mean_CCI_A(ctrl_exo)": -5015.984126984125,
+      "mean_CCI_B(phn_exo)": -5090.327777777777,
+      "diff_B_minus_A": -74.34365079365125,
+      "p_ttest": 0.8557170516308046,
+      "p_wilcoxon": 1.0,
+      "p_perm": 0.855,
+      "perm_percentile": 41.46
+    },
+    "VZV_vs_Mock": {
+      "contrast": "VZV_vs_Mock",
+      "m1_n": 9,
+      "e1_n": 18,
+      "mean_CCI_A(mock)": -5990.814814814814,
+      "mean_CCI_B(vzv)": -6010.606481481482,
+      "diff_B_minus_A": -19.79166666666788,
+      "p_ttest": 0.9721922231260104,
+      "p_wilcoxon": 1.0,
+      "p_perm": 0.9648,
+      "perm_percentile": 47.760000000000005
+    }
+  },
+  "bh_q": {
+    "HZexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": 0.175,
+      "M2_membrane_cytoskeleton": 0.136,
+      "M3_ecm_integrin_hippo": 0.4598,
+      "M4_mechano_effectors": 0.4598,
+      "E1_classical_nociceptor": 0.0299,
+      "N1_voltage_gated_control": 0.1965,
+      "N2_olfactory_control": 0.0224,
+      "N3_ribosomal_control": 0.0048
+    },
+    "PHNexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": 0.0208,
+      "M2_membrane_cytoskeleton": 0.0563,
+      "M3_ecm_integrin_hippo": 0.8378,
+      "M4_mechano_effectors": 0.1445,
+      "E1_classical_nociceptor": 0.016,
+      "N1_voltage_gated_control": 0.0563,
+      "N2_olfactory_control": 0.4832,
+      "N3_ribosomal_control": 0.0016
+    },
+    "VZV_vs_Mock": {
+      "M1_mechanogated_channels": 0.2056,
+      "M2_membrane_cytoskeleton": 0.6058,
+      "M3_ecm_integrin_hippo": 0.9958,
+      "M4_mechano_effectors": 0.1936,
+      "E1_classical_nociceptor": 0.9958,
+      "N1_voltage_gated_control": 0.9958,
+      "N2_olfactory_control": 0.6058,
+      "N3_ribosomal_control": 0.6058
+    }
+  }
+}
