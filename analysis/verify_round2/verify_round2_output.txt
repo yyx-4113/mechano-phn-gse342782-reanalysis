@@ -1,0 +1,166 @@
+group sizes (ctrl/hz/phn/mock/vzv): 7 7 5 6 6
+{'M1_mechanogated_channels': 9, 'M2_membrane_cytoskeleton': 20, 'M3_ecm_integrin_hippo': 58, 'M4_mechano_effectors': 25, 'E1_classical_nociceptor': 18, 'N1_voltage_gated_control': 17, 'N2_olfactory_control': 16, 'N3_ribosomal_control': 18}
+
+=== 1. HZ contrast: 8-module BH (editor recompute) ===
+N3_ribosomal_control                diff=+0.3914 perm_P=0.0017 q=0.0140
+[PASS] BH diff N3_ribosomal_control: recomputed=0.3914  reference=0.3914
+[PASS] BH perm P N3_ribosomal_control: recomputed=0.0017  reference=0.0017
+[PASS] BH q N3_ribosomal_control: recomputed=0.014  reference=0.0136
+N2_olfactory_control                diff=-0.0221 perm_P=0.0058 q=0.0233
+[PASS] BH diff N2_olfactory_control: recomputed=-0.0221  reference=-0.0221
+[PASS] BH perm P N2_olfactory_control: recomputed=0.0058  reference=0.0058
+[PASS] BH q N2_olfactory_control: recomputed=0.0233  reference=0.0232
+E1_classical_nociceptor             diff=-0.2196 perm_P=0.0128 q=0.0342
+[PASS] BH diff E1_classical_nociceptor: recomputed=-0.2196  reference=-0.2196
+[PASS] BH perm P E1_classical_nociceptor: recomputed=0.0128  reference=0.0128
+[PASS] BH q E1_classical_nociceptor: recomputed=0.0342  reference=0.0341
+M2_membrane_cytoskeleton            diff=-0.1483 perm_P=0.0682 q=0.1364
+[PASS] BH diff M2_membrane_cytoskeleton: recomputed=-0.1483  reference=-0.1483
+[PASS] BH perm P M2_membrane_cytoskeleton: recomputed=0.0682  reference=0.0682
+[PASS] BH q M2_membrane_cytoskeleton: recomputed=0.1364  reference=0.1364
+M1_mechanogated_channels            diff=-0.0780 perm_P=0.1131 q=0.1809
+[PASS] BH diff M1_mechanogated_channels: recomputed=-0.078  reference=-0.078
+[PASS] BH perm P M1_mechanogated_channels: recomputed=0.1131  reference=0.1131
+[PASS] BH q M1_mechanogated_channels: recomputed=0.1809  reference=0.181
+N1_voltage_gated_control            diff=-0.1558 perm_P=0.1509 q=0.2012
+[PASS] BH diff N1_voltage_gated_control: recomputed=-0.1558  reference=-0.1558
+[PASS] BH perm P N1_voltage_gated_control: recomputed=0.1509  reference=0.1509
+[PASS] BH q N1_voltage_gated_control: recomputed=0.2012  reference=0.2012
+M3_ecm_integrin_hippo               diff=-0.0489 perm_P=0.4219 q=0.4615
+[PASS] BH diff M3_ecm_integrin_hippo: recomputed=-0.0489  reference=-0.0489
+[PASS] BH perm P M3_ecm_integrin_hippo: recomputed=0.4219  reference=0.4219
+[PASS] BH q M3_ecm_integrin_hippo: recomputed=0.4615  reference=0.4615
+M4_mechano_effectors                diff=-0.0278 perm_P=0.4615 q=0.4615
+[PASS] BH diff M4_mechano_effectors: recomputed=-0.0278  reference=-0.0278
+[PASS] BH perm P M4_mechano_effectors: recomputed=0.4615  reference=0.4615
+[PASS] BH q M4_mechano_effectors: recomputed=0.4615  reference=0.4615
+[PASS] BH q vs manuscript N3: recomputed=0.014  reference=0.014
+[PASS] BH q vs manuscript N2: recomputed=0.023  reference=0.023
+[PASS] BH q vs manuscript E1: recomputed=0.034  reference=0.034
+[PASS] BH q vs manuscript M2: recomputed=0.136  reference=0.136
+[PASS] BH q vs manuscript M1: recomputed=0.181  reference=0.181
+[PASS] BH q vs manuscript N1: recomputed=0.201  reference=0.201
+[PASS] BH q vs manuscript M3: recomputed=0.462  reference=0.462
+[PASS] BH q vs manuscript M4: recomputed=0.462  reference=0.462
+
+=== 2. route x module DiDiD (consistent orientation E1-M1) ===
+did_exo=-0.1417 did_inf=+0.0508 diff=-0.1925 perm P=0.00106 (3356/3171168)
+[PASS] DiDiD did_exosome: recomputed=-0.1417  reference=-0.1417
+[PASS] DiDiD did_infection: recomputed=0.0508  reference=0.0508
+[PASS] DiDiD difference: recomputed=-0.1925  reference=-0.1925
+[PASS] DiDiD exact perm P: recomputed=0.00106  reference=0.00106
+[PASS] DiDiD n_extreme: recomputed=3356  reference=3356
+[PASS] DiDiD n_null_partitions: recomputed=3171168  reference=3171168
+[PASS] DiDiD P vs manuscript 0.0011: recomputed=0.0011  reference=0.0011
+
+=== 3. M4 route difference (M4-only null, FIXED) ===
+d4_exo=-0.0278 d4_inf=-0.0544 diff=+0.0266 perm P=0.5783 (1833814/3171168)
+[PASS] M4 route diff_exosome: recomputed=-0.0278  reference=-0.0278
+[PASS] M4 route diff_infection: recomputed=-0.0544  reference=-0.0544
+[PASS] M4 route route_difference: recomputed=0.0266  reference=0.0266
+[PASS] M4 route exact perm P: recomputed=0.5783  reference=0.5783
+[PASS] M4 route n_extreme: recomputed=1833814  reference=1833814
+[PASS] M4 route P vs manuscript 0.58: recomputed=0.58  reference=0.58
+
+=== 4. E1-core sensitivity (13 canonical channels) ===
+n=13 diff=-0.2442 Welch P=0.003743 perm P=0.0023
+CI df=12 (as deposited): [-0.3832, -0.1052]
+CI Welch-Satterthwaite df=9.38: [-0.3876, -0.1008]
+detected-only n=10 diff=-0.2573 perm P=0.0029
+[PASS] E1-core n_genes: recomputed=13  reference=13
+[PASS] E1-core difference: recomputed=-0.2442  reference=-0.2442
+[PASS] E1-core Welch P: recomputed=0.0037  reference=0.0037
+[PASS] E1-core exact perm P: recomputed=0.0023  reference=0.0023
+[PASS] E1-core CI low (Welch df): recomputed=-0.388  reference=-0.388
+[PASS] E1-core CI high (Welch df): recomputed=-0.101  reference=-0.101
+[PASS] E1-core CI df (Satterthwaite): recomputed=9.38  reference=9.38
+[PASS] E1-core CI low vs manuscript -0.39: recomputed=-0.39  reference=-0.39
+[PASS] E1-core CI high vs manuscript -0.10: recomputed=-0.1  reference=-0.1
+[PASS] E1-core detected n: recomputed=10  reference=10
+[PASS] E1-core detected difference: recomputed=-0.2573  reference=-0.2573
+[PASS] E1-core detected perm P: recomputed=0.0029  reference=0.0029
+[INFO] pooled-df12 CI (superseded) = [-0.383, -0.105]; Welch-Satterthwaite CI (df=9.38) = [-0.388, -0.101] is the deposited and printed convention (manuscript -0.39 to -0.10)
+
+=== 5. PTK2 overlap sensitivity ===
+M3-PTK2: n=55 diff=-0.0475 perm P=0.4353
+M4-PTK2: n=24 diff=-0.0238 perm P=0.5239
+[PASS] M3-PTK2 n_genes: recomputed=55  reference=55
+[PASS] M3-PTK2 difference: recomputed=-0.0475  reference=-0.0475
+[PASS] M3-PTK2 perm P: recomputed=0.435  reference=0.435
+[PASS] M3-PTK2 vs manuscript -0.047/0.44: recomputed=-0.047  reference=-0.047
+[PASS] M3-PTK2 P vs manuscript 0.44: recomputed=0.44  reference=0.44
+[PASS] M4-PTK2 n_genes: recomputed=24  reference=24
+[PASS] M4-PTK2 difference: recomputed=-0.0238  reference=-0.0238
+[PASS] M4-PTK2 perm P: recomputed=0.524  reference=0.524
+[PASS] M4-PTK2 vs manuscript -0.024/0.52: recomputed=-0.024  reference=-0.024
+[PASS] M4-PTK2 P vs manuscript 0.52: recomputed=0.52  reference=0.52
+
+=== 6. CCI (M1 rank - E1 rank convention) ===
+full set: diff=+82.7222 perm P=0.8328
+detected only (5 M1, 13 E1): diff=+215.5571 perm P=0.0460
+E1 mean downward displacement: +596.1; M1: +513.4; TRPA1: +5451.4
+top E1 downward: {'GRIA1': 2868, 'SCN10A': 1396, 'TRPV1': 1042, 'GRIN2B': 1025}
+TRPA1 mean CPM ctrl=0.0332 hz=0.0071
+counterfactual shift -0.2196: CCI diff=+2470.1 perm P=0.00058
+[PASS] CCI full difference: recomputed=82.7  reference=82.7
+[PASS] CCI full perm P: recomputed=0.8328  reference=0.8328
+[PASS] CCI detected n_m1: recomputed=5  reference=5
+[PASS] CCI detected n_e1: recomputed=13  reference=13
+[PASS] CCI detected difference: recomputed=215.6  reference=215.6
+[PASS] CCI detected perm P: recomputed=0.046  reference=0.046
+[PASS] CCI detected vs manuscript +215.6: recomputed=215.6  reference=215.6
+[PASS] CCI detected P vs manuscript 0.046: recomputed=0.046  reference=0.046
+[PASS] CCI e1 mean displacement: recomputed=596  reference=596
+[PASS] CCI m1 mean displacement: recomputed=513  reference=513
+[PASS] CCI TRPA1 displacement: recomputed=5451  reference=5451
+[PASS] CCI TRPA1 cpm ctrl: recomputed=0.0332  reference=0.0332
+[PASS] CCI TRPA1 cpm hz: recomputed=0.0071  reference=0.0071
+[PASS] CCI top E1 down GRIA1: recomputed=2868  reference=2868
+[PASS] CCI top E1 down SCN10A: recomputed=1396  reference=1396
+[PASS] CCI top E1 down TRPV1: recomputed=1042  reference=1042
+[PASS] CCI top E1 down GRIN2B: recomputed=1025  reference=1025
+[PASS] CCI top E1 down vs manuscript GRIA1: recomputed=2868  reference=2868
+[PASS] CCI top E1 down vs manuscript SCN10A: recomputed=1396  reference=1396
+[PASS] CCI top E1 down vs manuscript TRPV1: recomputed=1042  reference=1042
+[PASS] CCI top E1 down vs manuscript GRIN2B: recomputed=1025  reference=1025
+[PASS] CCI counterfactual imposed shift: recomputed=-0.2196  reference=-0.2196
+[PASS] CCI counterfactual difference: recomputed=2470  reference=2470
+[PASS] CCI counterfactual perm P: recomputed=0.00058  reference=0.00058
+[PASS] CCI counterfactual vs manuscript +2470: recomputed=2470  reference=2470
+[PASS] CCI counterfactual P vs manuscript 0.0006: recomputed=0.0006  reference=0.0006
+
+=== 7. per-route DiD (E1 - M1) P values ===
+exosome: diff=-0.1417 perm P=0.0017
+[PASS] DiD exosome diff vs manuscript -0.142: recomputed=-0.142  reference=-0.142
+[PASS] DiD exosome P vs manuscript 0.0017: recomputed=0.0017  reference=0.0017
+infection (E1-M1): diff=+0.0508 perm P=0.1926
+[PASS] DiD infection diff (E1-M1) vs deposit did_infection: recomputed=0.0508  reference=0.0508
+[PASS] DiD infection magnitude vs manuscript 0.051: recomputed=0.051  reference=0.051
+[PASS] DiD infection P vs manuscript 0.19: recomputed=0.19  reference=0.19
+detected-gene DiD: diff=-0.0718 perm P=0.1573
+[PASS] DiD detected diff vs manuscript -0.072: recomputed=-0.072  reference=-0.072
+[PASS] DiD detected P vs manuscript 0.16: recomputed=0.16  reference=0.16
+detected-gene M1 module: diff=-0.1709 perm P=0.0460 (n=5)
+[PASS] detected M1 diff vs manuscript -0.171: recomputed=-0.171  reference=-0.171
+[PASS] detected M1 P vs manuscript 0.046: recomputed=0.046  reference=0.046
+
+=== 8. E1 - N1 per-sample benchmark (HZ vs Ctrl) ===
+diff=-0.0638 perm P=0.1783 Welch P=0.1867
+[PASS] E1-N1 difference: recomputed=-0.0638  reference=-0.0638
+[PASS] E1-N1 perm P: recomputed=0.1783  reference=0.1783
+[PASS] E1-N1 Welch P: recomputed=0.1867  reference=0.1867
+[PASS] E1-N1 diff vs manuscript -0.064: recomputed=-0.064  reference=-0.064
+[PASS] E1-N1 perm P vs manuscript 0.178: recomputed=0.178  reference=0.178
+[PASS] E1-N1 Welch P vs manuscript 0.187: recomputed=0.187  reference=0.187
+
+=== 9. E1 module CI (HZ vs Ctrl) ===
+diff=-0.2196 Welch P=0.0111 CI95=[-0.3768, -0.0625] (df=9.81)
+[PASS] E1 module diff: recomputed=-0.2196  reference=-0.2196
+[PASS] E1 module Welch P: recomputed=0.0111  reference=0.0111
+[PASS] E1 module CI low: recomputed=-0.377  reference=-0.377
+[PASS] E1 module CI high: recomputed=-0.062  reference=-0.062
+[PASS] E1 module CI low vs manuscript -0.38: recomputed=-0.38  reference=-0.38
+[PASS] E1 module CI high vs manuscript -0.06: recomputed=-0.06  reference=-0.06
+
+===== EDITOR VERIFY SUMMARY: 114/114 checks PASS =====
+All editor verification checks passed.

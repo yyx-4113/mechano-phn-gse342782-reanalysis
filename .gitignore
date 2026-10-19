@@ -23,3 +23,9 @@ Thumbs.db
 # Local release archives (uploaded to GitHub Releases; not part of the deposited tree)
 release_v*.zip
 release_v*_SHA256.txt
+
+# Reviewer scratch / audit working dirs (reports themselves live in reviews/)
+analysis/scratch_B2/
+analysis/scratch_B3/
+analysis/scratch_editor/
+_B3_audit/

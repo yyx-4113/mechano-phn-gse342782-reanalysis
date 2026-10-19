@@ -1,10 +1,26 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Consistency gate v3：数值容差比较（所有期望值从产物动态派生，禁止硬编码）。
+"""Consistency gate v4：数值容差比较（所有期望值从产物动态派生，禁止硬编码）。
 v1.1.0 修订：
   - 键名 p_perm -> p_perm_exact（精确枚举）；
   - 移除硬编码 PIEZO2 p=0.1816（改从 layer1_gene_level.csv 派生）；
   - 覆盖扩展：MDE / Welch & perm CI / 交互检验 P / 检出基因敏感性 / 模块覆盖率 / 全局 DE。
+v1.1.7 修订（Round-2 审稿后）：
+  - MD 指向 manuscript_v1.1.7.md；
+  - 新增 round2_additions 断言：DiDiD / M4 route difference / 8 模块 BH 全表 /
+    EZR-PXN / detected-gene CCI / E1-core / PTK2 敏感性 / CCI 反事实 / TRPA1 位移；
+  - 新增文本断言：tag v1.1.7、无 Round-4、题注存在、STROBE、MDE post hoc 标签、
+    MoR 变换描述、引文勘误（Murthy 2018;10(462) / Ryba-Davidson / 21(1):630 / Merkel-cell）、
+    Chesler 表述修正、SCN10A "second-smallest P"、LOX/YAP1 对称地板警告、
+    CCN1/CCN2 alias、临床下一步重述、新局限 (xiv)(xv)(xvi)。
+v1.1.7a 修订（编辑最终独立复算后发现）：
+  - E1-core 存底 CI 自由度口径由 df=12 改为 Welch-Satterthwaite（与主结果
+    layer1_results.json 一致；df=12 区间偏窄、反保守）。产物已由
+    layer1_round2_additions.py 重生成，diff 确认仅 welch_ci95 变化
+    （[-0.383,-0.105] -> [-0.388,-0.101]，新增 welch_ci95_df=9.38）。
+    稿件印刷值相应改为 -0.39 to -0.10。
+  - M3 minus PTK2 稿件舍入修正 -0.048 -> -0.047（全精度 -0.0474965，
+    原稿将 4 位存底值 -0.0475 当作精确值上舍）。
 """
 import json, gzip, csv, re, os
 import numpy as np
@@ -17,7 +33,7 @@ from itertools import combinations
 _ROOT = Path(__file__).resolve().parents[1]
 RES = str(_ROOT / "analysis" / "results" / "layer1")
 RAW = str(_ROOT / "analysis" / "data" / "raw")
-MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.5.md")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.7.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -30,7 +46,7 @@ def numchk(name, fragment, expected):
     if fragment not in text:
         results.append((name, str(expected), "FAIL (fragment not in manuscript)"))
         return
-    nums = [float(x) for x in re.findall(r"-?\d+\.?\d*", fragment)]
+    nums = [float(x.replace(",", "")) for x in re.findall(r"-?\d[\d,]*(?:\.\d+)?", fragment)]
     ok = False
     for n in nums:
         dec = len(str(n).split(".")[1]) if "." in str(n) else 0
@@ -58,10 +74,10 @@ def mod(lab, m): return C[lab][m]
 
 # ---- 模块级（JSON，精确枚举 P）----
 m3 = mod("HZexo_vs_CtrlExo", "M3_ecm_integrin_hippo")
-numchk("primary M3 diff", "difference -0.049 log2CPM", m3["diff_B_minus_A"])
+numchk("primary M3 diff", "-0.049 log2CPM", m3["diff_B_minus_A"])
 numchk("primary M3 perm p", "permutation P = 0.42", m3["p_perm_exact"])
 numchk("primary M3 q", "BH q = 0.46", R["bh_q"]["HZexo_vs_CtrlExo"]["M3_ecm_integrin_hippo"])
-numchk("M3 MDE", "minimum detectable effect at 80% power was 0.18 log2CPM", m3["mde_80pct"])
+numchk("M3 MDE", "post hoc sensitivity, was 0.18 log2CPM", m3["mde_80pct"])
 numchk("M3 welch CI low", "Welch -0.18 to", m3["ci95_welch"][0])
 numchk("M3 welch CI high", "to +0.08", m3["ci95_welch"][1])
 numchk("M3 perm CI low", "permutation-inversion -0.16", m3["ci95_perm_inversion"][0])
@@ -198,15 +214,15 @@ piezo_p = float(piezo_hz["welch_p"].iloc[0])
 numchk("PIEZO2 spared (gene CSV)", "PIEZO2 P = 0.18", piezo_p)
 
 # ---- 模块覆盖率（JSON 派生）----
-present("M3 coverage 56/58", "56/58")
-present("N2 coverage 13/16", "13/16")
-present("N3 coverage 17/18", "17/18")
+present("M3 coverage 56/58", "56 of 58")
+present("N2 coverage 13/16", "13 of 16")
+present("N3 coverage 17/18", "17 of 18")
 n2 = mod("HZexo_vs_CtrlExo","N2_olfactory_control")
 n3 = mod("HZexo_vs_CtrlExo","N3_ribosomal_control")
 m3c = mod("HZexo_vs_CtrlExo","M3_ecm_integrin_hippo")
-numchk("N2 used/total", "13/16", n2["genes_used"] / n2["genes_total"] * 16)
-numchk("N3 used/total", "17/18", n3["genes_used"] / n3["genes_total"] * 18)
-numchk("M3 used/total", "56/58", m3c["genes_used"] / m3c["genes_total"] * 58)
+numchk("N2 used/total", "13 of 16", n2["genes_used"] / n2["genes_total"] * 16)
+numchk("N3 used/total", "17 of 18", n3["genes_used"] / n3["genes_total"] * 18)
+numchk("M3 used/total", "56 of 58", m3c["genes_used"] / m3c["genes_total"] * 58)
 
 # ---- 全局 DE（CSV）----
 hz_de = GD[GD.contrast == "HZexo_vs_CtrlExo"].iloc[0]
@@ -304,12 +320,132 @@ present("normalization robustness reported", "median-of-ratios")
 present("N1 component reported", "N1 itself shifted by -0.156")
 
 # ---- Round-4 补报 II：解耦对称性 / 基线口径 / rESWT 引用 / 拼写统一 ----
-present("mRNA-function decoupling applied symmetrically to PIEZO2", "do not read the M1 null as refuting")
+present("mRNA-function decoupling applied symmetrically to PIEZO2", "should not be read as evidence against a mechanical axis")
 present("'fully compatible' softened with testability caveat", "remains open")
 present("PIEZO2 adult-DRG expression baseline corrected", "widely expressed across adult human DRG")
 present("rESWT dataset [12] cited in text", "rESWT")
 present("PIEZO2 cross-experiment baseline disclosed", "245.2 versus 164.1")
 present("hyphenated mechano-transduction spelling removed", "mechanotransduction literature points")
+
+# ---- Round-2 / v1.1.7 新增：正式化 / 中性对照 / 敏感性 / 引文与文本断言 ----
+RA = _json.load(open(str(_ROOT / "analysis" / "results" / "layer1" / "layer1_round2_additions.json"), encoding="utf-8"))
+
+# (1) route x module DiDiD（正式 route-dependence 检验）
+DID = RA["route_by_module_didid"]
+numchk("DiDiD difference", "-0.193 log2CPM", DID["difference"])
+numchk("DiDiD exact permutation P", "exact permutation P = 0.0011", DID["exact_perm_P"])
+numchk("DiDiD combined partitions", "3,356 of 3,171,168", DID["n_extreme"])
+present("DiDiD SCN10A composition caveat", "not identically composed across routes")
+
+# (2) M4 route difference（significant-vs-not 并置的正式化）
+M4R = RA["m4_route_difference"]
+numchk("M4 route difference", "+0.027; exact permutation P = 0.58", M4R["route_difference"])
+numchk("M4 VZV BH q", "BH q = 0.20", R["bh_q"]["VZV_vs_Mock"]["M4_mechano_effectors"])
+
+# (3) 8 模块 BH 全表披露（primary contrast）
+BHT = RA["bh_table_hz_contrast"]
+numchk("BH table N3 q", "N3 0.014", BHT["N3_ribosomal_control"]["bh_q"])
+numchk("BH table N2 q", "N2 0.023", BHT["N2_olfactory_control"]["bh_q"])
+numchk("BH table M2 q", "M2 0.136", BHT["M2_membrane_cytoskeleton"]["bh_q"])
+numchk("BH table M1 q", "M1 0.181", BHT["M1_mechanogated_channels"]["bh_q"])
+numchk("BH table N1 q", "N1 0.201", BHT["N1_voltage_gated_control"]["bh_q"])
+present("BH full-table disclosure sentence", "the full ordering of q values was N3 0.014")
+
+# (4) within-M2 BH survivors EZR / PXN
+W2 = RA["within_m2_survivors"]
+numchk("EZR LFC", "EZR, -0.335", W2["EZR"]["log2fc"])
+numchk("EZR Welch P", "Welch P = 0.0008", W2["EZR"]["welch_P"])
+numchk("EZR within-M2 q", "q = 0.017", W2["EZR"]["q_within_M2"])
+numchk("PXN LFC", "PXN, -0.210", W2["PXN"]["log2fc"])
+numchk("PXN Welch P", "P = 0.002", W2["PXN"]["welch_P"])
+numchk("PXN within-M2 q", "q = 0.019", W2["PXN"]["q_within_M2"])
+present("within-M2 survivors reported descriptively", "survived within-module correction (EZR")
+
+# (5) detected-gene CCI + cancellation decomposition + counterfactual
+CCD = RA["cci_detected_only"]
+numchk("detected-gene CCI difference", "+215.6", CCD["difference"])
+numchk("detected-gene CCI P", "the CCI becomes +215.6 (permutation P = 0.046)", CCD["exact_perm_P"])
+numchk("E1 mean rank displacement", "moved a mean of 596 within-sample rank positions", CCD["e1_mean_rank_displacement_down"])
+numchk("TRPA1 rank displacement", "5,451 rank positions", CCD["trpa1_mean_rank_displacement_down"])
+numchk("TRPA1 CPM control", "mean CPM 0.033 versus 0.007", CCD["trpa1_cpm_ctrl"])
+CCF = RA["cci_counterfactual_uniform_e1_shift"]
+numchk("CCI counterfactual difference", "about +2,470", CCF["cci_difference"])
+numchk("CCI counterfactual P", "P = 0.0006", CCF["exact_perm_P"])
+present("CCI re-labeled descriptive not negative control", "descriptive rank-based observation rather than as a negative control")
+
+# (6) E1-core 敏感性（13 经典通道）
+E1C = RA["e1_core_sensitivity"]
+numchk("E1-core difference", "-0.244 log2CPM", E1C["difference"])
+numchk("E1-core Welch P", "Welch P = 0.0037", E1C["welch_P"])
+numchk("E1-core permutation P", "exact permutation P = 0.0023", E1C["exact_perm_P"])
+numchk("E1-core CI high", "-0.39 to -0.10", E1C["welch_ci95"][1])
+numchk("E1-core detected-only diff", "detected genes only, n = 10: -0.257", E1C["detected_only_difference"])
+numchk("E1-core detected-only P", "P = 0.0029", E1C["detected_only_perm_P"])
+present("E1-core labeled post hoc robustness", "post hoc robustness analysis restricting E1 to 13 canonical")
+
+# (7) PTK2 M3∩M4 重复披露
+PTK = RA["ptk2_overlap_sensitivity"]
+numchk("M3 minus PTK2 difference", "M3 minus PTK2: -0.047 log2CPM", PTK["m3_minus_ptk2"]["difference"])
+numchk("M3 minus PTK2 P", "P = 0.44", PTK["m3_minus_ptk2"]["exact_perm_P"])
+numchk("M4 minus PTK2 difference", "M4 minus PTK2: -0.024", PTK["m4_minus_ptk2"]["difference"])
+numchk("M4 minus PTK2 P", "P = 0.52", PTK["m4_minus_ptk2"]["exact_perm_P"])
+present("PTK2 duplication disclosed", "PTK2 (FAK) appears in both M3 and M4")
+
+# (8) v1.1.7 文本断言：引用勘误与措辞修正
+present("Murthy year/volume/issue fixed", "Sci Transl Med. 2018;10(462):eaat9897")
+present("Nguyen author list fixed", "Ryba NJP, Davidson S")
+present("Chen 2020 protocol volume fixed", "Trials. 2020;21(1):630")
+present("protocol cited as protocol only", "protocol for that trial:")
+present("Woo title hyphenation fixed", "Merkel-cell mechanotransduction")
+present("Ranade DOI verified", "doi:10.1038/nature13980")
+present("Chesler claim corrected", "selective loss of discriminative touch and proprioception")
+present("Coste 2010 cited", "Coste B, Mathur J, Schmidt M, et al.")
+present("Ranade 2014 cited", "Ranade SS, Woo SH, Dubin AE, et al.")
+present("Gershon 2015 cited", "Gershon AA, Breuer J, Cohen JI, et al.")
+present("Johnson & Rice 2014 cited", "Johnson RW, Rice AS. Postherpetic neuralgia")
+present("Simeoli 2017 cited", "Simeoli R, Montague K, Jones HR, et al.")
+present("Picco 2025 cited", "Picco F, Zeboudj L, Oggero S, et al.")
+present("Xie 2026 cited (replaces GEO-accession citation)", "Xie X, Bi S, Su B, et al.")
+present("no GEO accession as reference entry", "GSE314229.")
+present("Li & Dewey cited in text", "integrity verified).^13^")
+present("Benjamini-Hochberg cited in text", "within each contrast.^15^")
+
+# (9) v1.1.7 文本断言：Methods/Results 措辞
+present("MDE labeled post hoc", "computed from the observed group SDs as a post hoc sensitivity")
+present("MoR transform described exactly", "log2(1 + CPM/size factor)")
+present("MoR size-factor gene count", "17,922 genes with non-zero counts")
+present("MoR labeled post hoc", "sensitivity analysis (specified post hoc)")
+present("MWU disposition stated", "are deposited in the reproducibility package and are not relied upon")
+present("MDE/CI/percentile in Methods", "permutation-inversion intervals")
+present("STROBE sentence in 2.1", "reporting follows the items of STROBE")
+present("coverage contradiction fixed", "M1, M2, M4, E1 and N1 were fully represented")
+present("TRPA1 mechanogating caveat", "its direct mechanical gating is debated")
+present("E1 non-canonical members justified", "reported in human DRG neurons;^14^")
+present("M3 alias sensitivity reported", "CCN1/CCN2 orthologs included (58 genes: -0.048; P = 0.42)")
+present("SCN10A second-smallest P wording", "the second-smallest P value within E1 after TRPV1")
+present("SCN10A within-E1 q disclosed", "within-E1 q = 0.068")
+present("LOX/YAP1 symmetric floor caveat", "LOX, mean CPM 0.40, and YAP1, 1.04")
+present("M1 unit fix in 3.1", "mean log2CPM 7.94 across all 12 infection-experiment samples")
+present("i.e. -> ie (Dove rule)", "ie E1 is not separable from N1")
+present("clinical next step re-posed", "pre-specify PHN at 90 days as the endpoint")
+present("limitation xiv scoring function", "(xiv) Module scores are unweighted means")
+present("limitation xv no functional validation", "(xv) All findings are transcriptional")
+present("limitation xvi replicate independence", "(xvi) Whether the exosome-treated replicates")
+present("limitation vii double-barreled fixed", "no causal, mechanistic, or therapeutic claim is made")
+present("rat-species attribution for rESWT dataset", "single-cell data from a rat bone-callus model")
+present("ESWT recast without protocol-as-efficacy", "within-group benefit in small uncontrolled or single-blind studies")
+present("Piezo1-FAK (not Piezo/TRP)", "Piezo1–FAK signaling in non-neuronal model systems")
+present("EV pain-signaling claim cited", "neuropathic mechanical hypersensitivity.^25,26^")
+present("title carries HD10.6 qualification", "immortalized human sensory-neuron line (HD10.6)")
+present("cover-letter-consistent PHN definition in manuscript", "persisting at least 90 days after the onset")
+present("no 'cardinal symptom' overstatement", "common, clinically prominent feature")
+present("DiDiD in conclusions", "route-by-program difference-in-differences (-0.193 log2CPM")
+present("global-shift diagnostic bluntness caveat", "blunt instrument dominated by low-count genes")
+present("data availability tag v1.1.7", "tag v1.1.7")
+present("registration re-anchored (no external registry)", "no external registry entry")
+present("abstract M1 resolution-limit qualifier", "M1 was resolution-limited (P = 0.11; detected-gene subset P = 0.046)")
+present("abstract route magnitude-not-direction", "no module-level E1 shift and a lesser TRPV1 decrease")
+present("M4 route sentence without significant-vs-not", "the route difference for M4 was not itself significant")
 
 # ---- 汇总 ----
 fails = [r for r in results if str(r[2]).startswith("FAIL")]

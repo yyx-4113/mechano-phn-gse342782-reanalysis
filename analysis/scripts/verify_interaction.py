@@ -10,7 +10,8 @@ import pandas as pd
 from scipy import stats
 from itertools import combinations
 
-ROOT = "D:/2026.10/机械应力"
+from pathlib import Path
+ROOT = str(Path(__file__).resolve().parents[1])
 RAW = os.path.join(ROOT, "analysis/data/raw")
 CFG = os.path.join(ROOT, "analysis/config/mtp_panel.json")
 

@@ -6,23 +6,13 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-RAW = "D:/2026.10/机械应力/analysis/data/raw"
-CFG = "D:/2026.10/机械应力/analysis/config/mtp_panel.json"
-OUT = "D:/2026.10/机械应力/analysis/results/layer1"
+from pathlib import Path
+_ROOT = Path(__file__).resolve().parents[1]
+RAW = str(_ROOT / "data" / "raw")
+CFG = str(_ROOT / "config" / "mtp_panel.json")
+OUT = str(_ROOT / "results" / "layer1")
 with open(CFG) as f:
     PANEL = json.load(f)
-
-def load_counts(path):
-    rows = {}
-    with gzip.open(path, "rt") as f:
-        r = csv.reader(f); next(r)
-        for row in r:
-            g = row[0].strip()
-            if not g: continue
-            try: vals = [float(v) for v in row[1:]]
-            except ValueError: continue
-            if g not in rows: rows[g] = vals
-    return pd.DataFrame(rows, index=[h for h in pd.read_csv(path.replace('.gz',''), nrows=1, header=None).iloc[0,1:]]).T
 
 # 用已有函数重读
 import importlib.util
@@ -41,7 +31,7 @@ def load(path):
     return pd.DataFrame(rows).T
 di = load(os.path.join(RAW, "GSE342782_Processed_DirectInf_neuronHD10s_BulkSeq_Counts.csv.gz"))
 se = load(os.path.join(RAW, "GSE342782_SeraExoTreatedHD10sBulkSeq_counts.csv.gz"))
-se.columns = ["C11","C15","C18","C2","C20","C21","C5","P1","P10","P4","P7","P9","S17","S24","S27","S34","S44","S45","S62"]
+with gzip.open(os.path.join(RAW, "GSE342782_SeraExoTreatedHD10sBulkSeq_counts.csv.gz"), "rt") as _f:/n    se.columns = [h for h in next(csv.reader(_f))[1:]]
 cpm = se.div(se.sum(axis=0), axis=1)*1e6
 L = np.log2(1+cpm)
 grp = {s:("ctrl" if s.startswith("C") else "phn" if s.startswith("P") else "hz") for s in se.columns}

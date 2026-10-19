@@ -1,13 +1,33 @@
 {
-  "layer1_results.json": "e579dc0c5336bf00abf297a56067cf0fa11b7798f8b04408c914c918b61c3eca",
-  "layer1_module_scores.csv": "db877136b5819faa455e193de00a46ae8dae2e5e7f2153d63b7bb4e764b780fc",
+ "manifest_version": "2",
+ "generated_utc": "2026-10-19T18:27:01Z",
+ "files": {
   "layer1_cci.csv": "b3a648757ced05e84059a0d6d7867ce7ccf65b62f25c359db9cfb3f726726e50",
+  "layer1_diag.json": "27d4d99e2f9ffda074124c115b528a7c8dba61998bb4c3bfaa4845dd6fc49959",
+  "layer1_extra_checks.json": "28a888c0a3ecfc15cfd791ab0ffa94a654c9164849e4ce9562b021d804fc208c",
   "layer1_gene_level.csv": "3310b276c5cc59e2dc52d5bd3511eaf7613dc52160fb1410a35e4c9049ec88c1",
   "layer1_global_de.csv": "8f9d58b9e040dce815568e1b5d59e14aa6bcb21272b243a2f8a2be4e88cfffb2",
-  "layer1_diag.json": "27d4d99e2f9ffda074124c115b528a7c8dba61998bb4c3bfaa4845dd6fc49959",
-  "inputs": {
-    "DirectInf": "93aa468acfeab8a2045a09fb24b734627d630226e77573fd867d43e8ca87004e",
-    "SeraExo": "21bdde38d8f812a680a22ec60bc2d52f101398d5d4bfef5a6e686aee726bfdff",
-    "panel": "6d4f2bc844e68a7277879157f0210bcfd6bfd42a055a51de385382f2b4e60e3c"
-  }
+  "layer1_module_scores.csv": "db877136b5819faa455e193de00a46ae8dae2e5e7f2153d63b7bb4e764b780fc",
+  "layer1_norm_robustness.json": "fb9bee545e79c14c74135063c9620dbabc35c9cbfbd5cba52a2531a98c01e09f",
+  "layer1_results.json": "e579dc0c5336bf00abf297a56067cf0fa11b7798f8b04408c914c918b61c3eca",
+  "layer1_round2_additions.json": "5af9c8b111a8ae2f5d081edc7ec6a0f24c41674f4b9d7ffaf83a43cfd8c0c61b"
+ },
+ "figures": {
+  "fig1_design.png": "e7cf4f958b3c7f2095888cdd5423c685a14aad6e72150021a73683373fdd11b0",
+  "fig2a_module_scores.png": "84dcc15b7fb86adec5b981423beeed4c70094e382ae4444ecc6f65778d435f6e",
+  "fig2b_E1_genes.png": "83afc143a092a71a895076c336e808dde6b5b98ac02cafa1cd48e762211362c3",
+  "fig2c_dissociation.png": "4f78cfb2ea867252fd1051e10871a8840a1b1b1916cec17a29c4401db87eeb4d",
+  "fig2d_cci.png": "4545f2e834524c73c34ed1569bca886a4f03d94c89bfb25631646a2033b4ff88"
+ },
+ "gate_reports": {
+  "gate_consistency_report.txt": "8764e467f8cd13c74f335b2426d320aa18f90ca274c2892435eccfb6fc8aeb53",
+  "gate_jpr_compliance_report.txt": "118472ce7372b42a011f37a63d5d4ffb3c140bc59670ec16b8960a5c46bba9ea"
+ },
+ "inputs": {
+  "raw/GSE342782_Processed_DirectInf_neuronHD10s_BulkSeq_Counts.csv.gz": "93aa468acfeab8a2045a09fb24b734627d630226e77573fd867d43e8ca87004e",
+  "raw/GSE342782_SeraExoTreatedHD10sBulkSeq_counts.csv.gz": "21bdde38d8f812a680a22ec60bc2d52f101398d5d4bfef5a6e686aee726bfdff",
+  "raw/GSE342782_series_matrix.txt.gz": "d6a0a67e3c3d528c3598194937e55e3a7afa08e7ec028237ef4f90630d4274bc",
+  "raw/GSE64345_series_matrix.txt.gz": "6a5c0db592a68d9632a3f35cf7dc639ca0b08d7a3b96ccf8a2453ea4a24a65ab",
+  "config/mtp_panel.json": "6d4f2bc844e68a7277879157f0210bcfd6bfd42a055a51de385382f2b4e60e3c"
+ }
 }

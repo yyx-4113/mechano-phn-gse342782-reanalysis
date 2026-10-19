@@ -8,7 +8,8 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-OUT = "D:/2026.10/机械应力/analysis/results/layer1"
+from pathlib import Path
+OUT = str(Path(__file__).resolve().parents[1] / "results" / "layer1")
 FIG = os.path.join(OUT, "fig")
 os.makedirs(FIG, exist_ok=True)
 with open(os.path.join(OUT, "layer1_results.json")) as f:
@@ -57,9 +58,11 @@ ax.set_ylabel("Module score diff\n(HZ-exo − Ctrl-exo, log2CPM)")
 ax.set_title("Fig 2a. Mechanical-transduction module scores: HZ-exo vs Ctrl-exo\n(red=M-mechano, blue=E1, grey=neutral controls; dashed = detection floor)")
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(color="#c0392b", label="M1–M4 mechano modules"),
-                   Patch(color="#2980b9", label="E1 classical nociceptor"),
+                   Patch(color="#2980b9", label="E1 classical nocireptor"),
                    Patch(color="#7f8c8d", label="N1–N3 neutral controls")],
           fontsize=8, loc="upper left", framealpha=0.9)
+ax.text(0.99, 0.02, "*P < 0.05, **P < 0.01, ***P < 0.001 (exact permutation P)\nn = 7 vs 7; bars are group-mean module-score differences",
+        transform=ax.transAxes, ha="right", va="bottom", fontsize=8, style="italic")
 plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2a_module_scores.png"), dpi=150); plt.close()
 
 # ---- Fig2b: CCI across contrasts ----
@@ -76,23 +79,30 @@ for xi, (d, p) in enumerate(zip(cd, cp)):
 ax.axhline(0, color="black", lw=0.8)
 ax.set_xticks(xb); ax.set_xticklabels(clabs, rotation=20, ha="right", fontsize=8)
 ax.set_ylabel("CCI diff (M1 vs E1 mean-rank)")
-ax.set_title("Fig 2b. Channel Complementarity Index (CCI) by contrast")
-plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2b_cci.png"), dpi=150); plt.close()
+ax.set_title("Fig 2d. Channel-complementarity index (CCI) by contrast (all ns; exact permutation P ≥ 0.82)")
+plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2d_cci.png"), dpi=150); plt.close()
 
 print("figures written:", os.listdir(FIG))
 
-# ---- Fig2c: E1 经典伤害性通道基因级 LFC（真实阳性）----
+# ---- Fig2b: E1 经典伤害性通道基因级 LFC（真实阳性，重编号自 Fig 2c）----
+import pandas as pd
+gl = pd.read_csv(os.path.join(OUT, "layer1_gene_level.csv"))
+gl = gl[gl["contrast"] == "HZexo_vs_CtrlExo"]
 e1 = R["contrasts"]["HZexo_vs_CtrlExo"]["E1_classical_nociceptor"]
-tg = e1["top_genes"]  # [(gene, diff), ...]
-# 取 |diff| 最大的前 10
-tg = sorted(tg, key=lambda x: -abs(x[1]))[:10]
+tg = sorted(e1["top_genes"], key=lambda x: -abs(x[1]))[:10]
 gn = [t[0] for t in tg]; gv = [t[1] for t in tg]
-fig, ax = plt.subplots(figsize=(7, 4.5))
+pv = {r["gene"]: r["welch_p"] for _, r in gl.iterrows() if r["gene"] in set(gn)}
+fig, ax = plt.subplots(figsize=(7.6, 4.8))
 colors = ["#c0392b" if v < 0 else "#27ae60" for v in gv]
 ax.barh(range(len(gn)), gv, color=colors, edgecolor="black", lw=0.5)
 ax.set_yticks(range(len(gn))); ax.set_yticklabels(gn, fontsize=9)
+for i, g in enumerate(gn):
+    p = pv.get(g, float("nan"))
+    mark = "*" if p < 0.05 else "ns"
+    ax.text(gv[i] - 0.02, i, f"{gv[i]:+.3f}  {mark}", ha="right", va="center", fontsize=8)
 ax.axvline(0, color="black", lw=0.8)
+ax.set_xlim(min(gv) - 0.28, 0.05)
 ax.set_xlabel("log2CPM difference (HZ-exo − Ctrl-exo)")
-ax.set_title("Fig 2c. Classical nociceptor channels (E1) downregulated by acute HZ serum exosomes\n(pre-specified secondary endpoint); only TRPV1 survives within-module BH (q = 0.017)")
-plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2c_E1_genes.png"), dpi=150); plt.close()
-print("fig2c added")
+ax.set_title("Fig 2b. E1 genes with the largest HZ-exo effects; only TRPV1 survives\nwithin-module BH within E1 (q = 0.017); bars selected by |effect size|, * = nominal P < 0.05", fontsize=9.5)
+plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2b_E1_genes.png"), dpi=150); plt.close()
+print("fig2b (E1 genes) added")

@@ -1,7 +1,10 @@
 PASS  abstract block present
-PASS  abstract <= 300 words (actual 300)  [limit 300, got 300]
+PASS  abstract <= 300 words (actual 294)  [limit 300, got 294]
 PASS  keywords count 3-6 (actual 6)  [postherpetic neuralgia; mechanical allodynia; mechanotransduction; PIEZO2; varicella-zoster virus; extracellular vesicles]
-PASS  reference numbering contiguous 1..N (N=21)
+PASS  reference numbering contiguous 1..N (N=27)
+PASS  cited set == listed set (no uncited references)  [uncited: []]
+PASS  AMA first-appearance order is sequential  [order: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]]
+PASS  every reference entry carries a year  [[]]
 PASS  no British-spelling residue  [clean]
 PASS  Figure 1 cited in text
 PASS  Figure 2a cited in text
@@ -9,6 +12,8 @@ PASS  Figure 2b cited in text
 PASS  Figure 2c cited in text
 PASS  Figure 2d cited in text
 PASS  Table 1 cited in text
+PASS  all 5 figure captions present in md  [found: ['Figure 1', 'Figure 2a', 'Figure 2b', 'Figure 2c', 'Figure 2d']]
+PASS  figure caption carrying interaction P is qualified (post hoc + detected-gene P = 0.16)
 PASS  corresponding e-mail present
 PASS  ORCID present
 PASS  postal address present
@@ -23,10 +28,20 @@ PASS  section present: Declaration of interests
 PASS  section present: Funding
 PASS  section present: References
 PASS  running title present
-PASS  no placeholder '[truncated]'
-PASS  no placeholder 'TODO'
-PASS  no placeholder 'XXX'
-PASS  no placeholder 'Lorem'
-PASS  no placeholder '[insert'
+PASS  no placeholder/internal label '[truncated]'
+PASS  no placeholder/internal label 'TODO'
+PASS  no placeholder/internal label 'XXX'
+PASS  no placeholder/internal label 'Lorem'
+PASS  no placeholder/internal label '[insert'
+PASS  no placeholder/internal label 'Round-4'
+PASS  no placeholder/internal label 'Round 4'
+PASS  no placeholder/internal label 'internal benchmark'
+PASS  no 'pre-registered' branding in manuscript
+PASS  registration sentence states no external registry entry
+PASS  data availability cites tag v1.1.7  [looking for 'tag v1.1.7']
+PASS  cover letter title matches manuscript title
+PASS  cover letter does not redefine PHN by its symptom
+PASS  cover letter has no pre-registered branding
+PASS  repository README has no pre-registered branding
 
-TOTAL 30 | PASS 30 | FAIL 0
+TOTAL 45 checks | PASS 45 | FAIL 0

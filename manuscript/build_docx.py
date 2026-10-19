@@ -2,7 +2,12 @@
 # -*- coding: utf-8 -*-
 """manuscript .md -> .docx (Times New Roman 12pt, heading levels, tables, figures).
 遵循用户约定：cover/manuscript 生成 Times New Roman 12pt；不使用花哨模板。
-v1.1.0 修订：修正图插入层级（### 3.x 也是 h3），支持 markdown 表格渲染（Table 1）。"""
+v1.1.0 修订：修正图插入层级（### 3.x 也是 h3），支持 markdown 表格渲染（Table 1）。
+v1.1.7 修订：
+  - MD/OUT 指向 manuscript_v1.1.7；
+  - 图件改由 md 中的题注 blockquote 驱动插入（md 是题注的唯一来源，避免双份题注）；
+  - 题注文件映射更新为重编号后的文件名（fig2b_E1_genes / fig2c_dissociation / fig2d_cci）。
+"""
 import re, os
 from pathlib import Path
 from docx import Document
@@ -12,9 +17,18 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # 路径相对仓库根（manuscript/ 上溯一级），避免绝对路径不可移植
 _ROOT = Path(__file__).resolve().parents[1]
-MD = str(_ROOT / "manuscript" / "manuscript_v1.1.5.md")
+MD = str(_ROOT / "manuscript" / "manuscript_v1.1.7.md")
 FIG = str(_ROOT / "analysis" / "results" / "layer1" / "fig")
-OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.5.docx")
+OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.7.docx")
+
+# 题注前缀 -> (图文件, 宽度 inch)。题注 blockquote 在 md 中的位置即插图位置。
+FIG_MAP = {
+    "Figure 1.":  ("fig1_design.png", 6.2),
+    "Figure 2a.": ("fig2a_module_scores.png", 5.8),
+    "Figure 2b.": ("fig2b_E1_genes.png", 5.8),
+    "Figure 2c.": ("fig2c_dissociation.png", 5.8),
+    "Figure 2d.": ("fig2d_cci.png", 5.8),
+}
 
 doc = Document()
 style = doc.styles["Normal"]
@@ -84,51 +98,16 @@ def render_table(rows):
             run.font.name = "Times New Roman"; run.font.size = Pt(10)
     doc.add_paragraph()
 
-# 图件按"正文引用所在小节"就近插入（JPR 要求图表须在正文中被引用）
-FIG_SPECS = [
-    ("fig1_design.png", 6.2,
-     "Figure 1. Study design and prospectively specified analysis pipeline."),
-    ("fig2a_module_scores.png", 5.8,
-     "Figure 2a. Module-score differences for the primary contrast (HZ-exo vs control-exo), with neutral controls displayed alongside. E1 is the only biological module significantly shifted."),
-    ("fig2c_E1_genes.png", 5.8,
-     "Figure 2c. Gene-level differences within E1 for the primary contrast: coherent suppression of classical nociceptor channels. Only TRPV1 survives Benjamini-Hochberg correction within the module (q = 0.017)."),
-    ("fig2d_dissociation.png", 5.8,
-     "Figure 2d. Perturbation route and channel programme: E1-selective suppression under HZ exosomes (interaction P = 0.0017); reciprocal VZV pattern not significant (P = 0.19)."),
-    ("fig2b_cci.png", 5.8,
-     "Figure 2b. Channel-complementarity index (CCI) differences by contrast (all non-significant)."),
-]
-# 小节 -> 该小节内引用的图件（文件名）
-FIG_BY_SECTION = {
-    "3.1": ["fig1_design.png"],
-    "3.3": ["fig2a_module_scores.png", "fig2c_E1_genes.png"],
-    "3.4": ["fig2d_dissociation.png"],
-    "3.6": ["fig2b_cci.png"],
-}
-FIG_DONE = set()
-
-
-def insert_figures(section_key):
-    for fn in FIG_BY_SECTION.get(section_key, []):
-        if fn in FIG_DONE:
-            continue
-        spec = next((s for s in FIG_SPECS if s[0] == fn), None)
-        if spec is None:
-            continue
+def add_figure(caption_text):
+    """按题注文本前缀插图，然后输出题注（居中、斜体、10pt）。"""
+    key = next((k for k in FIG_MAP if caption_text.startswith(k)), None)
+    if key is not None:
+        fn, width = FIG_MAP[key]
         fp = os.path.join(FIG, fn)
-        if not os.path.exists(fp):
-            continue
-        p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.add_run().add_picture(fp, width=Inches(spec[1]))
-        add_par(spec[2], size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER)
-        FIG_DONE.add(fn)
-
-def maybe_figures(h):
-    """按小节号就近插入该小节引用的图件。"""
-    for key in FIG_BY_SECTION:
-        if h.startswith(key):
-            insert_figures(key)
-            return
-
+        if os.path.exists(fp):
+            p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.add_run().add_picture(fp, width=Inches(width))
+    add_par(caption_text, size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER)
 
 lines = open(MD, encoding="utf-8").read().splitlines()
 i = 0
@@ -153,17 +132,13 @@ while i < len(lines):
     elif line.startswith("# "):
         add_par(heading_text(line), bold=True, size=14)
     elif line.startswith("## "):
-        h = heading_text(line)
-        add_par(h, bold=True, size=12.5)
-        maybe_figures(h)
+        add_par(heading_text(line), bold=True, size=12.5)
     elif line.startswith("### "):
-        h = heading_text(line)
-        add_par(h, bold=True, size=12)
-        maybe_figures(h)
+        add_par(heading_text(line), bold=True, size=12)
     elif line.strip() == "---":
         pass
     elif line.startswith("> "):
-        add_par(line[2:].strip(), size=10, italic=True)
+        add_figure(line[2:].strip())
     elif line.startswith("- "):
         add_rich("• " + line[2:].strip(), size=12)
     elif line.startswith("[") and re.match(r"^\[\d+\]", line):

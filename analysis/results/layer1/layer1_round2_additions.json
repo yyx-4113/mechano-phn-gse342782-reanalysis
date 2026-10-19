@@ -1,0 +1,172 @@
+{
+ "route_by_module_didid": {
+  "composite": "E1 module score minus M1 module score, same orientation in both routes",
+  "did_exosome": -0.1417,
+  "did_direct_infection": 0.0508,
+  "difference": -0.1925,
+  "exact_perm_P": 0.00106,
+  "n_extreme": 3356,
+  "n_null_partitions": 3171168,
+  "note": "product of the two independent exact nulls (3432 x 924); SCN10A contributes to E1 only in the infection experiment"
+ },
+ "m4_route_difference": {
+  "diff_exosome": -0.0278,
+  "diff_infection": -0.0544,
+  "route_difference": 0.0266,
+  "exact_perm_P": 0.5783,
+  "n_extreme": 1833814,
+  "n_null_partitions": 3171168
+ },
+ "cci_detected_only": {
+  "n_m1_detected": 5,
+  "n_e1_detected": 13,
+  "m1_detected": [
+   "PIEZO1",
+   "PIEZO2",
+   "KCNK4",
+   "TMEM150C",
+   "P2RX3"
+  ],
+  "e1_detected": [
+   "SCN9A",
+   "SCN11A",
+   "TRPV1",
+   "CACNA2D1",
+   "CACNA2D2",
+   "CACNA1H",
+   "KCNQ2",
+   "KCNS1",
+   "ASIC1",
+   "ASIC2",
+   "ASIC3",
+   "GRIA2",
+   "P2RX7"
+  ],
+  "difference": 215.6,
+  "exact_perm_P": 0.046,
+  "full_set_difference": 82.7,
+  "full_set_perm_P": 0.8328,
+  "e1_mean_rank_displacement_down": 596.0,
+  "m1_mean_rank_displacement_down": 513.0,
+  "trpa1_mean_rank_displacement_down": 5451.0,
+  "trpa1_cpm_ctrl": 0.0332,
+  "trpa1_cpm_hz": 0.0071,
+  "top_e1_downward": {
+   "GRIA1": 2868.0,
+   "SCN10A": 1396.0,
+   "TRPV1": 1042.0,
+   "GRIN2B": 1025.0
+  }
+ },
+ "cci_counterfactual_uniform_e1_shift": {
+  "imposed_shift_log2cpm": -0.2196,
+  "cci_difference": 2470.0,
+  "exact_perm_P": 0.00058
+ },
+ "e1_core_sensitivity": {
+  "genes": [
+   "SCN9A",
+   "SCN10A",
+   "SCN11A",
+   "TRPV1",
+   "TRPM8",
+   "ASIC1",
+   "ASIC2",
+   "ASIC3",
+   "KCNS1",
+   "KCNQ2",
+   "KCNQ3",
+   "CACNA2D1",
+   "CACNA2D2"
+  ],
+  "n_genes": 13,
+  "difference": -0.2442,
+  "welch_P": 0.0037,
+  "exact_perm_P": 0.0023,
+  "welch_ci95": [
+   -0.388,
+   -0.101
+  ],
+  "welch_ci95_df": 9.38,
+  "detected_only_n": 10,
+  "detected_only_difference": -0.2573,
+  "detected_only_perm_P": 0.0029,
+  "label": "post hoc robustness analysis; not part of the frozen panel"
+ },
+ "ptk2_overlap_sensitivity": {
+  "m3_minus_ptk2": {
+   "difference": -0.0475,
+   "exact_perm_P": 0.435,
+   "n_genes": 55
+  },
+  "m4_minus_ptk2": {
+   "difference": -0.0238,
+   "exact_perm_P": 0.524,
+   "n_genes": 24
+  },
+  "note": "PTK2 is a member of both M3 and M4 in the frozen panel"
+ },
+ "bh_table_hz_contrast": {
+  "M1_mechanogated_channels": {
+   "diff": -0.078,
+   "p_perm_exact": 0.1131,
+   "n_genes": 9,
+   "bh_q": 0.181
+  },
+  "M2_membrane_cytoskeleton": {
+   "diff": -0.1483,
+   "p_perm_exact": 0.0682,
+   "n_genes": 20,
+   "bh_q": 0.1364
+  },
+  "M3_ecm_integrin_hippo": {
+   "diff": -0.0489,
+   "p_perm_exact": 0.4219,
+   "n_genes": 56,
+   "bh_q": 0.4615
+  },
+  "M4_mechano_effectors": {
+   "diff": -0.0278,
+   "p_perm_exact": 0.4615,
+   "n_genes": 25,
+   "bh_q": 0.4615
+  },
+  "E1_classical_nociceptor": {
+   "diff": -0.2196,
+   "p_perm_exact": 0.0128,
+   "n_genes": 18,
+   "bh_q": 0.0341
+  },
+  "N1_voltage_gated_control": {
+   "diff": -0.1558,
+   "p_perm_exact": 0.1509,
+   "n_genes": 17,
+   "bh_q": 0.2012
+  },
+  "N2_olfactory_control": {
+   "diff": -0.0221,
+   "p_perm_exact": 0.0058,
+   "n_genes": 13,
+   "bh_q": 0.0232
+  },
+  "N3_ribosomal_control": {
+   "diff": 0.3914,
+   "p_perm_exact": 0.0017,
+   "n_genes": 17,
+   "bh_q": 0.0136
+  }
+ },
+ "within_m2_survivors": {
+  "PXN": {
+   "log2fc": -0.2102,
+   "welch_P": 0.0019,
+   "q_within_M2": 0.019
+  },
+  "EZR": {
+   "log2fc": -0.3346,
+   "welch_P": 0.00083,
+   "q_within_M2": 0.0167
+  }
+ },
+ "within_m2_n_tested": 20
+}
