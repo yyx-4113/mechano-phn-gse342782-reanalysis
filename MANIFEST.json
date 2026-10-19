@@ -2,7 +2,7 @@
   "generated": "2026-10-19",
   "algorithm": "sha256",
   "repository": "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis",
-  "tag": "v1.1.1",
+  "tag": "v1.1.2",
   "files": {
     ".github\\workflows\\release.yml": "0c33ecd835c8ca87402b8c26929e9f93b998e6fcf961a2d2b695ef4ed1efb33c",
     "analysis\\config\\mtp_panel.json": "6d4f2bc844e68a7277879157f0210bcfd6bfd42a055a51de385382f2b4e60e3c",
@@ -28,21 +28,19 @@
     "analysis\\scripts\\layer1_diag.py": "74c797faed272837d06ee468ef6be7b58619d4a5d1114f2d74b32fdef4957df5",
     "analysis\\scripts\\layer1_mechano.py": "77a2c0e9d54f5b636ece2dbb3106df753030c9a21a22fb180839206539aa0387",
     "analysis\\scripts\\verify_interaction.py": "0175c3459ed6ef8662d51608ad3364b953d3cd96dba08730604cfe8723c24f7f",
-    "manuscript\\build_docx.py": "7a3157183cf9c47ffac7a0f3faef43f488a46d5fbb2804b6e0c4e9c9d20f42bf",
+    "manuscript\\build_docx.py": "255476761230145440208d19b02cf2e8bcedb0beb07e25c574b4694fbe001872",
     "manuscript\\cover_letter_JPR.md": "e61a6b956ef4b7a71d7669e9d4565fe9eec958ff463e8fbf907eeb92a5d3d773",
-    "manuscript\\gate_consistency.py": "8f0b98621d36f597c808c5a222a69f0955640acd80c08f90297448ba5e5ff590",
-    "manuscript\\manuscript_v1.0.0.docx": "3be4809db561dba8667387a194db1e1a80fb56d50daa19eafe838b053caf7a4f",
-    "manuscript\\manuscript_v1.0.0.md": "5d8decacd2d3f3529abedadf55886bf85c503617b6a33c966142ce6490ef06db",
-    "manuscript\\manuscript_v1.1.1.docx": "a7ae3e8e4251a67756392633ae0c68626f3df4cc93bed12fc00c9ad4da80e3c5",
-    "manuscript\\manuscript_v1.1.1.md": "eb7104b3d55444576f136f224bc5f922da1be9390c032ce406160193a046f3f0",
+    "manuscript\\gate_consistency.py": "950a16f16ce03745d5117cd60471edd729b3560d93732e4bf6d205bbf5fd2811",
+    "manuscript\\manuscript_v1.1.2.docx": "d39a1ae3665189a7c7a498ec691b55d899f0e2e168e6e2f4a3f9d45516b39b28",
+    "manuscript\\manuscript_v1.1.2.md": "3fb9c20662130c20d60c0494f10ac5e5581f2ea81b793b39eff9aed4a994b9f2",
     "README.md": "e99546191bc03bdc056f408bd53c25332ce7fdf3a50d236c39656d1c57b14fe7",
     "LICENSE": "7b36f471cfb9e7c7c6611b00426888737e0cb9b845e48897d8ced9c1b15243f4",
-    "CITATION.cff": "fdcf1cbce6b372fd1299d890bc1f90b2f98a0ea5ab30b8c88f14da7c757dba82",
-    "MANIFEST.json": "cd641f6406e52025223480daae9de87d5183539af61498de50c137b7a9a98dc3",
+    "CITATION.cff": "25d9de7c3c9aa14a9fc7d76eccf2db862240b79ddf5542d5953fb3ce6462bc3b",
+    "MANIFEST.json": "6a2166dfd82fbb1714527bc4f924581c9b8fb23262a2d1d279f956b9f40f2be4",
     "GITHUB_DEPOSIT_SOP.md": "9c9353b4ebdde98596b1462499a367d4095c05118d37736854306be77e2983eb",
     "author_verification_statement.md": "15a9f7784aeb3aa95a7198bb1a16940e7879eeb81cfb9f6d3ee4f2685f63b553",
     "PROTOCOL_机械应力与PHN.md": "d98d36df75761063821466dfe6ac49266de168174f3d856cd531997d9b1ad4fe",
-    ".gitignore": "508e8a97122c114d528200c1083e3d1e074a278b2f0e9dc744dabe4504e61f2d",
-    "analysis/scripts/make_manifest.py": "846bdea963193dca145fbc70c071a71e8e711a2d7acd4d63c4aeb5b009cab582"
+    ".gitignore": "4f23618857af488ff9041e1782cb3061be63991d75cb699fcdd3d9b2a84eebcc",
+    "analysis/scripts/make_manifest.py": "ed21b1bca8081c85bf56a49a717f7212187a1c2bb488c059d4148cb694b26ac8"
   }
 }

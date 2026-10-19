@@ -12,9 +12,9 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # 路径相对仓库根（manuscript/ 上溯一级），避免绝对路径不可移植
 _ROOT = Path(__file__).resolve().parents[1]
-MD = str(_ROOT / "manuscript" / "manuscript_v1.1.1.md")
+MD = str(_ROOT / "manuscript" / "manuscript_v1.1.2.md")
 FIG = str(_ROOT / "analysis" / "results" / "layer1" / "fig")
-OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.1.docx")
+OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.2.docx")
 
 doc = Document()
 style = doc.styles["Normal"]

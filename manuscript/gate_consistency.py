@@ -17,7 +17,7 @@ from itertools import combinations
 _ROOT = Path(__file__).resolve().parents[1]
 RES = str(_ROOT / "analysis" / "results" / "layer1")
 RAW = str(_ROOT / "analysis" / "data" / "raw")
-MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.1.md")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.2.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -195,7 +195,7 @@ numchk("TAC1 meanCPM DI", "65.7", w0["TAC1"]["DirectInf"]["mean_cpm"])
 # PIEZO2 "spared" —— 从基因级 CSV 派生（不再硬编码 0.1816）
 piezo_hz = G[(G.gene == "PIEZO2") & (G.contrast == "HZexo_vs_CtrlExo")]
 piezo_p = float(piezo_hz["welch_p"].iloc[0])
-numchk("PIEZO2 spared (gene CSV)", "PIEZO2 gene P = 0.18", piezo_p)
+numchk("PIEZO2 spared (gene CSV)", "PIEZO2 P = 0.18", piezo_p)
 
 # ---- 模块覆盖率（JSON 派生）----
 present("M3 coverage 56/58", "56/58")

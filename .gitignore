@@ -19,3 +19,7 @@ analysis/data/raw/GSE64345*
 # Local editor / OS cruft
 .DS_Store
 Thumbs.db
+
+# Local release archives (uploaded to GitHub Releases; not part of the deposited tree)
+release_v*.zip
+release_v*_SHA256.txt
