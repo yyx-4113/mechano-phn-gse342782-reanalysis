@@ -443,30 +443,49 @@ for Lm, grp, gA, gB, lab, cpm_df in [(L_se, se_groups, "ctrl_exo", "hz_exo", "HZ
 
 # ---------- 基因级 module 内 BH 校正（与模块级 BH 同法，描述性）----------
 # 使基因级证据可复现且可审计：每个 (contrast, panel module) 族内做 BH。
+#
+# Round-4 修复（跨模块共享基因的 q 覆盖 bug）：
+#   KCNQ2 与 KCNQ3 同时属于 E1 与 N1。旧实现按 (contrast, module) 依次把 q 写回
+#   同一个 gene 行，导致后处理的 N1 覆盖 E1 的 q（E1 内 KCNQ3 应为 0.3655，
+#   实际写入 0.5004；KCNQ2 应为 0.4970，实际写入 0.5636 —— 恰好是 N1 的值）。
+#   现改为先按 (contrast, module, gene) 计算并存于字典，再展开为
+#   "每个成员关系一行"（CSV 增加 module 列），彻底消除歧义。
 _gene_df = pd.DataFrame(gene_rows)
-_gene_df["q_within_module"] = np.nan
+_qmap = {}
 for _lab in _gene_df["contrast"].unique():
     for _mod, _genes in MODULES.items():
-        _mask = (_gene_df["contrast"] == _lab) & (_gene_df["gene"].isin(_genes))
-        _valid = _mask & _gene_df["welch_p"].notna() & (_gene_df["welch_p"] >= 0) & (_gene_df["welch_p"] <= 1)
+        _valid = ((_gene_df["contrast"] == _lab) & (_gene_df["gene"].isin(_genes))
+                  & _gene_df["welch_p"].notna()
+                  & (_gene_df["welch_p"] >= 0) & (_gene_df["welch_p"] <= 1))
         if int(_valid.sum()) == 0:
             continue
         _qs = bh(_gene_df.loc[_valid, "welch_p"].values)
-        _gene_df.loc[_valid, "q_within_module"] = [round(float(x), 4) for x in _qs]
-gene_rows = _gene_df.to_dict("records")
+        for _i, _q in zip(_gene_df.index[_valid], _qs):
+            _qmap[(_lab, _mod, _gene_df.at[_i, "gene"])] = round(float(_q), 4)
+
+_expanded = []
+for _r in gene_rows:
+    _lab, _g = _r["contrast"], _r["gene"]
+    _mods = [m for m, gs in MODULES.items() if _g in gs]
+    if not _mods:
+        _expanded.append(dict(_r, module="unassigned", q_within_module=None))
+        continue
+    for _m in _mods:
+        _expanded.append(dict(_r, module=_m,
+                              q_within_module=_qmap.get((_lab, _m, _g))))
+gene_rows = _expanded
+
 # 紧凑结构写入 JSON，供 gate 与可追溯性声明引用
 gene_level_bh = {}
-for _lab in _gene_df["contrast"].unique():
+for _lab in sorted({r["contrast"] for r in gene_rows}):
     gene_level_bh[_lab] = {}
-    for _mod, _genes in MODULES.items():
-        _sub = _gene_df[(_gene_df["contrast"] == _lab) & (_gene_df["gene"].isin(_genes))]
-        if len(_sub) == 0:
+    for _mod in MODULES:
+        _sub = [r for r in gene_rows if r["contrast"] == _lab and r["module"] == _mod]
+        if not _sub:
             continue
         gene_level_bh[_lab][_mod] = {
             r["gene"]: {"log2FC": r["log2FC"], "welch_p": r["welch_p"],
-                        "q_within_module": r["q_within_module"]}
-            for _, r in _sub.iterrows()
-        }
+                        "q_within_module": r["q_within_module"]} for r in _sub}
 results["gene_level_bh"] = gene_level_bh
 
 # ---------- 写出 ----------

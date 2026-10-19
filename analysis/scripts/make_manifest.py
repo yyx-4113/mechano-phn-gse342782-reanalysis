@@ -8,7 +8,7 @@ import hashlib, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-EXCLUDE_DIRS = {".workbuddy", "__pycache__", ".git", "archive"}
+EXCLUDE_DIRS = {".workbuddy", "__pycache__", ".git", "archive", ".tmpcheck"}
 EXCLUDE_FILES = {"make_manifest.py"}
 EXCLUDE_SUFFIX = {".pyc"}
 EXCLUDE_PATH_FRAGMENTS = ["GSE64345"]  # downloaded but unused raw data
@@ -49,7 +49,7 @@ out = {
     "generated": "2026-10-19",
     "algorithm": "sha256",
     "repository": "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis",
-    "tag": "v1.1.3",
+    "tag": "v1.1.4",
     "files": records,
 }
 with open(os.path.join(ROOT, "MANIFEST.json"), "w") as f:

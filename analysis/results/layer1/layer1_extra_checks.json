@@ -1,0 +1,276 @@
+{
+  "note": "Post hoc / exploratory checks added after Round-4 peer review; not part of the pre-specified frozen analysis plan.",
+  "panel_version": "mtp-frozen-2026-10-19",
+  "e1_vs_n1_benchmark": {
+    "HZexo_vs_CtrlExo": {
+      "diff_hz_exo_minus_ctrl_exo": -0.0638,
+      "perm_p": 0.1783,
+      "n_permutations": 3432,
+      "welch_p": 0.1867,
+      "mean_hz_exo": 0.56,
+      "mean_ctrl_exo": 0.6238,
+      "interpretation": "E1 is not separable from its own neutral control N1 at the module level: the (E1 - N1) difference is small and non-significant."
+    },
+    "VZV_vs_Mock": {
+      "diff_vzv_minus_mock": 0.0026,
+      "perm_p": 0.9351,
+      "n_permutations": 924,
+      "welch_p": 0.9363,
+      "mean_vzv": 0.714,
+      "mean_mock": 0.7114
+    }
+  },
+  "neuronal_integrity_markers": {
+    "contrast": "HZexo_vs_CtrlExo",
+    "genes": {
+      "ATF3": {
+        "log2FC": 0.0002,
+        "welch_p": 0.9983,
+        "ci95": [
+          -0.236,
+          0.237
+        ],
+        "mean_hz_exo": 7.065,
+        "mean_ctrl_exo": 7.065,
+        "bh_q_across_markers": 0.9983
+      },
+      "NEFH": {
+        "log2FC": -0.2205,
+        "welch_p": 0.0061,
+        "ci95": [
+          -0.365,
+          -0.076
+        ],
+        "mean_hz_exo": 6.603,
+        "mean_ctrl_exo": 6.824,
+        "bh_q_across_markers": 0.06
+      },
+      "TUBB3": {
+        "log2FC": -0.1833,
+        "welch_p": 0.012,
+        "ci95": [
+          -0.318,
+          -0.049
+        ],
+        "mean_hz_exo": 11.312,
+        "mean_ctrl_exo": 11.495,
+        "bh_q_across_markers": 0.06
+      },
+      "NEFL": {
+        "log2FC": -0.1113,
+        "welch_p": 0.0526,
+        "ci95": [
+          -0.224,
+          0.001
+        ],
+        "mean_hz_exo": 10.74,
+        "mean_ctrl_exo": 10.851,
+        "bh_q_across_markers": 0.1052
+      },
+      "PRPH": {
+        "log2FC": -0.128,
+        "welch_p": 0.0479,
+        "ci95": [
+          -0.255,
+          -0.001
+        ],
+        "mean_hz_exo": 11.726,
+        "mean_ctrl_exo": 11.854,
+        "bh_q_across_markers": 0.1052
+      },
+      "NTRK1": {
+        "log2FC": -0.2019,
+        "welch_p": 0.0306,
+        "ci95": [
+          -0.381,
+          -0.022
+        ],
+        "mean_hz_exo": 7.093,
+        "mean_ctrl_exo": 7.295,
+        "bh_q_across_markers": 0.102
+      },
+      "SPP1": {
+        "log2FC": 0.0277,
+        "welch_p": 0.3391,
+        "ci95": [
+          -0.033,
+          0.089
+        ],
+        "mean_hz_exo": 0.099,
+        "mean_ctrl_exo": 0.071,
+        "bh_q_across_markers": 0.419
+      },
+      "GAL": {
+        "log2FC": -0.3389,
+        "welch_p": 0.1661,
+        "ci95": [
+          -0.84,
+          0.162
+        ],
+        "mean_hz_exo": 5.111,
+        "mean_ctrl_exo": 5.45,
+        "bh_q_across_markers": 0.2768
+      },
+      "TAC1": {
+        "log2FC": 0.2176,
+        "welch_p": 0.3771,
+        "ci95": [
+          -0.308,
+          0.744
+        ],
+        "mean_hz_exo": 6.082,
+        "mean_ctrl_exo": 5.865,
+        "bh_q_across_markers": 0.419
+      },
+      "CALCA": {
+        "log2FC": 0.0201,
+        "welch_p": 0.3641,
+        "ci95": [
+          -0.029,
+          0.069
+        ],
+        "mean_hz_exo": 0.033,
+        "mean_ctrl_exo": 0.013,
+        "bh_q_across_markers": 0.419
+      }
+    },
+    "interpretation": "ATF3 (injury marker) is unchanged, so the E1 shift is not attributable to overt cytotoxicity; however several pan-neuronal markers also move modestly, so a non-specific mild neuronal reaction cannot be excluded."
+  },
+  "trpv1_by_route": {
+    "HZexo_vs_CtrlExo": {
+      "log2FC": -0.5673,
+      "welch_p": 0.0009,
+      "ci95": [
+        -0.838,
+        -0.297
+      ],
+      "mean_hz_exo": 6.328,
+      "mean_ctrl_exo": 6.895,
+      "q_within_E1": 0.0165
+    },
+    "VZV_vs_Mock": {
+      "log2FC": -0.1487,
+      "welch_p": 0.008,
+      "ci95": [
+        -0.247,
+        -0.05
+      ],
+      "mean_vzv": 6.868,
+      "mean_mock": 7.017,
+      "q_within_E1": 0.1435
+    },
+    "interpretation": "TRPV1 mRNA falls under BOTH routes; the route dependence is one of magnitude (HZ-exo approximately -0.57 vs direct VZV approximately -0.15), not of direction."
+  },
+  "baseline_denominators": {
+    "note": "Manuscript section 3.1 previously mixed two denominators: PIEZO2/ITGB1/P2RX3 were all-12-sample means whereas SCN9A/TRPV1 were mock-only means.",
+    "genes": {
+      "PIEZO2": {
+        "directinf_all12_mean_log2cpm": 7.94,
+        "directinf_mock_only_mean_log2cpm": 8.012,
+        "directinf_all12_mean_cpm": 245.24
+      },
+      "P2RX3": {
+        "directinf_all12_mean_log2cpm": 9.651,
+        "directinf_mock_only_mean_log2cpm": 9.693,
+        "directinf_all12_mean_cpm": 806.84
+      },
+      "ITGB1": {
+        "directinf_all12_mean_log2cpm": 8.342,
+        "directinf_mock_only_mean_log2cpm": 8.344,
+        "directinf_all12_mean_cpm": 323.65
+      },
+      "SCN9A": {
+        "directinf_all12_mean_log2cpm": 8.314,
+        "directinf_mock_only_mean_log2cpm": 8.391,
+        "directinf_all12_mean_cpm": 318.27
+      },
+      "TRPV1": {
+        "directinf_all12_mean_log2cpm": 6.942,
+        "directinf_mock_only_mean_log2cpm": 7.017,
+        "directinf_all12_mean_cpm": 122.27
+      },
+      "TRPV4": {
+        "directinf_all12_mean_log2cpm": 0.308,
+        "directinf_mock_only_mean_log2cpm": 0.328,
+        "directinf_all12_mean_cpm": 0.25
+      },
+      "STOML3": {
+        "directinf_all12_mean_log2cpm": 0.011,
+        "directinf_mock_only_mean_log2cpm": 0.011,
+        "directinf_all12_mean_cpm": 0.01
+      }
+    }
+  },
+  "detection_baseline_extras": {
+    "OR5A1": {
+      "seraexo_mean_cpm": 0.885,
+      "seraexo_detected_fraction": 0.316,
+      "HZexo_vs_CtrlExo": {
+        "log2FC": -0.2904,
+        "welch_p": 0.0052,
+        "ci95": [
+          -0.476,
+          -0.105
+        ],
+        "mean_hz_exo": 0.757,
+        "mean_ctrl_exo": 1.048
+      }
+    },
+    "PIEZO2": {
+      "seraexo_mean_cpm": 164.127,
+      "seraexo_detected_fraction": 1.0,
+      "HZexo_vs_CtrlExo": {
+        "log2FC": -0.2822,
+        "welch_p": 0.1816,
+        "ci95": [
+          -0.718,
+          0.154
+        ],
+        "mean_hz_exo": 7.247,
+        "mean_ctrl_exo": 7.529
+      }
+    },
+    "TRPV4": {
+      "seraexo_mean_cpm": 0.19,
+      "seraexo_detected_fraction": 0.0,
+      "HZexo_vs_CtrlExo": {
+        "log2FC": 0.1247,
+        "welch_p": 0.1132,
+        "ci95": [
+          -0.035,
+          0.284
+        ],
+        "mean_hz_exo": 0.274,
+        "mean_ctrl_exo": 0.149
+      }
+    },
+    "STOML3": {
+      "seraexo_mean_cpm": 0.0,
+      "seraexo_detected_fraction": 0.0,
+      "HZexo_vs_CtrlExo": {
+        "log2FC": 0.0,
+        "welch_p": NaN,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_hz_exo": 0.0,
+        "mean_ctrl_exo": 0.0
+      }
+    },
+    "SCN10A": {
+      "seraexo_mean_cpm": 0.545,
+      "seraexo_detected_fraction": 0.105,
+      "HZexo_vs_CtrlExo": {
+        "log2FC": -0.3844,
+        "welch_p": 0.0076,
+        "ci95": [
+          -0.644,
+          -0.124
+        ],
+        "mean_hz_exo": 0.47,
+        "mean_ctrl_exo": 0.855
+      }
+    }
+  }
+}

@@ -35,7 +35,7 @@ label_map = {
 for m in order:
     c = mods[m]
     diffs.append(c["diff_B_minus_A"])
-    ps.append(c["p_perm"])
+    ps.append(c["p_perm_exact"])
     tag = m[0]
     cols.append(cmap.get(tag, "#000"))
     lbls.append(label_map[m])
@@ -54,7 +54,7 @@ for xi, (d, p) in enumerate(zip(diffs, ps)):
 ax.axhline(0, color="black", lw=0.8)
 ax.set_xticks(x); ax.set_xticklabels(lbls, fontsize=8)
 ax.set_ylabel("Module score diff\n(HZ-exo − Ctrl-exo, log2CPM)")
-ax.set_title("Fig 2a. Mechanical-transduction module scores: HZ-exo vs Ctrl-exo\n(red=M-mechano, blue=E1, grey=neutral controls)")
+ax.set_title("Fig 2a. Mechanical-transduction module scores: HZ-exo vs Ctrl-exo\n(red=M-mechano, blue=E1, grey=neutral controls; dashed = detection floor)")
 from matplotlib.patches import Patch
 ax.legend(handles=[Patch(color="#c0392b", label="M1–M4 mechano modules"),
                    Patch(color="#2980b9", label="E1 classical nociceptor"),
@@ -66,7 +66,7 @@ plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2a_module_scores.png"), dp
 cci = R["CCI"]
 clabs = list(cci.keys())
 cd = [cci[k]["diff_B_minus_A"] for k in clabs]
-cp = [cci[k]["p_perm"] for k in clabs]
+cp = [cci[k]["p_perm_exact"] for k in clabs]
 fig, ax = plt.subplots(figsize=(8, 4.5))
 xb = np.arange(len(clabs)); b = ax.bar(xb, cd, color="#8e44ad", edgecolor="black", lw=0.6)
 for xi, (d, p) in enumerate(zip(cd, cp)):
@@ -93,6 +93,6 @@ ax.barh(range(len(gn)), gv, color=colors, edgecolor="black", lw=0.5)
 ax.set_yticks(range(len(gn))); ax.set_yticklabels(gn, fontsize=9)
 ax.axvline(0, color="black", lw=0.8)
 ax.set_xlabel("log2CPM difference (HZ-exo − Ctrl-exo)")
-ax.set_title("Fig 2c. Classical nociceptor channels (E1) selectively downregulated\nby acute HZ serum exosomes (pre-specified secondary endpoint)")
+ax.set_title("Fig 2c. Classical nociceptor channels (E1) downregulated by acute HZ serum exosomes\n(pre-specified secondary endpoint); only TRPV1 survives within-module BH (q = 0.017)")
 plt.tight_layout(); plt.savefig(os.path.join(FIG, "fig2c_E1_genes.png"), dpi=150); plt.close()
 print("fig2c added")

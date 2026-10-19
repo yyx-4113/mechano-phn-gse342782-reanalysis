@@ -12,9 +12,9 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # 路径相对仓库根（manuscript/ 上溯一级），避免绝对路径不可移植
 _ROOT = Path(__file__).resolve().parents[1]
-MD = str(_ROOT / "manuscript" / "manuscript_v1.1.3.md")
+MD = str(_ROOT / "manuscript" / "manuscript_v1.1.4.md")
 FIG = str(_ROOT / "analysis" / "results" / "layer1" / "fig")
-OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.3.docx")
+OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.4.docx")
 
 doc = Document()
 style = doc.styles["Normal"]
@@ -30,15 +30,19 @@ def add_par(text, bold=False, size=12, align=None, italic=False):
     return p
 
 def add_rich(text, size=12, bold_all=False):
-    """处理 **bold** 与 *italic* 行内标记。"""
+    """处理 **bold** / *italic* / ^superscript^(Dove 上标引用) 行内标记。"""
     p = doc.add_paragraph()
-    tokens = re.split(r"(\*\*.+?\*\*|\*.+?\*)", text)
+    p.paragraph_format.line_spacing = 2.0  # Dove 要求双倍行距
+    tokens = re.split(r"(\*\*.+?\*\*|\*.+?\*|\^.+?\^)", text)
     for t in tokens:
         if not t: continue
         if t.startswith("**") and t.endswith("**"):
             r = p.add_run(t[2:-2]); r.bold = True
         elif t.startswith("*") and t.endswith("*") and len(t) > 2:
             r = p.add_run(t[1:-1]); r.italic = True
+        elif t.startswith("^") and t.endswith("^") and len(t) > 2:
+            r = p.add_run(t[1:-1])
+            r.font.superscript = True  # Dove: 上标阿拉伯数字，无括号
         else:
             r = p.add_run(t)
         r.font.name = "Times New Roman"; r.font.size = Pt(size)
@@ -80,27 +84,53 @@ def render_table(rows):
             run.font.name = "Times New Roman"; run.font.size = Pt(10)
     doc.add_paragraph()
 
-def insert_figures(kind):
-    if kind == "design":
+# 图件按"正文引用所在小节"就近插入（JPR 要求图表须在正文中被引用）
+FIG_SPECS = [
+    ("fig1_design.png", 6.2,
+     "Figure 1. Study design and prospectively specified analysis pipeline."),
+    ("fig2a_module_scores.png", 5.8,
+     "Figure 2a. Module-score differences for the primary contrast (HZ-exo vs control-exo), with neutral controls displayed alongside. E1 is the only biological module significantly shifted."),
+    ("fig2c_E1_genes.png", 5.8,
+     "Figure 2c. Gene-level differences within E1 for the primary contrast: coherent suppression of classical nociceptor channels. Only TRPV1 survives Benjamini-Hochberg correction within the module (q = 0.017)."),
+    ("fig2d_dissociation.png", 5.8,
+     "Figure 2d. Perturbation route and channel programme: E1-selective suppression under HZ exosomes (interaction P = 0.0017); reciprocal VZV pattern not significant (P = 0.19)."),
+    ("fig2b_cci.png", 5.8,
+     "Figure 2b. Channel-complementarity index (CCI) differences by contrast (all non-significant)."),
+]
+# 小节 -> 该小节内引用的图件（文件名）
+FIG_BY_SECTION = {
+    "3.1": ["fig1_design.png"],
+    "3.3": ["fig2a_module_scores.png", "fig2c_E1_genes.png"],
+    "3.4": ["fig2d_dissociation.png"],
+    "3.6": ["fig2b_cci.png"],
+}
+FIG_DONE = set()
+
+
+def insert_figures(section_key):
+    for fn in FIG_BY_SECTION.get(section_key, []):
+        if fn in FIG_DONE:
+            continue
+        spec = next((s for s in FIG_SPECS if s[0] == fn), None)
+        if spec is None:
+            continue
+        fp = os.path.join(FIG, fn)
+        if not os.path.exists(fp):
+            continue
         p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.add_run().add_picture(os.path.join(FIG, "fig1_design.png"), width=Inches(6.2))
-        add_par("Figure 1. Study design and prospectively specified analysis pipeline.", size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER)
-    elif kind == "dissociation":
-        specs = [
-            ("fig2a_module_scores.png", "Figure 2a. Module-score differences for the primary contrast (HZ-exo vs control-exo), with neutral controls displayed alongside. E1 is the only biological module significantly shifted."),
-            ("fig2b_cci.png", "Figure 2b. Channel-complementarity index (CCI) differences by contrast (all non-significant)."),
-            ("fig2c_E1_genes.png", "Figure 2c. Gene-level differences within E1 for the primary contrast: coherent suppression of classical nociceptor channels."),
-            ("fig2d_dissociation.png", "Figure 2d. Perturbation route and channel programme: E1-selective suppression under HZ exosomes (interaction P = 0.0017); reciprocal VZV pattern not significant (P = 0.19)."),
-        ]
-        for fn, cap in specs:
-            fp = os.path.join(FIG, fn)
-            if os.path.exists(fp):
-                p = doc.add_paragraph(); p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                p.add_run().add_picture(fp, width=Inches(5.8))
-                add_par(cap, size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER)
+        p.add_run().add_picture(fp, width=Inches(spec[1]))
+        add_par(spec[2], size=10, italic=True, align=WD_ALIGN_PARAGRAPH.CENTER)
+        FIG_DONE.add(fn)
+
+def maybe_figures(h):
+    """按小节号就近插入该小节引用的图件。"""
+    for key in FIG_BY_SECTION:
+        if h.startswith(key):
+            insert_figures(key)
+            return
+
 
 lines = open(MD, encoding="utf-8").read().splitlines()
-fig_state = {"design": False, "dissociation": False}
 i = 0
 first_line = True
 while i < len(lines):
@@ -125,17 +155,11 @@ while i < len(lines):
     elif line.startswith("## "):
         h = heading_text(line)
         add_par(h, bold=True, size=12.5)
-        if "3.1" in h and not fig_state["design"]:
-            insert_figures("design"); fig_state["design"] = True
-        if "3.4" in h and not fig_state["dissociation"]:
-            insert_figures("dissociation"); fig_state["dissociation"] = True
+        maybe_figures(h)
     elif line.startswith("### "):
         h = heading_text(line)
         add_par(h, bold=True, size=12)
-        if "3.1" in h and not fig_state["design"]:
-            insert_figures("design"); fig_state["design"] = True
-        if "3.4" in h and not fig_state["dissociation"]:
-            insert_figures("dissociation"); fig_state["dissociation"] = True
+        maybe_figures(h)
     elif line.strip() == "---":
         pass
     elif line.startswith("> "):
@@ -149,6 +173,32 @@ while i < len(lines):
     else:
         add_rich(line.strip(), size=12)
     i += 1
+
+
+# ---------- Dove 排版要求：连续行号 + 页脚页码 ----------
+from docx.oxml.ns import qn
+from docx.oxml import OxmlElement
+
+_sec = doc.sections[0]
+_sectPr = _sec._sectPr
+_ln = OxmlElement("w:lnNumType")
+_ln.set(qn("w:countBy"), "1")
+_ln.set(qn("w:start"), "1")
+_ln.set(qn("w:numRestart"), "continuous")   # 连续行号
+_ln.set(qn("w:distance"), "283")            # ~0.5 cm（twips）
+_sectPr.append(_ln)
+
+_footer = _sec.footer
+_fp = _footer.paragraphs[0]
+_fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
+_fld = OxmlElement("w:fldSimple")
+_fld.set(qn("w:instr"), "PAGE")
+_run = OxmlElement("w:r")
+_txt = OxmlElement("w:t")
+_txt.text = "1"
+_run.append(_txt)
+_fld.append(_run)
+_fp._p.append(_fld)
 
 doc.save(OUT)
 print("docx saved:", OUT)

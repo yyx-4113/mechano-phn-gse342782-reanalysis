@@ -1,0 +1,32 @@
+PASS  abstract block present
+PASS  abstract <= 300 words (actual 300)  [limit 300, got 300]
+PASS  keywords count 3-6 (actual 6)  [postherpetic neuralgia; mechanical allodynia; mechanotransduction; PIEZO2; varicella-zoster virus; extracellular vesicles]
+PASS  reference numbering contiguous 1..N (N=20)
+PASS  no British-spelling residue  [clean]
+PASS  Figure 1 cited in text
+PASS  Figure 2a cited in text
+PASS  Figure 2b cited in text
+PASS  Figure 2c cited in text
+PASS  Figure 2d cited in text
+PASS  Table 1 cited in text
+PASS  corresponding e-mail present
+PASS  ORCID present
+PASS  postal address present
+PASS  telephone present
+PASS  fax present
+PASS  section present: Abstract
+PASS  section present: Data availability
+PASS  section present: Ethics approval and consent to participate
+PASS  section present: Consent for publication
+PASS  section present: Author contributions
+PASS  section present: Declaration of interests
+PASS  section present: Funding
+PASS  section present: References
+PASS  running title present
+PASS  no placeholder '[truncated]'
+PASS  no placeholder 'TODO'
+PASS  no placeholder 'XXX'
+PASS  no placeholder 'Lorem'
+PASS  no placeholder '[insert'
+
+TOTAL 30 | PASS 30 | FAIL 0

@@ -17,7 +17,7 @@ from itertools import combinations
 _ROOT = Path(__file__).resolve().parents[1]
 RES = str(_ROOT / "analysis" / "results" / "layer1")
 RAW = str(_ROOT / "analysis" / "data" / "raw")
-MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.3.md")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.4.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -221,8 +221,15 @@ numchk("global range low", "range 1.55", min(vals))
 claim_le("global range high (claim <=1.61)", 1.61, max(vals))
 
 # ---- 基因级：从 CSV 派生的关键值 ----
-def gv(g, lab, col):
+E1M = "E1_classical_nociceptor"
+
+
+def gv(g, lab, col, module=None):
+    """基因级取值。Round-4 起 CSV 含 module 列（跨模块共享基因各一行），
+    取 q_within_module 时必须指定 module，否则同名基因会取到错误模块的值。"""
     row = G[(G.gene == g) & (G.contrast == lab)]
+    if module is not None:
+        row = row[row.module == module]
     return float(row[col].iloc[0]) if len(row) else None
 numchk("TRPV1 LFC", "-0.567", gv("TRPV1","HZexo_vs_CtrlExo","log2FC"))
 numchk("SCN9A LFC", "-0.323", gv("SCN9A","HZexo_vs_CtrlExo","log2FC"))
@@ -232,14 +239,51 @@ numchk("ASIC2 LFC", "-0.296", gv("ASIC2","HZexo_vs_CtrlExo","log2FC"))
 numchk("KCNS1 LFC", "-0.393", gv("KCNS1","HZexo_vs_CtrlExo","log2FC"))
 
 # ---- 基因级 module 内 BH 校正（Round-3 诚实化：防止回退到"全部显著"）----
-numchk("TRPV1 within-E1 q", "0.017", gv("TRPV1","HZexo_vs_CtrlExo","q_within_module"))
-claim_le("TRPV1 within-E1 q (survives FDR <=0.05)", 0.05, gv("TRPV1","HZexo_vs_CtrlExo","q_within_module"))
-claim_ge("KCNS1 within-E1 q (does NOT survive >=0.05)", 0.05, gv("KCNS1","HZexo_vs_CtrlExo","q_within_module"))
-claim_ge("SCN9A within-E1 q (does NOT survive >=0.05)", 0.05, gv("SCN9A","HZexo_vs_CtrlExo","q_within_module"))
-claim_ge("ASIC1 within-E1 q (does NOT survive >=0.05)", 0.05, gv("ASIC1","HZexo_vs_CtrlExo","q_within_module"))
-claim_ge("ASIC2 within-E1 q (does NOT survive >=0.05)", 0.05, gv("ASIC2","HZexo_vs_CtrlExo","q_within_module"))
+numchk("TRPV1 within-E1 q", "0.017", gv("TRPV1","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+claim_le("TRPV1 within-E1 q (survives FDR <=0.05)", 0.05, gv("TRPV1","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+claim_ge("KCNS1 within-E1 q (does NOT survive >=0.05)", 0.05, gv("KCNS1","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+claim_ge("SCN9A within-E1 q (does NOT survive >=0.05)", 0.05, gv("SCN9A","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+claim_ge("ASIC1 within-E1 q (does NOT survive >=0.05)", 0.05, gv("ASIC1","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+claim_ge("ASIC2 within-E1 q (does NOT survive >=0.05)", 0.05, gv("ASIC2","HZexo_vs_CtrlExo","q_within_module", module=E1M))
 present("within-module BH disclosed", "within-E1")
+# Round-4 回归锁：KCNQ2/KCNQ3 同属 E1 与 N1，q 不得被后处理模块覆盖
+numchk("KCNQ3 within-E1 q (was overwritten by N1 before Round-4 fix)", "0.366",
+       gv("KCNQ3","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+numchk("KCNQ2 within-E1 q (was overwritten by N1 before Round-4 fix)", "0.497",
+       gv("KCNQ2","HZexo_vs_CtrlExo","q_within_module", module=E1M))
+claim_ge("KCNQ3 within-E1 q < N1 q (family-specific, not overwritten)", 0.40,
+         gv("KCNQ3","HZexo_vs_CtrlExo","q_within_module", module="N1_voltage_gated_control"))
 present("detected-gene subset vs multiplicity clarified", "subset analysis")
+
+# ---- Round-4 新增：E1 内部基准 / 神经元完整性 / 路径量级（产物 layer1_extra_checks.json）----
+import json as _json
+X = _json.load(open(str(_ROOT / "analysis" / "results" / "layer1" / "layer1_extra_checks.json"), encoding="utf-8"))
+XE = X["e1_vs_n1_benchmark"]["HZexo_vs_CtrlExo"]
+numchk("E1-N1 difference", "-0.064", XE["diff_hz_exo_minus_ctrl_exo"])
+numchk("E1-N1 permutation P", "0.178", XE["perm_p"])
+claim_ge("E1 vs N1 NOT separable (P >= 0.05)", 0.05, XE["perm_p"])
+XM = X["neuronal_integrity_markers"]["genes"]
+numchk("ATF3 log2FC", "+0.0002", XM["ATF3"]["log2FC"])
+claim_ge("ATF3 unchanged (P >= 0.05)", 0.05, XM["ATF3"]["welch_p"])
+numchk("NEFH log2FC", "-0.221", XM["NEFH"]["log2FC"])
+numchk("TUBB3 log2FC", "-0.183", XM["TUBB3"]["log2FC"])
+XT = X["trpv1_by_route"]["VZV_vs_Mock"]
+numchk("TRPV1 under direct VZV", "-0.149", XT["log2FC"])
+numchk("TRPV1 VZV within-E1 q", "0.144", XT["q_within_E1"])
+claim_ge("TRPV1 VZV does NOT survive within-E1 FDR", 0.05, XT["q_within_E1"])
+XB = X["baseline_denominators"]["genes"]
+numchk("SCN9A all-12 baseline", "8.31", XB["SCN9A"]["directinf_all12_mean_log2cpm"])
+numchk("SCN9A mock-only baseline", "8.39", XB["SCN9A"]["directinf_mock_only_mean_log2cpm"])
+numchk("TRPV1 all-12 baseline", "6.94", XB["TRPV1"]["directinf_all12_mean_log2cpm"])
+XD = X["detection_baseline_extras"]
+numchk("OR5A1 mean CPM", "0.89", XD["OR5A1"]["seraexo_mean_cpm"])
+numchk("PIEZO2 gene-level CI low", "-0.72", XD["PIEZO2"]["HZexo_vs_CtrlExo"]["ci95"][0])
+numchk("PIEZO2 gene-level CI high", "+0.15", XD["PIEZO2"]["HZexo_vs_CtrlExo"]["ci95"][1])
+present("E1 vs N1 benchmark disclosed", "not separable from N1")
+present("ATF3 injury marker reported", "ATF3")
+present("route dependence is magnitude not direction", "magnitude rather than direction")
+present("substrate stiffness limitation", "Substrate stiffness")
+present("PHN donor metadata statement", "not present in the deposited GEO metadata")
 
 # ---- 汇总 ----
 fails = [r for r in results if str(r[2]).startswith("FAIL")]

@@ -1,18 +1,18 @@
-consistency gate v3: 95 assertions, 0 failures
+consistency gate v3: 119 assertions, 0 failures
 PASS	primary M3 diff	expected=-0.04887804878732682
 PASS	primary M3 perm p	expected=0.4219114219114219
 PASS	primary M3 q	expected=0.46153846153846156
-PASS	M3 MDE	expected=0.17862241236718387
-PASS	M3 welch CI low	expected=-0.17642864150982487
-PASS	M3 welch CI high	expected=0.07867254393517123
-PASS	M3 perm CI low	expected=-0.15932317497477644
-PASS	M3 perm CI high	expected=0.061567077400122794
-PASS	E1 diff	expected=-0.2196365305749759
+PASS	M3 MDE	expected=0.17862241236718354
+PASS	M3 welch CI low	expected=-0.17642864150982468
+PASS	M3 welch CI high	expected=0.07867254393517104
+PASS	M3 perm CI low	expected=-0.1593231749747762
+PASS	M3 perm CI high	expected=0.061567077400122544
+PASS	E1 diff	expected=-0.219636530574975
 PASS	E1 perm p	expected=0.01282051282051282
 PASS	E1 q	expected=0.034188034188034185
-PASS	E1 CI low	expected=-0.37679910414731266
-PASS	E1 CI high	expected=-0.06247395700263911
-PASS	M1 HZ diff	expected=-0.07795531805076283
+PASS	E1 CI low	expected=-0.3767991041473118
+PASS	E1 CI high	expected=-0.06247395700263819
+PASS	M1 HZ diff	expected=-0.07795531805076195
 PASS	M1 HZ p	expected=0.11305361305361306
 PASS	M2 HZ diff	expected=-0.14832456545454598
 PASS	M2 HZ p	expected=0.06818181818181818
@@ -23,31 +23,31 @@ PASS	N3 HZ diff	expected=0.3914409317117524
 PASS	N3 HZ p	expected=0.0017482517482517483
 PASS	VZV M1 diff	expected=-0.05036785975583724
 PASS	VZV M1 perm p	expected=0.049783549783549784
-PASS	VZV M1 welch p	expected=0.04655764245345769
+PASS	VZV M1 welch p	expected=0.046557642453458066
 PASS	VZV M4 diff	expected=-0.05439490453080964
 PASS	VZV M4 p	expected=0.030303030303030304
-PASS	VZV E1 diff	expected=0.00046908823899993735
+PASS	VZV E1 diff	expected=0.0004690882390017137
 PASS	VZV E1 p	expected=0.9956709956709957
 PASS	VZV M3 null	expected=0.8528138528138528
-PASS	PHN M1 diff	expected=-0.11896893663456787
+PASS	PHN M1 diff	expected=-0.11896893663456698
 PASS	PHN M1 p	expected=0.008838383838383838
 PASS	PHN M1 q	expected=0.02356902356902357
-PASS	PHN E1 diff	expected=-0.19740180729001056
+PASS	PHN E1 diff	expected=-0.19740180729000967
 PASS	PHN E1 p	expected=0.005050505050505051
 PASS	PHN E1 q	expected=0.020202020202020204
-PASS	PHN M2 diff	expected=-0.1783220114830959
+PASS	PHN M2 diff	expected=-0.1783220114830968
 PASS	PHN M2 p	expected=0.030303030303030304
 PASS	PHN N1 p	expected=0.039141414141414144
 PASS	PHN N3 diff	expected=0.577401405683327
 PASS	PHN N3 p	expected=0.0012626262626262627
 PASS	PHN N3 q	expected=0.010101010101010102
 PASS	PHN M3 null	expected=0.8295454545454546
-PASS	interaction HZ diff	expected=-0.14168121252421206
+PASS	interaction HZ diff	expected=-0.14168121252421217
 PASS	interaction HZ p	expected=0.0017482517482517483
 PASS	interaction VZV diff	expected=-0.050836947994836734
 PASS	interaction VZV p	expected=0.19264069264069264
 PASS	detected-only interaction disclosed	expected=detected-gene subset analysis (P = 0.16)
-PASS	detected interaction HZ diff	expected=-0.07178112938819886
+PASS	detected interaction HZ diff	expected=-0.07178112938819899
 PASS	detected interaction HZ p (non-sig <=0.20)	expected=true=0.1573 <= claimed_ceil 0.2
 PASS	INDEPENDENT M3 HZ perm p (raw counts)	expected=0.4219114219114219
 PASS	INDEPENDENT M3 HZ perm p (raw counts)	expected=0.4219
@@ -93,4 +93,28 @@ PASS	SCN9A within-E1 q (does NOT survive >=0.05)	expected=true=0.0693 >= claimed
 PASS	ASIC1 within-E1 q (does NOT survive >=0.05)	expected=true=0.0693 >= claimed_floor 0.05
 PASS	ASIC2 within-E1 q (does NOT survive >=0.05)	expected=true=0.1265 >= claimed_floor 0.05
 PASS	within-module BH disclosed	expected=within-E1
+PASS	KCNQ3 within-E1 q (was overwritten by N1 before Round-4 fix)	expected=0.3655
+PASS	KCNQ2 within-E1 q (was overwritten by N1 before Round-4 fix)	expected=0.497
+PASS	KCNQ3 within-E1 q < N1 q (family-specific, not overwritten)	expected=true=0.5004 >= claimed_floor 0.4
 PASS	detected-gene subset vs multiplicity clarified	expected=subset analysis
+PASS	E1-N1 difference	expected=-0.0638
+PASS	E1-N1 permutation P	expected=0.1783
+PASS	E1 vs N1 NOT separable (P >= 0.05)	expected=true=0.1783 >= claimed_floor 0.05
+PASS	ATF3 log2FC	expected=0.0002
+PASS	ATF3 unchanged (P >= 0.05)	expected=true=0.9983 >= claimed_floor 0.05
+PASS	NEFH log2FC	expected=-0.2205
+PASS	TUBB3 log2FC	expected=-0.1833
+PASS	TRPV1 under direct VZV	expected=-0.1487
+PASS	TRPV1 VZV within-E1 q	expected=0.1435
+PASS	TRPV1 VZV does NOT survive within-E1 FDR	expected=true=0.1435 >= claimed_floor 0.05
+PASS	SCN9A all-12 baseline	expected=8.314
+PASS	SCN9A mock-only baseline	expected=8.391
+PASS	TRPV1 all-12 baseline	expected=6.942
+PASS	OR5A1 mean CPM	expected=0.885
+PASS	PIEZO2 gene-level CI low	expected=-0.718
+PASS	PIEZO2 gene-level CI high	expected=0.154
+PASS	E1 vs N1 benchmark disclosed	expected=not separable from N1
+PASS	ATF3 injury marker reported	expected=ATF3
+PASS	route dependence is magnitude not direction	expected=magnitude rather than direction
+PASS	substrate stiffness limitation	expected=Substrate stiffness
+PASS	PHN donor metadata statement	expected=not present in the deposited GEO metadata
