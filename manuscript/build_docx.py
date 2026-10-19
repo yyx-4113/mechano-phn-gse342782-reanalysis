@@ -4,14 +4,17 @@
 遵循用户约定：cover/manuscript 生成 Times New Roman 12pt；不使用花哨模板。
 v1.1.0 修订：修正图插入层级（### 3.x 也是 h3），支持 markdown 表格渲染（Table 1）。"""
 import re, os
+from pathlib import Path
 from docx import Document
 from docx.shared import Pt, Inches, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT
 
-MD = "D:/2026.10/机械应力/manuscript/manuscript_v1.1.0.md"
-FIG = "D:/2026.10/机械应力/analysis/results/layer1/fig"
-OUT = "D:/2026.10/机械应力/manuscript/manuscript_v1.1.0.docx"
+# 路径相对仓库根（manuscript/ 上溯一级），避免绝对路径不可移植
+_ROOT = Path(__file__).resolve().parents[1]
+MD = str(_ROOT / "manuscript" / "manuscript_v1.1.1.md")
+FIG = str(_ROOT / "analysis" / "results" / "layer1" / "fig")
+OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.1.docx")
 
 doc = Document()
 style = doc.styles["Normal"]

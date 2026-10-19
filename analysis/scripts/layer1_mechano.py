@@ -26,10 +26,13 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 from itertools import combinations
+from pathlib import Path
 
-RAW = "D:/2026.10/机械应力/analysis/data/raw"
-OUT = "D:/2026.10/机械应力/analysis/results/layer1"
-CFG = "D:/2026.10/机械应力/analysis/config/mtp_panel.json"
+# 路径相对仓库根（analysis/scripts/ 上溯两级），避免绝对路径不可移植
+_ROOT = Path(__file__).resolve().parents[2]
+RAW = str(_ROOT / "analysis" / "data" / "raw")
+OUT = str(_ROOT / "analysis" / "results" / "layer1")
+CFG = str(_ROOT / "analysis" / "config" / "mtp_panel.json")
 os.makedirs(OUT, exist_ok=True)
 
 # ---------- 工具 ----------
@@ -332,6 +335,33 @@ results["interaction"] = {
     "VZV_vs_Mock": interaction(L_di, di_groups, "M1_mechanogated_channels", "E1_classical_nociceptor", "mock", "vzv", "VZV_vs_Mock"),
 }
 
+# ---------- 检出基因交互检验（公平性校正：限制于 mean CPM>1 的基因） ----------
+# 全模块交互（E1-M1）因 M1 含 4/9 未检出基因（值≈0）而被稀释，使 E1 看似更被选择性抑制；
+# 限制于检出基因后重新计算，以检验选择性是否真实存在（Round-2 B2 修正）。
+def interaction_detected(Lm, cpm_df, grp, modX, modY, gA, gB, lab):
+    gx_all = [g for g in MODULES[modX] if g in Lm.index]
+    gy_all = [g for g in MODULES[modY] if g in Lm.index]
+    gx = [g for g in gx_all if cpm_df.loc[g].mean() > 1]
+    gy = [g for g in gy_all if cpm_df.loc[g].mean() > 1]
+    if len(gx) < 2 or len(gy) < 2:
+        return None
+    sx = Lm.loc[gx].mean(axis=0).values
+    sy = Lm.loc[gy].mean(axis=0).values
+    d = sx - sy
+    idx_a = [i for i, s in enumerate(Lm.columns) if grp[s] == gA]
+    idx_b = [i for i, s in enumerate(Lm.columns) if grp[s] == gB]
+    diff_obs = d[idx_b].mean() - d[idx_a].mean()
+    p_perm, perc, n_perm = perm_exact(diff_obs, d.reshape(1, -1), idx_a, idx_b)
+    return {"contrast": lab, "modules": "%s_minus_%s" % (modX, modY),
+            "n_%s" % modX: len(gx), "n_%s" % modY: len(gy),
+            "diff_B_minus_A": float(diff_obs), "p_perm_exact": float(p_perm),
+            "n_permutations": int(n_perm)}
+
+results["interaction_detected_only"] = {
+    "HZexo_vs_CtrlExo": interaction_detected(L_se, cpm_se, se_groups, "E1_classical_nociceptor", "M1_mechanogated_channels", "ctrl_exo", "hz_exo", "HZexo_vs_CtrlExo"),
+    "VZV_vs_Mock": interaction_detected(L_di, cpm_di, di_groups, "M1_mechanogated_channels", "E1_classical_nociceptor", "mock", "vzv", "VZV_vs_Mock"),
+}
+
 # ---------- 检出基因敏感性分析 ----------
 def detected_sensitivity(Lm, cpm_df, grp, gA, gB, lab):
     """module score 限制于该实验内 mean CPM > 1 的基因；报告 M1/M2/M3/M4/E1。"""
@@ -481,6 +511,12 @@ for mod in MODULE_ORDER:
 print("\n=== 交互检验（contrast-of-contrasts）===")
 for lab, c in results["interaction"].items():
     print("  %-22s %-40s diff=%+.4f  p_exact=%.4g" % (lab, c["modules"], c["diff_B_minus_A"], c["p_perm_exact"]))
+
+print("\n=== 检出基因交互检验（公平性校正：限定 CPM>1）===")
+for lab, c in results["interaction_detected_only"].items():
+    if c is None:
+        print("  %s: skipped (insufficient detected genes)" % lab); continue
+    print("  %-22s nE1=%d nM1=%d diff=%+.4f p_exact=%.4g" % (lab, c.get("n_E1_classical_nociceptor"), c.get("n_M1_mechanogated_channels"), c["diff_B_minus_A"], c["p_perm_exact"]))
 
 print("\n=== 检出基因敏感性 ===")
 for lab, mods in results["sensitivity_detected_genes"].items():

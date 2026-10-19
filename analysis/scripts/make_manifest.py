@@ -35,11 +35,21 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
         if top in ("analysis", "manuscript", ".github"):
             records[rel] = sha256(full)
 
+# ---- root-level provenance docs (README, LICENSE, CITATION.cff, protocol, SOP, etc.) ----
+ROOT_DOCS = ("README.md", "LICENSE", "CITATION.cff", "MANIFEST.json",
+             "GITHUB_DEPOSIT_SOP.md", "author_verification_statement.md",
+             "PROTOCOL_机械应力与PHN.md", ".gitignore",
+             "analysis/scripts/make_manifest.py")
+for name in ROOT_DOCS:
+    p = os.path.join(ROOT, name)
+    if os.path.exists(p):
+        records[name] = sha256(p)
+
 out = {
     "generated": "2026-10-19",
     "algorithm": "sha256",
     "repository": "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis",
-    "tag": "v1.1.0",
+    "tag": "v1.1.1",
     "files": records,
 }
 with open(os.path.join(ROOT, "MANIFEST.json"), "w") as f:

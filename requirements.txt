@@ -1,0 +1,8 @@
+# Reproducibility package dependencies (pinned at the versions used for v1.1.1)
+# Exact permutation uses itertools.combinations (no Monte-Carlo), so results are
+# deterministic and do not depend on package versions; versions below are for provenance.
+numpy==2.4.6
+pandas==3.0.5
+scipy==1.18.0
+matplotlib==3.11.1
+python-docx==1.2.0

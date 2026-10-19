@@ -1843,6 +1843,26 @@
       }
     }
   },
+  "interaction_detected_only": {
+    "HZexo_vs_CtrlExo": {
+      "contrast": "HZexo_vs_CtrlExo",
+      "modules": "E1_classical_nociceptor_minus_M1_mechanogated_channels",
+      "n_E1_classical_nociceptor": 13,
+      "n_M1_mechanogated_channels": 5,
+      "diff_B_minus_A": -0.07178112938819886,
+      "p_perm_exact": 0.15734265734265734,
+      "n_permutations": 3432
+    },
+    "VZV_vs_Mock": {
+      "contrast": "VZV_vs_Mock",
+      "modules": "M1_mechanogated_channels_minus_E1_classical_nociceptor",
+      "n_M1_mechanogated_channels": 5,
+      "n_E1_classical_nociceptor": 15,
+      "diff_B_minus_A": -0.07562731237042497,
+      "p_perm_exact": 0.1277056277056277,
+      "n_permutations": 924
+    }
+  },
   "sensitivity_detected_genes": {
     "HZexo_vs_CtrlExo": {
       "M1_mechanogated_channels": {

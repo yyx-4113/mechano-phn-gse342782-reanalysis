@@ -1,4 +1,4 @@
-consistency gate v3: 82 assertions, 0 failures
+consistency gate v3: 87 assertions, 0 failures
 PASS	primary M3 diff	expected=-0.04887804878732682
 PASS	primary M3 perm p	expected=0.4219114219114219
 PASS	primary M3 q	expected=0.46153846153846156
@@ -46,6 +46,11 @@ PASS	interaction HZ diff	expected=-0.14168121252421206
 PASS	interaction HZ p	expected=0.0017482517482517483
 PASS	interaction VZV diff	expected=-0.050836947994836734
 PASS	interaction VZV p	expected=0.19264069264069264
+PASS	detected-only interaction disclosed	expected=detected-gene P = 0.16
+PASS	detected interaction HZ diff	expected=-0.07178112938819886
+PASS	detected interaction HZ p (non-sig <=0.20)	expected=true=0.1573 <= claimed_ceil 0.2
+PASS	INDEPENDENT M3 HZ perm p (raw counts)	expected=0.4219114219114219
+PASS	INDEPENDENT M3 HZ perm p (raw counts)	expected=0.4219
 PASS	sens M1 detected diff	expected=-0.17092549515785738
 PASS	sens M1 detected p	expected=0.04603729603729604
 PASS	CCI lower-bound claim	expected=all permutation P >= 0.82

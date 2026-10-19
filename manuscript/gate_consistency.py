@@ -10,10 +10,14 @@ import json, gzip, csv, re, os
 import numpy as np
 import pandas as pd
 from scipy import stats
+from pathlib import Path
+from itertools import combinations
 
-RES = "D:/2026.10/机械应力/analysis/results/layer1"
-RAW = "D:/2026.10/机械应力/analysis/data/raw"
-MD  = "D:/2026.10/机械应力/manuscript/manuscript_v1.1.0.md"
+# 路径相对仓库根（manuscript/ 上溯一级），避免绝对路径不可移植
+_ROOT = Path(__file__).resolve().parents[1]
+RES = str(_ROOT / "analysis" / "results" / "layer1")
+RAW = str(_ROOT / "analysis" / "data" / "raw")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.1.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -112,6 +116,55 @@ numchk("interaction HZ diff", "-0.142 log2CPM", it_hz["diff_B_minus_A"])
 numchk("interaction HZ p", "exact permutation P = 0.0017", it_hz["p_perm_exact"])
 numchk("interaction VZV diff", "-0.051", it_vz["diff_B_minus_A"])
 numchk("interaction VZV p", "exact permutation P = 0.19", it_vz["p_perm_exact"])
+
+# ---- 检出基因交互检验（公平性校正；限制 mean CPM>1，排除 floor 稀释）----
+itd_hz = R["interaction_detected_only"]["HZexo_vs_CtrlExo"]
+present("detected-only interaction disclosed", "detected-gene P = 0.16")
+numchk("detected interaction HZ diff", "-0.072", itd_hz["diff_B_minus_A"])
+claim_le("detected interaction HZ p (non-sig <=0.20)", 0.20, itd_hz["p_perm_exact"])
+
+# ---- 独立重算（破解循环 gate：从原始计数直接重算主终点 M3 精确置换 P）----
+def _load_counts(path):
+    # 与管线 load_counts 对齐：首列 gene_symbol，列名取 header 的样本名（字符串）
+    rows = {}
+    with gzip.open(path, "rt") as f:
+        r = csv.reader(f)
+        header = next(r)
+        samples = [h for h in header[1:]]
+        for row in r:
+            g = row[0].strip()
+            if not g or g.upper() in ("NA","GENE_SYMBOL"): continue
+            try: v = [float(x) for x in row[1:]]
+            except ValueError: continue
+            if g in rows: continue
+            rows[g] = v
+    df = pd.DataFrame(rows, index=samples).T
+    df.index.name = "gene_symbol"
+    return df
+def _perm_exact(diff_obs, values, idx_a, idx_b):
+    values = np.asarray(values, dtype=float).ravel()
+    pool = np.concatenate([idx_a, idx_b]); na = len(idx_a); obs = abs(diff_obs)
+    dists = []
+    for idx in combinations(range(len(pool)), na):
+        a = values[pool[list(idx)]]
+        mask = np.ones(len(pool), dtype=bool); mask[list(idx)] = False
+        dists.append(values[pool[mask]].mean() - a.mean())
+    return float((np.abs(np.asarray(dists)) >= obs - 1e-12).mean())
+_panel = json.load(open(os.path.join(_ROOT, "analysis", "config", "mtp_panel.json")))
+_m3 = _panel["M3_ecm_integrin_hippo"]["genes"]
+_se = _load_counts(os.path.join(RAW, "GSE342782_SeraExoTreatedHD10sBulkSeq_counts.csv.gz"))
+_se_groups = {s: ("ctrl_exo" if s.startswith("C") else "phn_exo" if s.startswith("P") else "hz_exo" if s.startswith("S") else None) for s in _se.columns}
+_present = set(_se.index)
+_m3p = [g for g in _m3 if g in _present]
+_L = np.log2(1 + _se.div(_se.sum(axis=0), axis=1) * 1e6)
+_sub = _L.loc[_m3p]
+_ia = [i for i,s in enumerate(_se.columns) if _se_groups[s]=="ctrl_exo"]
+_ib = [i for i,s in enumerate(_se.columns) if _se_groups[s]=="hz_exo"]
+_scores = _sub.mean(axis=0).values
+_diff = _scores[_ib].mean() - _scores[_ia].mean()
+_p_indep = _perm_exact(_diff, _scores, _ia, _ib)
+numchk("INDEPENDENT M3 HZ perm p (raw counts)", "permutation P = 0.42", _p_indep)
+results.append(("INDEPENDENT M3 HZ perm p (raw counts)", "%.4f" % _p_indep, "PASS" if abs(_p_indep - 0.42) < 0.02 else "FAIL"))
 
 # ---- 检出基因敏感性 ----
 sens = R["sensitivity_detected_genes"]["HZexo_vs_CtrlExo"]["M1_mechanogated_channels"]
