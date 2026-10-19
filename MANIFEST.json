@@ -2,7 +2,7 @@
   "generated": "2026-10-19",
   "algorithm": "sha256",
   "repository": "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis",
-  "tag": "v1.1.5",
+  "tag": "v1.1.6",
   "files": {
     ".github\\workflows\\release.yml": "0c33ecd835c8ca87402b8c26929e9f93b998e6fcf961a2d2b695ef4ed1efb33c",
     "analysis\\config\\mtp_panel.json": "6d4f2bc844e68a7277879157f0210bcfd6bfd42a055a51de385382f2b4e60e3c",
@@ -34,7 +34,7 @@
     "analysis\\scripts\\layer1_norm_robustness.py": "ed0aeb52276efffb7ee40a73a2258a3eaccb17c46fdcb497ece600149d13dd66",
     "analysis\\scripts\\verify_interaction.py": "0175c3459ed6ef8662d51608ad3364b953d3cd96dba08730604cfe8723c24f7f",
     "manuscript\\build_docx.py": "25052b39cf9287372f13f889dea988b9dee0ddae69e5efd9fc9db906081f4afb",
-    "manuscript\\cover_letter_JPR.md": "5d3dc20ea9bca801e7cd1ce6afa9ee5d3d8512912ce4aaa109870e7d5299204f",
+    "manuscript\\cover_letter_JPR.md": "b9b24e12a548000aa69667742dc6448f2ce5d6081e25b65cf31b4b046bd70f37",
     "manuscript\\gate_consistency.py": "1f611bd03cd4d7cba2fd6137a491c0ac99a55f732bbccd008479b46390a4e1c6",
     "manuscript\\gate_jpr_compliance.py": "c76fc0903c2b55cc1925c7e2e51482f6fd3da646ccecd7100f56e56913972760",
     "manuscript\\manuscript_v1.1.4.docx": "0d4975bccd9ac0ebb50270dcbff81778be1683c6c7db927dbc9e027530c3de5d",
@@ -43,11 +43,11 @@
     "README.md": "e99546191bc03bdc056f408bd53c25332ce7fdf3a50d236c39656d1c57b14fe7",
     "LICENSE": "7b36f471cfb9e7c7c6611b00426888737e0cb9b845e48897d8ced9c1b15243f4",
     "CITATION.cff": "b281f4aa014b797e94a7c777419c851f7cfa95a2e9bc0d4d792868c60dcb000a",
-    "MANIFEST.json": "473b72d0932f91341f5d0cbeb755fa796e7e3f57f6c58e46a4163b832c6c7344",
+    "MANIFEST.json": "d00ac906683b1b6c6fa1fe5be3d79115387ecdd74fa256a31c92316ed1ef418c",
     "GITHUB_DEPOSIT_SOP.md": "9c9353b4ebdde98596b1462499a367d4095c05118d37736854306be77e2983eb",
     "author_verification_statement.md": "15a9f7784aeb3aa95a7198bb1a16940e7879eeb81cfb9f6d3ee4f2685f63b553",
     "PROTOCOL_机械应力与PHN.md": "d98d36df75761063821466dfe6ac49266de168174f3d856cd531997d9b1ad4fe",
     ".gitignore": "4f23618857af488ff9041e1782cb3061be63991d75cb699fcdd3d9b2a84eebcc",
-    "analysis/scripts/make_manifest.py": "73f6459b7127dbad7828e4be1e77fa41e723d6e4a16e5619fd84073e3d78a099"
+    "analysis/scripts/make_manifest.py": "a9025e3e1738a920ab27f7db049b80ad40de895ece3b6b44ff7e6fd07fe4f274"
   }
 }
