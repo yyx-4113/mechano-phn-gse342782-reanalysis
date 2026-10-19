@@ -65,7 +65,15 @@
     "author_verification_statement.md": "15a9f7784aeb3aa95a7198bb1a16940e7879eeb81cfb9f6d3ee4f2685f63b553",
     "PROTOCOL_机械应力与PHN.md": "d98d36df75761063821466dfe6ac49266de168174f3d856cd531997d9b1ad4fe",
     ".gitignore": "f3fe535df23318af5c5a238508c5c1340af6013d4035be3681c4d59839f3e0ce",
-    "release_notes_v1.1.7.md": "1064a19943087197be4dba61631acf009f64bc398b20010a2610c89c9a5153a5",
-    "analysis/scripts/make_manifest.py": "41c6957dcb6896a1c139d786094f4c5cab400ed41f3ab47d8876cb038c809a74"
+    "requirements.txt": "396efdef459094f82e63f46dc712cf6c976591daafab469df3efb52231a8d101",
+    "analysis/scripts/make_manifest.py": "7d3485a9580e3ac84350f37fef17e3d09fd3f6b5990bc1ccebc0b9a97e3669ec",
+    "release_notes_v1.1.0.md": "382aa048a9c351fe607cb52c4b0dcb89fff22d87f25b6d080c0cee0dccad3305",
+    "release_notes_v1.1.1.md": "e557ae47e3bbf4a2ddfdc2ca937f1bf85ee5c2837e0a49068addf3c31461c11e",
+    "release_notes_v1.1.2.md": "54f88d7075efeab5e942879a270cd8e6dab603c49ba0cee9ed8f9a5ee30055e4",
+    "release_notes_v1.1.3.md": "152e7d6a298a5e80f60401f2fc90d10e14bebd9d4f876faf99401a6ff1da4a37",
+    "release_notes_v1.1.4.md": "9d45a242c9cf061c2b104ba61fd7ab38a29192a818acb5d82facfc6f6aeb3568",
+    "release_notes_v1.1.5.md": "fd54cbacffb1ed10bf1071366feba65c41fb5a82f6c7f8a726b58a46ff994387",
+    "release_notes_v1.1.6.md": "886f0d506f888f99ab70a894184ce1d0942755ecf38f842b125b1000aceabe87",
+    "release_notes_v1.1.7.md": "1064a19943087197be4dba61631acf009f64bc398b20010a2610c89c9a5153a5"
   }
 }

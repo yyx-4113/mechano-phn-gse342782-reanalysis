@@ -51,9 +51,10 @@ for dirpath, dirnames, filenames in os.walk(ROOT):
 # file and the git tag.
 ROOT_DOCS = ("README.md", "LICENSE", "CITATION.cff",
              "GITHUB_DEPOSIT_SOP.md", "author_verification_statement.md",
-             "PROTOCOL_机械应力与PHN.md", ".gitignore",
-             "release_notes_v1.1.7.md",
+             "PROTOCOL_机械应力与PHN.md", ".gitignore", "requirements.txt",
              "analysis/scripts/make_manifest.py")
+ROOT_DOCS += tuple(sorted(fn for fn in os.listdir(ROOT)
+                          if fn.startswith("release_notes_") and fn.endswith(".md")))
 for name in ROOT_DOCS:
     p = os.path.join(ROOT, name)
     if os.path.exists(p):
