@@ -441,6 +441,34 @@ for Lm, grp, gA, gB, lab, cpm_df in [(L_se, se_groups, "ctrl_exo", "hz_exo", "HZ
                       "n_up": int((d > 0.5).sum()), "n_down": int((d < -0.5).sum()),
                       "n_nominal_p_lt_0.05": int((p < 0.05).sum()), "n_genes": int(len(d))})
 
+# ---------- 基因级 module 内 BH 校正（与模块级 BH 同法，描述性）----------
+# 使基因级证据可复现且可审计：每个 (contrast, panel module) 族内做 BH。
+_gene_df = pd.DataFrame(gene_rows)
+_gene_df["q_within_module"] = np.nan
+for _lab in _gene_df["contrast"].unique():
+    for _mod, _genes in MODULES.items():
+        _mask = (_gene_df["contrast"] == _lab) & (_gene_df["gene"].isin(_genes))
+        _valid = _mask & _gene_df["welch_p"].notna() & (_gene_df["welch_p"] >= 0) & (_gene_df["welch_p"] <= 1)
+        if int(_valid.sum()) == 0:
+            continue
+        _qs = bh(_gene_df.loc[_valid, "welch_p"].values)
+        _gene_df.loc[_valid, "q_within_module"] = [round(float(x), 4) for x in _qs]
+gene_rows = _gene_df.to_dict("records")
+# 紧凑结构写入 JSON，供 gate 与可追溯性声明引用
+gene_level_bh = {}
+for _lab in _gene_df["contrast"].unique():
+    gene_level_bh[_lab] = {}
+    for _mod, _genes in MODULES.items():
+        _sub = _gene_df[(_gene_df["contrast"] == _lab) & (_gene_df["gene"].isin(_genes))]
+        if len(_sub) == 0:
+            continue
+        gene_level_bh[_lab][_mod] = {
+            r["gene"]: {"log2FC": r["log2FC"], "welch_p": r["welch_p"],
+                        "q_within_module": r["q_within_module"]}
+            for _, r in _sub.iterrows()
+        }
+results["gene_level_bh"] = gene_level_bh
+
 # ---------- 写出 ----------
 res_path = os.path.join(OUT, "layer1_results.json")
 with open(res_path, "w") as f:

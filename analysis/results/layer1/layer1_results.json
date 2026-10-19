@@ -2039,5 +2039,2686 @@
         "mean_cpm_B": 0.018745461700565753
       }
     }
+  },
+  "gene_level_bh": {
+    "HZexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": {
+        "KCNK2": {
+          "log2FC": 0.0644,
+          "welch_p": 0.5202565472380846,
+          "q_within_module": 0.5946
+        },
+        "KCNK4": {
+          "log2FC": 0.1286,
+          "welch_p": 0.4114451499735109,
+          "q_within_module": 0.5486
+        },
+        "P2RX3": {
+          "log2FC": -0.3043,
+          "welch_p": 0.0755120005639298,
+          "q_within_module": 0.2905
+        },
+        "PIEZO1": {
+          "log2FC": -0.3743,
+          "welch_p": 0.10341388225623087,
+          "q_within_module": 0.2905
+        },
+        "PIEZO2": {
+          "log2FC": -0.2822,
+          "welch_p": 0.18155288126233107,
+          "q_within_module": 0.2905
+        },
+        "STOML3": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "TMEM150C": {
+          "log2FC": -0.0224,
+          "welch_p": 0.6672092765567484,
+          "q_within_module": 0.6672
+        },
+        "TRPA1": {
+          "log2FC": -0.0361,
+          "welch_p": 0.17145742593242813,
+          "q_within_module": 0.2905
+        },
+        "TRPV4": {
+          "log2FC": 0.1247,
+          "welch_p": 0.11319081548999341,
+          "q_within_module": 0.2905
+        }
+      },
+      "M2_membrane_cytoskeleton": {
+        "ACTN1": {
+          "log2FC": -0.0649,
+          "welch_p": 0.45349816502164236,
+          "q_within_module": 0.6479
+        },
+        "ACTN2": {
+          "log2FC": -0.1522,
+          "welch_p": 0.14918790013052313,
+          "q_within_module": 0.373
+        },
+        "EZR": {
+          "log2FC": -0.3346,
+          "welch_p": 0.0008343885877382725,
+          "q_within_module": 0.0167
+        },
+        "FLNA": {
+          "log2FC": -0.4944,
+          "welch_p": 0.19947383986040337,
+          "q_within_module": 0.3803
+        },
+        "FLNB": {
+          "log2FC": -0.3741,
+          "welch_p": 0.17309318916563696,
+          "q_within_module": 0.3803
+        },
+        "ITGA1": {
+          "log2FC": -0.0125,
+          "welch_p": 0.884645915381075,
+          "q_within_module": 0.8846
+        },
+        "ITGA2": {
+          "log2FC": -0.0167,
+          "welch_p": 0.5991581931411486,
+          "q_within_module": 0.7075
+        },
+        "ITGA5": {
+          "log2FC": 0.0953,
+          "welch_p": 0.5144541425339729,
+          "q_within_module": 0.6859
+        },
+        "ITGAV": {
+          "log2FC": -0.0204,
+          "welch_p": 0.8691716679008265,
+          "q_within_module": 0.8846
+        },
+        "ITGB1": {
+          "log2FC": 0.0753,
+          "welch_p": 0.07547817692969526,
+          "q_within_module": 0.2516
+        },
+        "ITGB3": {
+          "log2FC": -0.1898,
+          "welch_p": 0.1479076714840217,
+          "q_within_module": 0.373
+        },
+        "ITGB4": {
+          "log2FC": -0.0344,
+          "welch_p": 0.6430617489674754,
+          "q_within_module": 0.7145
+        },
+        "MSN": {
+          "log2FC": -0.0432,
+          "welch_p": 0.20914935511896457,
+          "q_within_module": 0.3803
+        },
+        "PXN": {
+          "log2FC": -0.2102,
+          "welch_p": 0.0019018279855794785,
+          "q_within_module": 0.019
+        },
+        "RDX": {
+          "log2FC": 0.0491,
+          "welch_p": 0.6014034430832123,
+          "q_within_module": 0.7075
+        },
+        "TLN1": {
+          "log2FC": -0.1873,
+          "welch_p": 0.382790215746925,
+          "q_within_module": 0.5889
+        },
+        "TLN2": {
+          "log2FC": -0.5392,
+          "welch_p": 0.036140269576546126,
+          "q_within_module": 0.1807
+        },
+        "VASP": {
+          "log2FC": -0.1099,
+          "welch_p": 0.07158397657170855,
+          "q_within_module": 0.2516
+        },
+        "VCL": {
+          "log2FC": -0.3415,
+          "welch_p": 0.009049642622467532,
+          "q_within_module": 0.0603
+        },
+        "ZYX": {
+          "log2FC": -0.0611,
+          "welch_p": 0.24437294480544822,
+          "q_within_module": 0.4073
+        }
+      },
+      "M3_ecm_integrin_hippo": {
+        "ADAMTS1": {
+          "log2FC": -0.4794,
+          "welch_p": 0.01295264592377733,
+          "q_within_module": 0.1773
+        },
+        "ADAMTS5": {
+          "log2FC": -0.2989,
+          "welch_p": 0.03098603761820408,
+          "q_within_module": 0.213
+        },
+        "AMOT": {
+          "log2FC": -0.2187,
+          "welch_p": 0.2916193689134771,
+          "q_within_module": 0.4717
+        },
+        "AMOTL1": {
+          "log2FC": -0.2113,
+          "welch_p": 0.36963995547871703,
+          "q_within_module": 0.5495
+        },
+        "AMOTL2": {
+          "log2FC": -0.2287,
+          "welch_p": 0.01611740092072517,
+          "q_within_module": 0.1773
+        },
+        "ANKRD1": {
+          "log2FC": 0.008,
+          "welch_p": 0.17259731953308396,
+          "q_within_module": 0.3835
+        },
+        "COL1A1": {
+          "log2FC": 0.0797,
+          "welch_p": 0.20312294473542278,
+          "q_within_module": 0.3852
+        },
+        "COL1A2": {
+          "log2FC": 0.085,
+          "welch_p": 0.28855163789199445,
+          "q_within_module": 0.4717
+        },
+        "COL2A1": {
+          "log2FC": 0.6384,
+          "welch_p": 0.2875961929480036,
+          "q_within_module": 0.4717
+        },
+        "COL3A1": {
+          "log2FC": 0.0012,
+          "welch_p": 0.9830476319160405,
+          "q_within_module": 0.983
+        },
+        "COL4A1": {
+          "log2FC": -0.3808,
+          "welch_p": 0.0052162435556658586,
+          "q_within_module": 0.1346
+        },
+        "COL4A2": {
+          "log2FC": -0.6268,
+          "welch_p": 0.0073410435519217975,
+          "q_within_module": 0.1346
+        },
+        "COL5A1": {
+          "log2FC": -0.2205,
+          "welch_p": 0.09700809309466209,
+          "q_within_module": 0.3069
+        },
+        "COL6A1": {
+          "log2FC": -0.1529,
+          "welch_p": 0.19124920025533798,
+          "q_within_module": 0.3835
+        },
+        "COMP": {
+          "log2FC": 0.0541,
+          "welch_p": 0.09153410550459534,
+          "q_within_module": 0.3069
+        },
+        "DCN": {
+          "log2FC": 0.0014,
+          "welch_p": 0.9421397868069386,
+          "q_within_module": 0.9777
+        },
+        "FERMT1": {
+          "log2FC": -0.1106,
+          "welch_p": 0.3240661127620446,
+          "q_within_module": 0.5092
+        },
+        "FN1": {
+          "log2FC": -0.2157,
+          "welch_p": 0.2587845384599613,
+          "q_within_module": 0.4591
+        },
+        "ILK": {
+          "log2FC": 0.0176,
+          "welch_p": 0.9097440916508318,
+          "q_within_module": 0.9777
+        },
+        "LAMA1": {
+          "log2FC": 0.0061,
+          "welch_p": 0.8148182964098647,
+          "q_within_module": 0.9535
+        },
+        "LAMA2": {
+          "log2FC": -0.0252,
+          "welch_p": 0.6393146516515232,
+          "q_within_module": 0.8177
+        },
+        "LAMB1": {
+          "log2FC": -0.3169,
+          "welch_p": 0.05992669971998393,
+          "q_within_module": 0.2535
+        },
+        "LAMC1": {
+          "log2FC": -0.1783,
+          "welch_p": 0.23650019710442652,
+          "q_within_module": 0.4336
+        },
+        "LATS1": {
+          "log2FC": -0.1625,
+          "welch_p": 0.17237181639060128,
+          "q_within_module": 0.3835
+        },
+        "LATS2": {
+          "log2FC": -0.1208,
+          "welch_p": 0.41803503275043125,
+          "q_within_module": 0.5748
+        },
+        "LIMS1": {
+          "log2FC": -0.1684,
+          "welch_p": 0.047988264107206864,
+          "q_within_module": 0.2199
+        },
+        "LOX": {
+          "log2FC": 0.291,
+          "welch_p": 0.02403038255704474,
+          "q_within_module": 0.213
+        },
+        "LOXL1": {
+          "log2FC": 0.0127,
+          "welch_p": 0.8904086631672897,
+          "q_within_module": 0.9777
+        },
+        "LOXL2": {
+          "log2FC": -0.395,
+          "welch_p": 0.04352043467011681,
+          "q_within_module": 0.2199
+        },
+        "LOXL3": {
+          "log2FC": -0.102,
+          "welch_p": 0.1515827763940779,
+          "q_within_module": 0.3835
+        },
+        "LOXL4": {
+          "log2FC": 0.0246,
+          "welch_p": 0.7501758815332902,
+          "q_within_module": 0.8969
+        },
+        "LUM": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "MMP14": {
+          "log2FC": -0.0114,
+          "welch_p": 0.9335797900183463,
+          "q_within_module": 0.9777
+        },
+        "MMP2": {
+          "log2FC": -0.0174,
+          "welch_p": 0.8954832432765742,
+          "q_within_module": 0.9777
+        },
+        "MMP3": {
+          "log2FC": 0.0193,
+          "welch_p": 0.4148583274945043,
+          "q_within_module": 0.5748
+        },
+        "MMP9": {
+          "log2FC": 0.0042,
+          "welch_p": 0.3559176837495822,
+          "q_within_module": 0.5438
+        },
+        "MOB1A": {
+          "log2FC": 0.2637,
+          "welch_p": 0.0031059214049335574,
+          "q_within_module": 0.1346
+        },
+        "MOB1B": {
+          "log2FC": -0.0301,
+          "welch_p": 0.4668089326240617,
+          "q_within_module": 0.616
+        },
+        "NF2": {
+          "log2FC": -0.1608,
+          "welch_p": 0.07032963152951062,
+          "q_within_module": 0.2763
+        },
+        "P4HA1": {
+          "log2FC": 0.1869,
+          "welch_p": 0.1405196166828966,
+          "q_within_module": 0.3835
+        },
+        "P4HA2": {
+          "log2FC": -0.0121,
+          "welch_p": 0.9100727404662237,
+          "q_within_module": 0.9777
+        },
+        "PLOD1": {
+          "log2FC": -0.1393,
+          "welch_p": 0.0283428001101908,
+          "q_within_module": 0.213
+        },
+        "PLOD2": {
+          "log2FC": 0.2847,
+          "welch_p": 0.04568190489484912,
+          "q_within_module": 0.2199
+        },
+        "PTK2": {
+          "log2FC": -0.1249,
+          "welch_p": 0.09762503099802874,
+          "q_within_module": 0.3009
+        },
+        "SAV1": {
+          "log2FC": -0.0914,
+          "welch_p": 0.1004521047364721,
+          "q_within_module": 0.3069
+        },
+        "STK3": {
+          "log2FC": 0.0649,
+          "welch_p": 0.7461724124376682,
+          "q_within_module": 0.8969
+        },
+        "STK4": {
+          "log2FC": -0.1335,
+          "welch_p": 0.17878438806198987,
+          "q_within_module": 0.3835
+        },
+        "TEAD1": {
+          "log2FC": -0.3392,
+          "welch_p": 0.04685494963247144,
+          "q_within_module": 0.2199
+        },
+        "TEAD2": {
+          "log2FC": 0.3917,
+          "welch_p": 0.19517753143575695,
+          "q_within_module": 0.3835
+        },
+        "TEAD3": {
+          "log2FC": -0.1426,
+          "welch_p": 0.17430175414993418,
+          "q_within_module": 0.3835
+        },
+        "TEAD4": {
+          "log2FC": -0.1192,
+          "welch_p": 0.38890688398554124,
+          "q_within_module": 0.5629
+        },
+        "TIMP1": {
+          "log2FC": -0.0619,
+          "welch_p": 0.667127362823146,
+          "q_within_module": 0.8339
+        },
+        "TIMP2": {
+          "log2FC": 0.0025,
+          "welch_p": 0.968157131040491,
+          "q_within_module": 0.983
+        },
+        "TIMP3": {
+          "log2FC": 0.0955,
+          "welch_p": 0.47042827162019,
+          "q_within_module": 0.616
+        },
+        "WWTR1": {
+          "log2FC": 0.3013,
+          "welch_p": 0.19526079485013748,
+          "q_within_module": 0.3835
+        },
+        "YAP1": {
+          "log2FC": 0.4254,
+          "welch_p": 0.18341801095492866,
+          "q_within_module": 0.3835
+        }
+      },
+      "M4_mechano_effectors": {
+        "ACTA2": {
+          "log2FC": 0.1798,
+          "welch_p": 0.23748723185528584,
+          "q_within_module": 0.3492
+        },
+        "CALD1": {
+          "log2FC": 0.0722,
+          "welch_p": 0.5376370307482335,
+          "q_within_module": 0.64
+        },
+        "CDC42": {
+          "log2FC": 0.3144,
+          "welch_p": 0.02130458706894897,
+          "q_within_module": 0.1879
+        },
+        "CRK": {
+          "log2FC": -0.0477,
+          "welch_p": 0.1852163996343379,
+          "q_within_module": 0.3492
+        },
+        "CRKL": {
+          "log2FC": -0.2311,
+          "welch_p": 0.07525665091434763,
+          "q_within_module": 0.3009
+        },
+        "MAPK1": {
+          "log2FC": -0.185,
+          "welch_p": 0.02838224829026697,
+          "q_within_module": 0.1879
+        },
+        "MAPK14": {
+          "log2FC": 0.0269,
+          "welch_p": 0.5889928176403375,
+          "q_within_module": 0.6693
+        },
+        "MAPK3": {
+          "log2FC": -0.1427,
+          "welch_p": 0.0231535611239717,
+          "q_within_module": 0.1879
+        },
+        "MAPK8": {
+          "log2FC": 0.039,
+          "welch_p": 0.4403872932172259,
+          "q_within_module": 0.5742
+        },
+        "MYH10": {
+          "log2FC": -0.3049,
+          "welch_p": 0.22104423752101846,
+          "q_within_module": 0.3492
+        },
+        "MYH9": {
+          "log2FC": -0.2767,
+          "welch_p": 0.20780607523052944,
+          "q_within_module": 0.3492
+        },
+        "PTK2": {
+          "log2FC": -0.1249,
+          "welch_p": 0.09762503099802874,
+          "q_within_module": 0.3009
+        },
+        "RHOA": {
+          "log2FC": 0.1394,
+          "welch_p": 0.1444444790649827,
+          "q_within_module": 0.3009
+        },
+        "RHOC": {
+          "log2FC": 0.1662,
+          "welch_p": 0.1364301538957112,
+          "q_within_module": 0.3009
+        },
+        "ROCK1": {
+          "log2FC": -0.0321,
+          "welch_p": 0.8082557314742191,
+          "q_within_module": 0.8537
+        },
+        "ROCK2": {
+          "log2FC": -0.187,
+          "welch_p": 0.1158407393509534,
+          "q_within_module": 0.3009
+        },
+        "SMAD2": {
+          "log2FC": 0.0021,
+          "welch_p": 0.9454355281785843,
+          "q_within_module": 0.9454
+        },
+        "SMAD3": {
+          "log2FC": -0.1782,
+          "welch_p": 0.11186614178675765,
+          "q_within_module": 0.3009
+        },
+        "SRC": {
+          "log2FC": -0.1326,
+          "welch_p": 0.10232756920682673,
+          "q_within_module": 0.3009
+        },
+        "TGFB1": {
+          "log2FC": 0.2248,
+          "welch_p": 0.030056323032430225,
+          "q_within_module": 0.1879
+        },
+        "TGFB2": {
+          "log2FC": 0.0419,
+          "welch_p": 0.8195846715802696,
+          "q_within_module": 0.8537
+        },
+        "TGFB3": {
+          "log2FC": -0.0988,
+          "welch_p": 0.27569141051337553,
+          "q_within_module": 0.3829
+        },
+        "TPM1": {
+          "log2FC": -0.1359,
+          "welch_p": 0.2370538246097969,
+          "q_within_module": 0.3492
+        },
+        "VIM": {
+          "log2FC": 0.1347,
+          "welch_p": 0.13682132787787518,
+          "q_within_module": 0.3009
+        },
+        "YES1": {
+          "log2FC": 0.0398,
+          "welch_p": 0.4593606692165798,
+          "q_within_module": 0.5742
+        }
+      },
+      "E1_classical_nociceptor": {
+        "ASIC1": {
+          "log2FC": -0.1812,
+          "welch_p": 0.019257567008866362,
+          "q_within_module": 0.0693
+        },
+        "ASIC2": {
+          "log2FC": -0.296,
+          "welch_p": 0.04215035726139389,
+          "q_within_module": 0.1265
+        },
+        "ASIC3": {
+          "log2FC": -0.1446,
+          "welch_p": 0.1901872014523959,
+          "q_within_module": 0.3655
+        },
+        "CACNA1H": {
+          "log2FC": -0.2972,
+          "welch_p": 0.2409974124900821,
+          "q_within_module": 0.3655
+        },
+        "CACNA2D1": {
+          "log2FC": -0.1325,
+          "welch_p": 0.2646005418445406,
+          "q_within_module": 0.3655
+        },
+        "CACNA2D2": {
+          "log2FC": -0.1624,
+          "welch_p": 0.25582439913789784,
+          "q_within_module": 0.3655
+        },
+        "GRIA1": {
+          "log2FC": -0.0902,
+          "welch_p": 0.07875553459205427,
+          "q_within_module": 0.2025
+        },
+        "GRIA2": {
+          "log2FC": -0.1469,
+          "welch_p": 0.29831621483659165,
+          "q_within_module": 0.3655
+        },
+        "GRIN2B": {
+          "log2FC": -0.1061,
+          "welch_p": 0.3523034686755499,
+          "q_within_module": 0.3963
+        },
+        "KCNQ2": {
+          "log2FC": -0.2111,
+          "welch_p": 0.4694083803452662,
+          "q_within_module": 0.5636
+        },
+        "KCNQ3": {
+          "log2FC": -0.1743,
+          "welch_p": 0.3045731003710809,
+          "q_within_module": 0.5004
+        },
+        "KCNS1": {
+          "log2FC": -0.393,
+          "welch_p": 0.01741482811835261,
+          "q_within_module": 0.0693
+        },
+        "P2RX7": {
+          "log2FC": -0.1383,
+          "welch_p": 0.29440462287878894,
+          "q_within_module": 0.3655
+        },
+        "SCN10A": {
+          "log2FC": -0.3844,
+          "welch_p": 0.00760427131596624,
+          "q_within_module": 0.0684
+        },
+        "SCN11A": {
+          "log2FC": -0.1615,
+          "welch_p": 0.20782334000262243,
+          "q_within_module": 0.3655
+        },
+        "SCN9A": {
+          "log2FC": -0.3231,
+          "welch_p": 0.01815414458335192,
+          "q_within_module": 0.0693
+        },
+        "TRPM8": {
+          "log2FC": -0.0433,
+          "welch_p": 0.7221215763557218,
+          "q_within_module": 0.7221
+        },
+        "TRPV1": {
+          "log2FC": -0.5673,
+          "welch_p": 0.0009153186552599286,
+          "q_within_module": 0.0165
+        }
+      },
+      "N1_voltage_gated_control": {
+        "CACNA1A": {
+          "log2FC": -0.1925,
+          "welch_p": 0.40325339961031786,
+          "q_within_module": 0.5636
+        },
+        "CACNA1C": {
+          "log2FC": -0.176,
+          "welch_p": 0.49728319001498633,
+          "q_within_module": 0.5636
+        },
+        "CACNA1S": {
+          "log2FC": 0.0059,
+          "welch_p": 0.8403635367652067,
+          "q_within_module": 0.8404
+        },
+        "CACNB2": {
+          "log2FC": -0.0597,
+          "welch_p": 0.4447929661738828,
+          "q_within_module": 0.5636
+        },
+        "HCN1": {
+          "log2FC": -0.4508,
+          "welch_p": 0.03742551352598429,
+          "q_within_module": 0.3826
+        },
+        "HCN2": {
+          "log2FC": -0.1503,
+          "welch_p": 0.3068297791863205,
+          "q_within_module": 0.5004
+        },
+        "KCNA1": {
+          "log2FC": -0.1588,
+          "welch_p": 0.21606561372572797,
+          "q_within_module": 0.4797
+        },
+        "KCND3": {
+          "log2FC": -0.2172,
+          "welch_p": 0.18602003050269397,
+          "q_within_module": 0.4797
+        },
+        "KCNQ1": {
+          "log2FC": -0.0833,
+          "welch_p": 0.32380429165031027,
+          "q_within_module": 0.5004
+        },
+        "KCNQ2": {
+          "log2FC": -0.2111,
+          "welch_p": 0.4694083803452662,
+          "q_within_module": 0.5636
+        },
+        "KCNQ3": {
+          "log2FC": -0.1743,
+          "welch_p": 0.3045731003710809,
+          "q_within_module": 0.5004
+        },
+        "SCN1A": {
+          "log2FC": 0.1727,
+          "welch_p": 0.045011660358703263,
+          "q_within_module": 0.3826
+        },
+        "SCN2A": {
+          "log2FC": -0.2107,
+          "welch_p": 0.13245178591291284,
+          "q_within_module": 0.4797
+        },
+        "SCN3A": {
+          "log2FC": -0.1921,
+          "welch_p": 0.19900781713659405,
+          "q_within_module": 0.4797
+        },
+        "SCN4A": {
+          "log2FC": 0.0175,
+          "welch_p": 0.5808143061223511,
+          "q_within_module": 0.6171
+        },
+        "SCN5A": {
+          "log2FC": -0.2425,
+          "welch_p": 0.22574522556806972,
+          "q_within_module": 0.4797
+        },
+        "SCN8A": {
+          "log2FC": -0.3258,
+          "welch_p": 0.11541961985952182,
+          "q_within_module": 0.4797
+        }
+      },
+      "N2_olfactory_control": {
+        "OR10J5": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR11H1": {
+          "log2FC": -0.0007,
+          "welch_p": 0.9164622743539684,
+          "q_within_module": 0.9165
+        },
+        "OR1A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR2A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR4A15": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR51B4": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52B2": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52D1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52E1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR5A1": {
+          "log2FC": -0.2904,
+          "welch_p": 0.005201924690804562,
+          "q_within_module": 0.0156
+        },
+        "OR7A5": {
+          "log2FC": 0.0044,
+          "welch_p": 0.3559176837495822,
+          "q_within_module": 0.5339
+        },
+        "OR8A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        }
+      },
+      "N3_ribosomal_control": {
+        "RPL10": {
+          "log2FC": 0.1358,
+          "welch_p": 0.15513133144800356,
+          "q_within_module": 0.1551
+        },
+        "RPL11": {
+          "log2FC": 0.3172,
+          "welch_p": 0.0037894846519708476,
+          "q_within_module": 0.0046
+        },
+        "RPL12": {
+          "log2FC": 0.3809,
+          "welch_p": 0.0025969096221471737,
+          "q_within_module": 0.0039
+        },
+        "RPL3": {
+          "log2FC": 0.204,
+          "welch_p": 0.0027208339232448887,
+          "q_within_module": 0.0039
+        },
+        "RPL4": {
+          "log2FC": 0.2313,
+          "welch_p": 0.0027602358516299846,
+          "q_within_module": 0.0039
+        },
+        "RPL5": {
+          "log2FC": 0.4504,
+          "welch_p": 0.0008884761037374637,
+          "q_within_module": 0.0019
+        },
+        "RPL6": {
+          "log2FC": 0.3147,
+          "welch_p": 0.009910682876888779,
+          "q_within_module": 0.0105
+        },
+        "RPL7": {
+          "log2FC": 0.3389,
+          "welch_p": 0.009192791698975055,
+          "q_within_module": 0.0104
+        },
+        "RPL8": {
+          "log2FC": 0.2949,
+          "welch_p": 0.0030650641554589232,
+          "q_within_module": 0.004
+        },
+        "RPL9": {
+          "log2FC": 0.5923,
+          "welch_p": 0.0001596497615201757,
+          "q_within_module": 0.0011
+        },
+        "RPS10": {
+          "log2FC": 0.4843,
+          "welch_p": 0.0005838074470299169,
+          "q_within_module": 0.0017
+        },
+        "RPS3": {
+          "log2FC": 0.5294,
+          "welch_p": 0.00037725945171305803,
+          "q_within_module": 0.0013
+        },
+        "RPS5": {
+          "log2FC": 0.3978,
+          "welch_p": 0.0008699876289853697,
+          "q_within_module": 0.0019
+        },
+        "RPS6": {
+          "log2FC": 0.6156,
+          "welch_p": 0.0001938849690631377,
+          "q_within_module": 0.0011
+        },
+        "RPS7": {
+          "log2FC": 0.6327,
+          "welch_p": 0.0002622400852028794,
+          "q_within_module": 0.0011
+        },
+        "RPS8": {
+          "log2FC": 0.3984,
+          "welch_p": 0.00017524900101724465,
+          "q_within_module": 0.0011
+        },
+        "RPS9": {
+          "log2FC": 0.3359,
+          "welch_p": 0.0010481474235259415,
+          "q_within_module": 0.002
+        }
+      }
+    },
+    "PHNexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": {
+        "KCNK2": {
+          "log2FC": 0.0912,
+          "welch_p": 0.24728831959061803,
+          "q_within_module": 0.3974
+        },
+        "KCNK4": {
+          "log2FC": -0.0082,
+          "welch_p": 0.9464401176150621,
+          "q_within_module": 0.9464
+        },
+        "P2RX3": {
+          "log2FC": -0.3711,
+          "welch_p": 0.006952743590082095,
+          "q_within_module": 0.0278
+        },
+        "PIEZO1": {
+          "log2FC": -0.5134,
+          "welch_p": 0.0003536055363867303,
+          "q_within_module": 0.0028
+        },
+        "PIEZO2": {
+          "log2FC": -0.3834,
+          "welch_p": 0.0333682437671601,
+          "q_within_module": 0.089
+        },
+        "STOML3": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "TMEM150C": {
+          "log2FC": -0.0293,
+          "welch_p": 0.5767884157114005,
+          "q_within_module": 0.6592
+        },
+        "TRPA1": {
+          "log2FC": -0.026,
+          "welch_p": 0.40396531732666474,
+          "q_within_module": 0.5386
+        },
+        "TRPV4": {
+          "log2FC": 0.1695,
+          "welch_p": 0.24834763027179096,
+          "q_within_module": 0.3974
+        }
+      },
+      "M2_membrane_cytoskeleton": {
+        "ACTN1": {
+          "log2FC": -0.0566,
+          "welch_p": 0.45967245962665926,
+          "q_within_module": 0.5746
+        },
+        "ACTN2": {
+          "log2FC": -0.0489,
+          "welch_p": 0.5863547695738159,
+          "q_within_module": 0.6515
+        },
+        "EZR": {
+          "log2FC": -0.402,
+          "welch_p": 6.009710650949483e-05,
+          "q_within_module": 0.0012
+        },
+        "FLNA": {
+          "log2FC": -0.3626,
+          "welch_p": 0.19896380302975925,
+          "q_within_module": 0.2693
+        },
+        "FLNB": {
+          "log2FC": -0.4282,
+          "welch_p": 0.06677756182092243,
+          "q_within_module": 0.1214
+        },
+        "ITGA1": {
+          "log2FC": -0.1617,
+          "welch_p": 0.14922397994411085,
+          "q_within_module": 0.2296
+        },
+        "ITGA2": {
+          "log2FC": 0.0121,
+          "welch_p": 0.7039216061089636,
+          "q_within_module": 0.741
+        },
+        "ITGA5": {
+          "log2FC": 0.0994,
+          "welch_p": 0.7569239588441155,
+          "q_within_module": 0.7569
+        },
+        "ITGAV": {
+          "log2FC": 0.0824,
+          "welch_p": 0.5141287066039674,
+          "q_within_module": 0.6049
+        },
+        "ITGB1": {
+          "log2FC": 0.0482,
+          "welch_p": 0.201983082722219,
+          "q_within_module": 0.2693
+        },
+        "ITGB3": {
+          "log2FC": -0.3664,
+          "welch_p": 0.016376831698616593,
+          "q_within_module": 0.0468
+        },
+        "ITGB4": {
+          "log2FC": -0.1867,
+          "welch_p": 0.010275072912096148,
+          "q_within_module": 0.0343
+        },
+        "MSN": {
+          "log2FC": -0.1337,
+          "welch_p": 0.0009957969572501558,
+          "q_within_module": 0.0051
+        },
+        "PXN": {
+          "log2FC": -0.197,
+          "welch_p": 0.0012642350770721116,
+          "q_within_module": 0.0051
+        },
+        "RDX": {
+          "log2FC": 0.1334,
+          "welch_p": 0.13650535445055956,
+          "q_within_module": 0.2275
+        },
+        "TLN1": {
+          "log2FC": -0.3482,
+          "welch_p": 0.045882564161325516,
+          "q_within_module": 0.0918
+        },
+        "TLN2": {
+          "log2FC": -0.6159,
+          "welch_p": 0.0010147267727667684,
+          "q_within_module": 0.0051
+        },
+        "VASP": {
+          "log2FC": -0.1408,
+          "welch_p": 0.022552127503316956,
+          "q_within_module": 0.0501
+        },
+        "VCL": {
+          "log2FC": -0.3734,
+          "welch_p": 0.00019785082138367387,
+          "q_within_module": 0.002
+        },
+        "ZYX": {
+          "log2FC": -0.12,
+          "welch_p": 0.019108504158971508,
+          "q_within_module": 0.0478
+        }
+      },
+      "M3_ecm_integrin_hippo": {
+        "ADAMTS1": {
+          "log2FC": -0.3363,
+          "welch_p": 0.012301444938086877,
+          "q_within_module": 0.0905
+        },
+        "ADAMTS5": {
+          "log2FC": -0.1638,
+          "welch_p": 0.2014104240062903,
+          "q_within_module": 0.3485
+        },
+        "AMOT": {
+          "log2FC": -0.331,
+          "welch_p": 0.07466362544925348,
+          "q_within_module": 0.288
+        },
+        "AMOTL1": {
+          "log2FC": -0.3296,
+          "welch_p": 0.10012617835905292,
+          "q_within_module": 0.2881
+        },
+        "AMOTL2": {
+          "log2FC": -0.3373,
+          "welch_p": 7.716551495179561e-05,
+          "q_within_module": 0.0042
+        },
+        "ANKRD1": {
+          "log2FC": 0.0278,
+          "welch_p": 0.11100519570788706,
+          "q_within_module": 0.2881
+        },
+        "COL1A1": {
+          "log2FC": 0.1755,
+          "welch_p": 0.21254809002464412,
+          "q_within_module": 0.3485
+        },
+        "COL1A2": {
+          "log2FC": 0.0721,
+          "welch_p": 0.2129859176626372,
+          "q_within_module": 0.3485
+        },
+        "COL2A1": {
+          "log2FC": 1.3566,
+          "welch_p": 0.21203778778914376,
+          "q_within_module": 0.3485
+        },
+        "COL3A1": {
+          "log2FC": 0.0649,
+          "welch_p": 0.41020523493287325,
+          "q_within_module": 0.5497
+        },
+        "COL4A1": {
+          "log2FC": -0.2445,
+          "welch_p": 0.12292942542323854,
+          "q_within_module": 0.2881
+        },
+        "COL4A2": {
+          "log2FC": -0.6133,
+          "welch_p": 0.00019984616765542378,
+          "q_within_module": 0.0054
+        },
+        "COL5A1": {
+          "log2FC": -0.1955,
+          "welch_p": 0.11601834766175244,
+          "q_within_module": 0.2881
+        },
+        "COL6A1": {
+          "log2FC": -0.2871,
+          "welch_p": 0.0030465658834838956,
+          "q_within_module": 0.0411
+        },
+        "COMP": {
+          "log2FC": -0.0192,
+          "welch_p": 0.3034611599346924,
+          "q_within_module": 0.4429
+        },
+        "DCN": {
+          "log2FC": -0.0015,
+          "welch_p": 0.9374387808399811,
+          "q_within_module": 0.9735
+        },
+        "FERMT1": {
+          "log2FC": -0.0766,
+          "welch_p": 0.5828371751038224,
+          "q_within_module": 0.7019
+        },
+        "FN1": {
+          "log2FC": -0.4036,
+          "welch_p": 0.13339161927597418,
+          "q_within_module": 0.2881
+        },
+        "ILK": {
+          "log2FC": 0.2265,
+          "welch_p": 0.192484872221477,
+          "q_within_module": 0.3485
+        },
+        "LAMA1": {
+          "log2FC": -0.0066,
+          "welch_p": 0.7563259515739,
+          "q_within_module": 0.8306
+        },
+        "LAMA2": {
+          "log2FC": -0.0012,
+          "welch_p": 0.9886520570728682,
+          "q_within_module": 0.9887
+        },
+        "LAMB1": {
+          "log2FC": -0.344,
+          "welch_p": 0.01341368525538322,
+          "q_within_module": 0.0905
+        },
+        "LAMC1": {
+          "log2FC": -0.2312,
+          "welch_p": 0.08962891752237444,
+          "q_within_module": 0.2881
+        },
+        "LATS1": {
+          "log2FC": -0.2036,
+          "welch_p": 0.11771458385252756,
+          "q_within_module": 0.2881
+        },
+        "LATS2": {
+          "log2FC": -0.2259,
+          "welch_p": 0.058302013150775094,
+          "q_within_module": 0.2624
+        },
+        "LIMS1": {
+          "log2FC": -0.078,
+          "welch_p": 0.17629039816942574,
+          "q_within_module": 0.3485
+        },
+        "LOX": {
+          "log2FC": 0.2665,
+          "welch_p": 0.09175738219366888,
+          "q_within_module": 0.2881
+        },
+        "LOXL1": {
+          "log2FC": -0.0515,
+          "welch_p": 0.5849213094272047,
+          "q_within_module": 0.7019
+        },
+        "LOXL2": {
+          "log2FC": -0.3513,
+          "welch_p": 0.037070176717797367,
+          "q_within_module": 0.2002
+        },
+        "LOXL3": {
+          "log2FC": 0.0139,
+          "welch_p": 0.8418915957308591,
+          "q_within_module": 0.8914
+        },
+        "LOXL4": {
+          "log2FC": -0.0258,
+          "welch_p": 0.6874329726680829,
+          "q_within_module": 0.7898
+        },
+        "LUM": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "MMP14": {
+          "log2FC": 0.1172,
+          "welch_p": 0.47315522621596096,
+          "q_within_module": 0.6022
+        },
+        "MMP2": {
+          "log2FC": -0.1464,
+          "welch_p": 0.34293738629792,
+          "q_within_module": 0.4748
+        },
+        "MMP3": {
+          "log2FC": 0.0083,
+          "welch_p": 0.7358797365129984,
+          "q_within_module": 0.8279
+        },
+        "MMP9": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "MOB1A": {
+          "log2FC": 0.264,
+          "welch_p": 0.01617246606015891,
+          "q_within_module": 0.097
+        },
+        "MOB1B": {
+          "log2FC": -0.0714,
+          "welch_p": 0.21191583709752662,
+          "q_within_module": 0.3485
+        },
+        "NF2": {
+          "log2FC": -0.2402,
+          "welch_p": 0.0020775780543228722,
+          "q_within_module": 0.0374
+        },
+        "P4HA1": {
+          "log2FC": 0.3802,
+          "welch_p": 0.131618390199986,
+          "q_within_module": 0.2881
+        },
+        "P4HA2": {
+          "log2FC": -0.0259,
+          "welch_p": 0.7690513899351783,
+          "q_within_module": 0.8306
+        },
+        "PLOD1": {
+          "log2FC": -0.1131,
+          "welch_p": 0.007578626096843662,
+          "q_within_module": 0.0818
+        },
+        "PLOD2": {
+          "log2FC": 0.456,
+          "welch_p": 0.11452992206767955,
+          "q_within_module": 0.2881
+        },
+        "PTK2": {
+          "log2FC": -0.0937,
+          "welch_p": 0.08447655012062766,
+          "q_within_module": 0.176
+        },
+        "SAV1": {
+          "log2FC": -0.0814,
+          "welch_p": 0.2989940938782433,
+          "q_within_module": 0.4429
+        },
+        "STK3": {
+          "log2FC": 0.3412,
+          "welch_p": 0.17906520363909378,
+          "q_within_module": 0.3485
+        },
+        "STK4": {
+          "log2FC": -0.2255,
+          "welch_p": 0.011253738424050223,
+          "q_within_module": 0.0905
+        },
+        "TEAD1": {
+          "log2FC": -0.2822,
+          "welch_p": 0.07064530565793288,
+          "q_within_module": 0.288
+        },
+        "TEAD2": {
+          "log2FC": 0.4777,
+          "welch_p": 0.33886556927195477,
+          "q_within_module": 0.4748
+        },
+        "TEAD3": {
+          "log2FC": -0.0891,
+          "welch_p": 0.41734481279504376,
+          "q_within_module": 0.5497
+        },
+        "TEAD4": {
+          "log2FC": 0.1468,
+          "welch_p": 0.479540928072472,
+          "q_within_module": 0.6022
+        },
+        "TIMP1": {
+          "log2FC": 0.0069,
+          "welch_p": 0.9589675911364189,
+          "q_within_module": 0.9771
+        },
+        "TIMP2": {
+          "log2FC": -0.1355,
+          "welch_p": 0.042696765416972524,
+          "q_within_module": 0.2096
+        },
+        "TIMP3": {
+          "log2FC": -0.0416,
+          "welch_p": 0.6146702390646158,
+          "q_within_module": 0.7216
+        },
+        "WWTR1": {
+          "log2FC": 0.3526,
+          "welch_p": 0.29395879346350784,
+          "q_within_module": 0.4429
+        },
+        "YAP1": {
+          "log2FC": 0.7122,
+          "welch_p": 0.2398777785869316,
+          "q_within_module": 0.381
+        }
+      },
+      "M4_mechano_effectors": {
+        "ACTA2": {
+          "log2FC": -0.0646,
+          "welch_p": 0.5065945654346787,
+          "q_within_module": 0.6079
+        },
+        "CALD1": {
+          "log2FC": 0.092,
+          "welch_p": 0.6239558930632256,
+          "q_within_module": 0.6782
+        },
+        "CDC42": {
+          "log2FC": 0.4244,
+          "welch_p": 0.002182494256015414,
+          "q_within_module": 0.0243
+        },
+        "CRK": {
+          "log2FC": -0.0351,
+          "welch_p": 0.20804493332973145,
+          "q_within_module": 0.3467
+        },
+        "CRKL": {
+          "log2FC": -0.2585,
+          "welch_p": 0.006487227908114569,
+          "q_within_module": 0.0341
+        },
+        "MAPK1": {
+          "log2FC": -0.2439,
+          "welch_p": 0.002910502641788792,
+          "q_within_module": 0.0243
+        },
+        "MAPK14": {
+          "log2FC": 0.0751,
+          "welch_p": 0.12110056589571544,
+          "q_within_module": 0.2329
+        },
+        "MAPK3": {
+          "log2FC": -0.1945,
+          "welch_p": 0.013802728984249009,
+          "q_within_module": 0.0493
+        },
+        "MAPK8": {
+          "log2FC": 0.0177,
+          "welch_p": 0.7416066579005283,
+          "q_within_module": 0.7725
+        },
+        "MYH10": {
+          "log2FC": -0.4683,
+          "welch_p": 0.017863404834216546,
+          "q_within_module": 0.0496
+        },
+        "MYH9": {
+          "log2FC": -0.4316,
+          "welch_p": 0.013700505994989433,
+          "q_within_module": 0.0493
+        },
+        "PTK2": {
+          "log2FC": -0.0937,
+          "welch_p": 0.08447655012062766,
+          "q_within_module": 0.176
+        },
+        "RHOA": {
+          "log2FC": 0.1629,
+          "welch_p": 0.02455498262197845,
+          "q_within_module": 0.0614
+        },
+        "RHOC": {
+          "log2FC": 0.2454,
+          "welch_p": 0.01740339915755391,
+          "q_within_module": 0.0496
+        },
+        "ROCK1": {
+          "log2FC": -0.1892,
+          "welch_p": 0.20020863053385013,
+          "q_within_module": 0.3467
+        },
+        "ROCK2": {
+          "log2FC": -0.2491,
+          "welch_p": 0.07988797446290372,
+          "q_within_module": 0.176
+        },
+        "SMAD2": {
+          "log2FC": -0.0362,
+          "welch_p": 0.3961153108354393,
+          "q_within_module": 0.6079
+        },
+        "SMAD3": {
+          "log2FC": -0.3038,
+          "welch_p": 0.006820880301887353,
+          "q_within_module": 0.0341
+        },
+        "SRC": {
+          "log2FC": -0.2491,
+          "welch_p": 0.0006319766404388572,
+          "q_within_module": 0.0158
+        },
+        "TGFB1": {
+          "log2FC": 0.0912,
+          "welch_p": 0.49490326780972455,
+          "q_within_module": 0.6079
+        },
+        "TGFB2": {
+          "log2FC": -0.1644,
+          "welch_p": 0.43318376755430005,
+          "q_within_module": 0.6079
+        },
+        "TGFB3": {
+          "log2FC": -0.006,
+          "welch_p": 0.9156523512727727,
+          "q_within_module": 0.9157
+        },
+        "TPM1": {
+          "log2FC": -0.0613,
+          "welch_p": 0.5537271414862235,
+          "q_within_module": 0.6292
+        },
+        "VIM": {
+          "log2FC": -0.0302,
+          "welch_p": 0.4736916165155423,
+          "q_within_module": 0.6079
+        },
+        "YES1": {
+          "log2FC": 0.0594,
+          "welch_p": 0.5106113514172175,
+          "q_within_module": 0.6079
+        }
+      },
+      "E1_classical_nociceptor": {
+        "ASIC1": {
+          "log2FC": -0.1956,
+          "welch_p": 0.006071618682663827,
+          "q_within_module": 0.0273
+        },
+        "ASIC2": {
+          "log2FC": -0.2126,
+          "welch_p": 0.14238402096897598,
+          "q_within_module": 0.2566
+        },
+        "ASIC3": {
+          "log2FC": 0.0833,
+          "welch_p": 0.4779383720378901,
+          "q_within_module": 0.5377
+        },
+        "CACNA1H": {
+          "log2FC": -0.2652,
+          "welch_p": 0.16351092568920117,
+          "q_within_module": 0.2643
+        },
+        "CACNA2D1": {
+          "log2FC": -0.1944,
+          "welch_p": 0.1425681905233052,
+          "q_within_module": 0.2566
+        },
+        "CACNA2D2": {
+          "log2FC": -0.229,
+          "welch_p": 0.06325753634477624,
+          "q_within_module": 0.1627
+        },
+        "GRIA1": {
+          "log2FC": -0.0669,
+          "welch_p": 0.17655755210775737,
+          "q_within_module": 0.2643
+        },
+        "GRIA2": {
+          "log2FC": -0.1859,
+          "welch_p": 0.2055415258352688,
+          "q_within_module": 0.2643
+        },
+        "GRIN2B": {
+          "log2FC": -0.0352,
+          "welch_p": 0.829142302133854,
+          "q_within_module": 0.8291
+        },
+        "KCNQ2": {
+          "log2FC": -0.3132,
+          "welch_p": 0.11748988679338841,
+          "q_within_module": 0.2219
+        },
+        "KCNQ3": {
+          "log2FC": -0.2949,
+          "welch_p": 0.05936979577374572,
+          "q_within_module": 0.1442
+        },
+        "KCNS1": {
+          "log2FC": -0.3707,
+          "welch_p": 0.03958221916880842,
+          "q_within_module": 0.1425
+        },
+        "P2RX7": {
+          "log2FC": -0.1413,
+          "welch_p": 0.25239971343188256,
+          "q_within_module": 0.3029
+        },
+        "SCN10A": {
+          "log2FC": -0.4191,
+          "welch_p": 0.0038151885446209015,
+          "q_within_module": 0.0229
+        },
+        "SCN11A": {
+          "log2FC": -0.0466,
+          "welch_p": 0.626652533441951,
+          "q_within_module": 0.6635
+        },
+        "SCN9A": {
+          "log2FC": -0.3311,
+          "welch_p": 0.003333693522871829,
+          "q_within_module": 0.0229
+        },
+        "TRPM8": {
+          "log2FC": 0.1505,
+          "welch_p": 0.20153526252129203,
+          "q_within_module": 0.2643
+        },
+        "TRPV1": {
+          "log2FC": -0.4854,
+          "welch_p": 0.00013098773538072493,
+          "q_within_module": 0.0024
+        }
+      },
+      "N1_voltage_gated_control": {
+        "CACNA1A": {
+          "log2FC": -0.3148,
+          "welch_p": 0.07288917372797946,
+          "q_within_module": 0.1549
+        },
+        "CACNA1C": {
+          "log2FC": -0.2579,
+          "welch_p": 0.21709724540833428,
+          "q_within_module": 0.3355
+        },
+        "CACNA1S": {
+          "log2FC": -0.007,
+          "welch_p": 0.8269378708473766,
+          "q_within_module": 0.8269
+        },
+        "CACNB2": {
+          "log2FC": -0.0299,
+          "welch_p": 0.7272704149209812,
+          "q_within_module": 0.7963
+        },
+        "HCN1": {
+          "log2FC": -0.338,
+          "welch_p": 0.006922192542162696,
+          "q_within_module": 0.1177
+        },
+        "HCN2": {
+          "log2FC": -0.1564,
+          "welch_p": 0.1567926896578492,
+          "q_within_module": 0.2665
+        },
+        "KCNA1": {
+          "log2FC": -0.2463,
+          "welch_p": 0.03869543490019412,
+          "q_within_module": 0.1374
+        },
+        "KCND3": {
+          "log2FC": -0.4884,
+          "welch_p": 0.03243027409609198,
+          "q_within_module": 0.1374
+        },
+        "KCNQ1": {
+          "log2FC": -0.0484,
+          "welch_p": 0.5159505522987916,
+          "q_within_module": 0.6265
+        },
+        "KCNQ2": {
+          "log2FC": -0.3132,
+          "welch_p": 0.11748988679338841,
+          "q_within_module": 0.2219
+        },
+        "KCNQ3": {
+          "log2FC": -0.2949,
+          "welch_p": 0.05936979577374572,
+          "q_within_module": 0.1442
+        },
+        "SCN1A": {
+          "log2FC": 0.0722,
+          "welch_p": 0.3685161812933796,
+          "q_within_module": 0.5221
+        },
+        "SCN2A": {
+          "log2FC": -0.2292,
+          "welch_p": 0.05029844619900572,
+          "q_within_module": 0.1425
+        },
+        "SCN3A": {
+          "log2FC": -0.2412,
+          "welch_p": 0.040401996696018405,
+          "q_within_module": 0.1374
+        },
+        "SCN4A": {
+          "log2FC": -0.0136,
+          "welch_p": 0.7494866430264493,
+          "q_within_module": 0.7963
+        },
+        "SCN5A": {
+          "log2FC": -0.1144,
+          "welch_p": 0.42456292804464313,
+          "q_within_module": 0.5552
+        },
+        "SCN8A": {
+          "log2FC": -0.3468,
+          "welch_p": 0.038376950098816226,
+          "q_within_module": 0.1374
+        }
+      },
+      "N2_olfactory_control": {
+        "OR10J5": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR11H1": {
+          "log2FC": 0.0318,
+          "welch_p": 0.4366931390652816,
+          "q_within_module": 0.4367
+        },
+        "OR1A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR2A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR4A15": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR51B4": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52B2": {
+          "log2FC": 0.0064,
+          "welch_p": 0.37390096630005887,
+          "q_within_module": 0.4367
+        },
+        "OR52D1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR52E1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR5A1": {
+          "log2FC": -0.1533,
+          "welch_p": 0.22038470910552213,
+          "q_within_module": 0.4367
+        },
+        "OR7A5": {
+          "log2FC": 0.0136,
+          "welch_p": 0.37390096630005887,
+          "q_within_module": 0.4367
+        },
+        "OR8A1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        }
+      },
+      "N3_ribosomal_control": {
+        "RPL10": {
+          "log2FC": 0.2752,
+          "welch_p": 0.002393444045931008,
+          "q_within_module": 0.0027
+        },
+        "RPL11": {
+          "log2FC": 0.3858,
+          "welch_p": 0.0016651826131580689,
+          "q_within_module": 0.0022
+        },
+        "RPL12": {
+          "log2FC": 0.49,
+          "welch_p": 0.00020850152973240127,
+          "q_within_module": 0.0009
+        },
+        "RPL3": {
+          "log2FC": 0.3083,
+          "welch_p": 0.008640472340356784,
+          "q_within_module": 0.0086
+        },
+        "RPL4": {
+          "log2FC": 0.3439,
+          "welch_p": 0.004579003524269404,
+          "q_within_module": 0.0049
+        },
+        "RPL5": {
+          "log2FC": 0.6754,
+          "welch_p": 0.0001621290707578669,
+          "q_within_module": 0.0009
+        },
+        "RPL6": {
+          "log2FC": 0.3484,
+          "welch_p": 0.0010922262742285693,
+          "q_within_module": 0.0016
+        },
+        "RPL7": {
+          "log2FC": 0.4015,
+          "welch_p": 0.0021706917490581855,
+          "q_within_module": 0.0026
+        },
+        "RPL8": {
+          "log2FC": 0.4623,
+          "welch_p": 0.00017105896284202632,
+          "q_within_module": 0.0009
+        },
+        "RPL9": {
+          "log2FC": 0.8968,
+          "welch_p": 0.0006468995521051196,
+          "q_within_module": 0.0014
+        },
+        "RPS10": {
+          "log2FC": 0.7457,
+          "welch_p": 0.0007179060414509964,
+          "q_within_module": 0.0014
+        },
+        "RPS3": {
+          "log2FC": 0.7735,
+          "welch_p": 0.0002736490169609755,
+          "q_within_module": 0.0009
+        },
+        "RPS5": {
+          "log2FC": 0.6797,
+          "welch_p": 0.0004974023439348975,
+          "q_within_module": 0.0014
+        },
+        "RPS6": {
+          "log2FC": 0.8884,
+          "welch_p": 0.0011416126749024798,
+          "q_within_module": 0.0016
+        },
+        "RPS7": {
+          "log2FC": 0.9856,
+          "welch_p": 0.0010199619245809626,
+          "q_within_module": 0.0016
+        },
+        "RPS8": {
+          "log2FC": 0.5565,
+          "welch_p": 0.00010358521085818533,
+          "q_within_module": 0.0009
+        },
+        "RPS9": {
+          "log2FC": 0.5989,
+          "welch_p": 0.0007125920787379144,
+          "q_within_module": 0.0014
+        }
+      }
+    },
+    "VZV_vs_Mock": {
+      "M1_mechanogated_channels": {
+        "KCNK2": {
+          "log2FC": 0.0188,
+          "welch_p": 0.7367779870539372,
+          "q_within_module": 0.8673
+        },
+        "KCNK4": {
+          "log2FC": -0.1698,
+          "welch_p": 0.28431182567201635,
+          "q_within_module": 0.5118
+        },
+        "P2RX3": {
+          "log2FC": -0.0824,
+          "welch_p": 0.34770596498234074,
+          "q_within_module": 0.5216
+        },
+        "PIEZO1": {
+          "log2FC": -0.2037,
+          "welch_p": 0.1633481962476091,
+          "q_within_module": 0.49
+        },
+        "PIEZO2": {
+          "log2FC": -0.1438,
+          "welch_p": 0.021270241378835358,
+          "q_within_module": 0.1914
+        },
+        "STOML3": {
+          "log2FC": 0.0007,
+          "welch_p": 0.9548274618241497,
+          "q_within_module": 0.9548
+        },
+        "TMEM150C": {
+          "log2FC": 0.0999,
+          "welch_p": 0.2422209665003977,
+          "q_within_module": 0.5118
+        },
+        "TRPA1": {
+          "log2FC": 0.0657,
+          "welch_p": 0.14560348185680444,
+          "q_within_module": 0.49
+        },
+        "TRPV4": {
+          "log2FC": -0.0387,
+          "welch_p": 0.7709570380778449,
+          "q_within_module": 0.8673
+        }
+      },
+      "M2_membrane_cytoskeleton": {
+        "ACTN1": {
+          "log2FC": -0.0901,
+          "welch_p": 0.43253887581308903,
+          "q_within_module": 0.7269
+        },
+        "ACTN2": {
+          "log2FC": 0.0915,
+          "welch_p": 0.5495572176441755,
+          "q_within_module": 0.7327
+        },
+        "EZR": {
+          "log2FC": -0.1237,
+          "welch_p": 0.08549769798698806,
+          "q_within_module": 0.342
+        },
+        "FLNA": {
+          "log2FC": -0.2039,
+          "welch_p": 0.22492931113547182,
+          "q_within_module": 0.6427
+        },
+        "FLNB": {
+          "log2FC": -0.087,
+          "welch_p": 0.5040857561956165,
+          "q_within_module": 0.7327
+        },
+        "ITGA1": {
+          "log2FC": 0.0068,
+          "welch_p": 0.9577724922274192,
+          "q_within_module": 0.9578
+        },
+        "ITGA2": {
+          "log2FC": 0.0184,
+          "welch_p": 0.7154546869473168,
+          "q_within_module": 0.8417
+        },
+        "ITGA5": {
+          "log2FC": -0.0863,
+          "welch_p": 0.6665155848767721,
+          "q_within_module": 0.8331
+        },
+        "ITGAV": {
+          "log2FC": 0.088,
+          "welch_p": 0.41020575055836106,
+          "q_within_module": 0.7269
+        },
+        "ITGB1": {
+          "log2FC": -0.0041,
+          "welch_p": 0.8711626699848707,
+          "q_within_module": 0.917
+        },
+        "ITGB3": {
+          "log2FC": 0.0975,
+          "welch_p": 0.13887624980311997,
+          "q_within_module": 0.4629
+        },
+        "ITGB4": {
+          "log2FC": -0.0193,
+          "welch_p": 0.8589083521312573,
+          "q_within_module": 0.917
+        },
+        "MSN": {
+          "log2FC": -0.046,
+          "welch_p": 0.5341477987546184,
+          "q_within_module": 0.7327
+        },
+        "PXN": {
+          "log2FC": -0.0745,
+          "welch_p": 0.3152784856735676,
+          "q_within_module": 0.7006
+        },
+        "RDX": {
+          "log2FC": 0.1575,
+          "welch_p": 0.01613839572074917,
+          "q_within_module": 0.1772
+        },
+        "TLN1": {
+          "log2FC": -0.1626,
+          "welch_p": 0.03544425382150751,
+          "q_within_module": 0.1772
+        },
+        "TLN2": {
+          "log2FC": -0.194,
+          "welch_p": 0.02369821170628243,
+          "q_within_module": 0.1772
+        },
+        "VASP": {
+          "log2FC": -0.0644,
+          "welch_p": 0.2600792798270984,
+          "q_within_module": 0.6502
+        },
+        "VCL": {
+          "log2FC": -0.1074,
+          "welch_p": 0.02876551040463778,
+          "q_within_module": 0.1772
+        },
+        "ZYX": {
+          "log2FC": 0.0529,
+          "welch_p": 0.4361379577728242,
+          "q_within_module": 0.7269
+        }
+      },
+      "M3_ecm_integrin_hippo": {
+        "ADAMTS1": {
+          "log2FC": -0.092,
+          "welch_p": 0.40088806047071696,
+          "q_within_module": 0.746
+        },
+        "ADAMTS5": {
+          "log2FC": -0.0407,
+          "welch_p": 0.5535819349106513,
+          "q_within_module": 0.8458
+        },
+        "AMOT": {
+          "log2FC": -0.0179,
+          "welch_p": 0.7956347305018173,
+          "q_within_module": 0.8931
+        },
+        "AMOTL1": {
+          "log2FC": -0.1197,
+          "welch_p": 0.004444271198782504,
+          "q_within_module": 0.0489
+        },
+        "AMOTL2": {
+          "log2FC": -0.0262,
+          "welch_p": 0.6944989988863696,
+          "q_within_module": 0.8931
+        },
+        "ANKRD1": {
+          "log2FC": 0.0325,
+          "welch_p": 0.3632174676491229,
+          "q_within_module": 0.746
+        },
+        "COL1A1": {
+          "log2FC": 1.2131,
+          "welch_p": 0.00016014425046294634,
+          "q_within_module": 0.0034
+        },
+        "COL1A2": {
+          "log2FC": 0.6302,
+          "welch_p": 4.7753185052842436e-05,
+          "q_within_module": 0.0026
+        },
+        "COL2A1": {
+          "log2FC": 0.06,
+          "welch_p": 0.9434486023885168,
+          "q_within_module": 0.9791
+        },
+        "COL3A1": {
+          "log2FC": 0.6125,
+          "welch_p": 0.00018714180429382521,
+          "q_within_module": 0.0034
+        },
+        "COL4A1": {
+          "log2FC": -0.0473,
+          "welch_p": 0.5975070472290688,
+          "q_within_module": 0.8648
+        },
+        "COL4A2": {
+          "log2FC": -0.2034,
+          "welch_p": 0.03238925060913565,
+          "q_within_module": 0.1485
+        },
+        "COL5A1": {
+          "log2FC": 0.2166,
+          "welch_p": 0.0282566748809407,
+          "q_within_module": 0.1413
+        },
+        "COL6A1": {
+          "log2FC": 0.1116,
+          "welch_p": 0.1491880439307072,
+          "q_within_module": 0.5128
+        },
+        "COMP": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "DCN": {
+          "log2FC": 0.128,
+          "welch_p": 0.2011800015552456,
+          "q_within_module": 0.6003
+        },
+        "FERMT1": {
+          "log2FC": 0.0185,
+          "welch_p": 0.8461991588125832,
+          "q_within_module": 0.9159
+        },
+        "FN1": {
+          "log2FC": 0.2992,
+          "welch_p": 0.02103917913805491,
+          "q_within_module": 0.1286
+        },
+        "ILK": {
+          "log2FC": 0.1341,
+          "welch_p": 0.10029296800615144,
+          "q_within_module": 0.3677
+        },
+        "LAMA1": {
+          "log2FC": -0.0709,
+          "welch_p": 0.44496889380417315,
+          "q_within_module": 0.7648
+        },
+        "LAMA2": {
+          "log2FC": 0.2393,
+          "welch_p": 0.08159477839628176,
+          "q_within_module": 0.3206
+        },
+        "LAMB1": {
+          "log2FC": -0.2527,
+          "welch_p": 0.0003531170121702485,
+          "q_within_module": 0.0049
+        },
+        "LAMC1": {
+          "log2FC": -0.1725,
+          "welch_p": 0.02389546718501061,
+          "q_within_module": 0.1314
+        },
+        "LATS1": {
+          "log2FC": 0.0112,
+          "welch_p": 0.7767865228999876,
+          "q_within_module": 0.8931
+        },
+        "LATS2": {
+          "log2FC": -0.0833,
+          "welch_p": 0.37754313439379195,
+          "q_within_module": 0.746
+        },
+        "LIMS1": {
+          "log2FC": 0.0122,
+          "welch_p": 0.7766356263846593,
+          "q_within_module": 0.8931
+        },
+        "LOX": {
+          "log2FC": -0.0538,
+          "welch_p": 0.6951385704095038,
+          "q_within_module": 0.8931
+        },
+        "LOXL1": {
+          "log2FC": -0.2832,
+          "welch_p": 0.06507612211466347,
+          "q_within_module": 0.2753
+        },
+        "LOXL2": {
+          "log2FC": -0.1213,
+          "welch_p": 0.22846591592338755,
+          "q_within_module": 0.6003
+        },
+        "LOXL3": {
+          "log2FC": -0.0169,
+          "welch_p": 0.8492938213051372,
+          "q_within_module": 0.9159
+        },
+        "LOXL4": {
+          "log2FC": -0.1457,
+          "welch_p": 0.27930378221073504,
+          "q_within_module": 0.6983
+        },
+        "LUM": {
+          "log2FC": 0.0057,
+          "welch_p": 0.3632174676491228,
+          "q_within_module": 0.746
+        },
+        "MMP14": {
+          "log2FC": -0.0022,
+          "welch_p": 0.9965409482430428,
+          "q_within_module": 0.9965
+        },
+        "MMP2": {
+          "log2FC": -0.4165,
+          "welch_p": 0.013871414969689966,
+          "q_within_module": 0.109
+        },
+        "MMP3": {
+          "log2FC": -0.0384,
+          "welch_p": 0.38944464983176014,
+          "q_within_module": 0.746
+        },
+        "MMP9": {
+          "log2FC": 0.2685,
+          "welch_p": 0.015967581584898225,
+          "q_within_module": 0.1098
+        },
+        "MOB1A": {
+          "log2FC": 0.0815,
+          "welch_p": 0.22902581520963208,
+          "q_within_module": 0.6003
+        },
+        "MOB1B": {
+          "log2FC": -0.0113,
+          "welch_p": 0.7908547430343023,
+          "q_within_module": 0.8931
+        },
+        "NF2": {
+          "log2FC": -0.0591,
+          "welch_p": 0.2074324755421905,
+          "q_within_module": 0.6003
+        },
+        "P4HA1": {
+          "log2FC": -0.2228,
+          "welch_p": 0.4361721912146989,
+          "q_within_module": 0.7648
+        },
+        "P4HA2": {
+          "log2FC": -0.0843,
+          "welch_p": 0.48364740164710246,
+          "q_within_module": 0.8061
+        },
+        "PLOD1": {
+          "log2FC": -0.2298,
+          "welch_p": 0.0067590187433141736,
+          "q_within_module": 0.062
+        },
+        "PLOD2": {
+          "log2FC": -0.0982,
+          "welch_p": 0.6459117004772477,
+          "q_within_module": 0.8931
+        },
+        "PTK2": {
+          "log2FC": -0.0268,
+          "welch_p": 0.39741414915943457,
+          "q_within_module": 0.5844
+        },
+        "SAV1": {
+          "log2FC": -0.0436,
+          "welch_p": 0.5177719438788563,
+          "q_within_module": 0.8136
+        },
+        "STK3": {
+          "log2FC": -0.012,
+          "welch_p": 0.9346761071230872,
+          "q_within_module": 0.9791
+        },
+        "STK4": {
+          "log2FC": -0.052,
+          "welch_p": 0.2292095472073895,
+          "q_within_module": 0.6003
+        },
+        "TEAD1": {
+          "log2FC": -0.0591,
+          "welch_p": 0.4069054636788576,
+          "q_within_module": 0.746
+        },
+        "TEAD2": {
+          "log2FC": -0.2347,
+          "welch_p": 0.6887579506264391,
+          "q_within_module": 0.8931
+        },
+        "TEAD3": {
+          "log2FC": 0.1001,
+          "welch_p": 0.5027636987734578,
+          "q_within_module": 0.8133
+        },
+        "TEAD4": {
+          "log2FC": -0.0023,
+          "welch_p": 0.991517234309047,
+          "q_within_module": 0.9965
+        },
+        "TIMP1": {
+          "log2FC": 0.0383,
+          "welch_p": 0.3936880062894735,
+          "q_within_module": 0.746
+        },
+        "TIMP2": {
+          "log2FC": 0.0224,
+          "welch_p": 0.7865899146498758,
+          "q_within_module": 0.8931
+        },
+        "TIMP3": {
+          "log2FC": 0.0639,
+          "welch_p": 0.5742383570494877,
+          "q_within_module": 0.8536
+        },
+        "WWTR1": {
+          "log2FC": -0.0899,
+          "welch_p": 0.7816141669663534,
+          "q_within_module": 0.8931
+        },
+        "YAP1": {
+          "log2FC": -0.18,
+          "welch_p": 0.7043063072738984,
+          "q_within_module": 0.8931
+        }
+      },
+      "M4_mechano_effectors": {
+        "ACTA2": {
+          "log2FC": -0.0441,
+          "welch_p": 0.5411900609997758,
+          "q_within_module": 0.6443
+        },
+        "CALD1": {
+          "log2FC": -0.1876,
+          "welch_p": 0.25378263230115705,
+          "q_within_module": 0.5287
+        },
+        "CDC42": {
+          "log2FC": 0.2481,
+          "welch_p": 0.01823476496368022,
+          "q_within_module": 0.1019
+        },
+        "CRK": {
+          "log2FC": -0.0326,
+          "welch_p": 0.35634419288460784,
+          "q_within_module": 0.5741
+        },
+        "CRKL": {
+          "log2FC": -0.0809,
+          "welch_p": 0.146652849184995,
+          "q_within_module": 0.3666
+        },
+        "MAPK1": {
+          "log2FC": -0.1645,
+          "welch_p": 0.010606982757818474,
+          "q_within_module": 0.0884
+        },
+        "MAPK14": {
+          "log2FC": -0.0396,
+          "welch_p": 0.46927669525431465,
+          "q_within_module": 0.637
+        },
+        "MAPK3": {
+          "log2FC": -0.01,
+          "welch_p": 0.8690826731604047,
+          "q_within_module": 0.8691
+        },
+        "MAPK8": {
+          "log2FC": 0.0232,
+          "welch_p": 0.6070828921734434,
+          "q_within_module": 0.6599
+        },
+        "MYH10": {
+          "log2FC": -0.2111,
+          "welch_p": 0.006656693158976422,
+          "q_within_module": 0.0884
+        },
+        "MYH9": {
+          "log2FC": -0.1315,
+          "welch_p": 0.0922834701243053,
+          "q_within_module": 0.2884
+        },
+        "PTK2": {
+          "log2FC": -0.0268,
+          "welch_p": 0.39741414915943457,
+          "q_within_module": 0.5844
+        },
+        "RHOA": {
+          "log2FC": 0.0203,
+          "welch_p": 0.590707709583131,
+          "q_within_module": 0.6599
+        },
+        "RHOC": {
+          "log2FC": 0.1865,
+          "welch_p": 0.02445035357572034,
+          "q_within_module": 0.1019
+        },
+        "ROCK1": {
+          "log2FC": -0.1633,
+          "welch_p": 0.08806733637380502,
+          "q_within_module": 0.2884
+        },
+        "ROCK2": {
+          "log2FC": -0.0592,
+          "welch_p": 0.3674544091056789,
+          "q_within_module": 0.5741
+        },
+        "SMAD2": {
+          "log2FC": 0.0297,
+          "welch_p": 0.32306315191063595,
+          "q_within_module": 0.5741
+        },
+        "SMAD3": {
+          "log2FC": 0.1111,
+          "welch_p": 0.4973256194517489,
+          "q_within_module": 0.637
+        },
+        "SRC": {
+          "log2FC": -0.1356,
+          "welch_p": 0.007106930737174222,
+          "q_within_module": 0.0884
+        },
+        "TGFB1": {
+          "log2FC": -0.1235,
+          "welch_p": 0.3001522072198156,
+          "q_within_module": 0.5741
+        },
+        "TGFB2": {
+          "log2FC": 0.0887,
+          "welch_p": 0.6886884182030568,
+          "q_within_module": 0.7174
+        },
+        "TGFB3": {
+          "log2FC": -0.1002,
+          "welch_p": 0.20192038258117226,
+          "q_within_module": 0.4589
+        },
+        "TPM1": {
+          "log2FC": -0.1874,
+          "welch_p": 0.1080100504894655,
+          "q_within_module": 0.3
+        },
+        "VIM": {
+          "log2FC": -0.2968,
+          "welch_p": 0.02295671869497448,
+          "q_within_module": 0.1019
+        },
+        "YES1": {
+          "log2FC": -0.0728,
+          "welch_p": 0.5096203229983973,
+          "q_within_module": 0.637
+        }
+      },
+      "E1_classical_nociceptor": {
+        "ASIC1": {
+          "log2FC": -0.0741,
+          "welch_p": 0.11795536084015117,
+          "q_within_module": 0.4502
+        },
+        "ASIC2": {
+          "log2FC": -0.2348,
+          "welch_p": 0.1946202730758759,
+          "q_within_module": 0.5595
+        },
+        "ASIC3": {
+          "log2FC": 0.0632,
+          "welch_p": 0.739171176491748,
+          "q_within_module": 0.887
+        },
+        "CACNA1H": {
+          "log2FC": 0.0133,
+          "welch_p": 0.9131143979999675,
+          "q_within_module": 0.9131
+        },
+        "CACNA2D1": {
+          "log2FC": 0.0517,
+          "welch_p": 0.39691320257240476,
+          "q_within_module": 0.7938
+        },
+        "CACNA2D2": {
+          "log2FC": 0.0106,
+          "welch_p": 0.8853847699347966,
+          "q_within_module": 0.9131
+        },
+        "GRIA1": {
+          "log2FC": -0.0498,
+          "welch_p": 0.6951302048002315,
+          "q_within_module": 0.887
+        },
+        "GRIA2": {
+          "log2FC": 0.0313,
+          "welch_p": 0.5904065696284285,
+          "q_within_module": 0.8856
+        },
+        "GRIN2B": {
+          "log2FC": 0.3573,
+          "welch_p": 0.2276929920215372,
+          "q_within_module": 0.5595
+        },
+        "KCNQ2": {
+          "log2FC": -0.1601,
+          "welch_p": 0.12505283124711955,
+          "q_within_module": 0.4011
+        },
+        "KCNQ3": {
+          "log2FC": 0.223,
+          "welch_p": 0.11251513470526954,
+          "q_within_module": 0.4011
+        },
+        "KCNS1": {
+          "log2FC": -0.052,
+          "welch_p": 0.5569306763406362,
+          "q_within_module": 0.8856
+        },
+        "P2RX7": {
+          "log2FC": 0.1548,
+          "welch_p": 0.24866234969128423,
+          "q_within_module": 0.5595
+        },
+        "SCN10A": {
+          "log2FC": -0.1052,
+          "welch_p": 0.6506429117369735,
+          "q_within_module": 0.887
+        },
+        "SCN11A": {
+          "log2FC": 0.0159,
+          "welch_p": 0.9037146758027594,
+          "q_within_module": 0.9131
+        },
+        "SCN9A": {
+          "log2FC": -0.1539,
+          "welch_p": 0.024236639230342125,
+          "q_within_module": 0.2181
+        },
+        "TRPM8": {
+          "log2FC": 0.066,
+          "welch_p": 0.5150109386505353,
+          "q_within_module": 0.8856
+        },
+        "TRPV1": {
+          "log2FC": -0.1487,
+          "welch_p": 0.007973787903589779,
+          "q_within_module": 0.1435
+        }
+      },
+      "N1_voltage_gated_control": {
+        "CACNA1A": {
+          "log2FC": -0.0406,
+          "welch_p": 0.5726675378564378,
+          "q_within_module": 0.8113
+        },
+        "CACNA1C": {
+          "log2FC": -0.052,
+          "welch_p": 0.4365900950381166,
+          "q_within_module": 0.7784
+        },
+        "CACNA1S": {
+          "log2FC": -0.0032,
+          "welch_p": 0.9022912245368252,
+          "q_within_module": 0.9023
+        },
+        "CACNB2": {
+          "log2FC": 0.0359,
+          "welch_p": 0.5226987245296199,
+          "q_within_module": 0.8078
+        },
+        "HCN1": {
+          "log2FC": 0.0274,
+          "welch_p": 0.8611849301261159,
+          "q_within_module": 0.9023
+        },
+        "HCN2": {
+          "log2FC": -0.1738,
+          "welch_p": 0.1321417934173955,
+          "q_within_module": 0.4011
+        },
+        "KCNA1": {
+          "log2FC": 0.2845,
+          "welch_p": 0.17126958020247593,
+          "q_within_module": 0.4011
+        },
+        "KCND3": {
+          "log2FC": 0.0204,
+          "welch_p": 0.8266391369745067,
+          "q_within_module": 0.9023
+        },
+        "KCNQ1": {
+          "log2FC": 0.0193,
+          "welch_p": 0.6700907785614505,
+          "q_within_module": 0.8763
+        },
+        "KCNQ2": {
+          "log2FC": -0.1601,
+          "welch_p": 0.12505283124711955,
+          "q_within_module": 0.4011
+        },
+        "KCNQ3": {
+          "log2FC": 0.223,
+          "welch_p": 0.11251513470526954,
+          "q_within_module": 0.4011
+        },
+        "SCN1A": {
+          "log2FC": 0.1491,
+          "welch_p": 0.1855514468098681,
+          "q_within_module": 0.4011
+        },
+        "SCN2A": {
+          "log2FC": -0.0147,
+          "welch_p": 0.7507042092667724,
+          "q_within_module": 0.9023
+        },
+        "SCN3A": {
+          "log2FC": -0.0741,
+          "welch_p": 0.06301897633791846,
+          "q_within_module": 0.4011
+        },
+        "SCN4A": {
+          "log2FC": 0.0594,
+          "welch_p": 0.45786596936667145,
+          "q_within_module": 0.7784
+        },
+        "SCN5A": {
+          "log2FC": -0.2573,
+          "welch_p": 0.1691557818460157,
+          "q_within_module": 0.4011
+        },
+        "SCN8A": {
+          "log2FC": -0.079,
+          "welch_p": 0.18876441703061397,
+          "q_within_module": 0.4011
+        }
+      },
+      "N2_olfactory_control": {
+        "OR10J5": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR11H1": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR1A1": {
+          "log2FC": 0.033,
+          "welch_p": 0.20491185012561794,
+          "q_within_module": 0.4036
+        },
+        "OR2A1": {
+          "log2FC": 0.0772,
+          "welch_p": 0.2363821780219079,
+          "q_within_module": 0.4036
+        },
+        "OR4A15": {
+          "log2FC": 0.0,
+          "welch_p": NaN,
+          "q_within_module": NaN
+        },
+        "OR51B4": {
+          "log2FC": 0.0108,
+          "welch_p": 0.3632174676491229,
+          "q_within_module": 0.4036
+        },
+        "OR52A1": {
+          "log2FC": 0.043,
+          "welch_p": 0.29566556451432696,
+          "q_within_module": 0.4036
+        },
+        "OR52B2": {
+          "log2FC": 0.0055,
+          "welch_p": 0.3632174676491226,
+          "q_within_module": 0.4036
+        },
+        "OR52D1": {
+          "log2FC": 0.0325,
+          "welch_p": 0.19823638801911234,
+          "q_within_module": 0.4036
+        },
+        "OR52E1": {
+          "log2FC": 0.0262,
+          "welch_p": 0.3632174676491229,
+          "q_within_module": 0.4036
+        },
+        "OR5A1": {
+          "log2FC": 0.0345,
+          "welch_p": 0.7696539508824315,
+          "q_within_module": 0.7697
+        },
+        "OR7A5": {
+          "log2FC": 0.0325,
+          "welch_p": 0.19823638801911234,
+          "q_within_module": 0.4036
+        },
+        "OR8A1": {
+          "log2FC": 0.0222,
+          "welch_p": 0.3632174676491228,
+          "q_within_module": 0.4036
+        }
+      },
+      "N3_ribosomal_control": {
+        "RPL10": {
+          "log2FC": 0.0197,
+          "welch_p": 0.894082488664241,
+          "q_within_module": 0.9826
+        },
+        "RPL11": {
+          "log2FC": 0.0786,
+          "welch_p": 0.4391468367339224,
+          "q_within_module": 0.6787
+        },
+        "RPL12": {
+          "log2FC": 0.2029,
+          "welch_p": 0.08585590311745736,
+          "q_within_module": 0.3369
+        },
+        "RPL3": {
+          "log2FC": -0.113,
+          "welch_p": 0.3661854587590719,
+          "q_within_module": 0.6225
+        },
+        "RPL4": {
+          "log2FC": 0.0004,
+          "welch_p": 0.9969797498340207,
+          "q_within_module": 0.997
+        },
+        "RPL5": {
+          "log2FC": 0.275,
+          "welch_p": 0.07319052333464383,
+          "q_within_module": 0.3369
+        },
+        "RPL6": {
+          "log2FC": 0.0164,
+          "welch_p": 0.8412181884594265,
+          "q_within_module": 0.9826
+        },
+        "RPL7": {
+          "log2FC": -0.0104,
+          "welch_p": 0.9247942583460846,
+          "q_within_module": 0.9826
+        },
+        "RPL8": {
+          "log2FC": 0.0526,
+          "welch_p": 0.6029653368581751,
+          "q_within_module": 0.7885
+        },
+        "RPL9": {
+          "log2FC": 0.2488,
+          "welch_p": 0.17579637208752674,
+          "q_within_module": 0.3369
+        },
+        "RPS10": {
+          "log2FC": 0.2326,
+          "welch_p": 0.1600737427517491,
+          "q_within_module": 0.3369
+        },
+        "RPS3": {
+          "log2FC": 0.3602,
+          "welch_p": 0.05504060201199024,
+          "q_within_module": 0.3369
+        },
+        "RPS5": {
+          "log2FC": 0.2388,
+          "welch_p": 0.11445937234956263,
+          "q_within_module": 0.3369
+        },
+        "RPS6": {
+          "log2FC": 0.2339,
+          "welch_p": 0.16625158918654748,
+          "q_within_module": 0.3369
+        },
+        "RPS7": {
+          "log2FC": 0.2957,
+          "welch_p": 0.17836166132583636,
+          "q_within_module": 0.3369
+        },
+        "RPS8": {
+          "log2FC": 0.1669,
+          "welch_p": 0.1771535810539126,
+          "q_within_module": 0.3369
+        },
+        "RPS9": {
+          "log2FC": 0.0691,
+          "welch_p": 0.5607060553888964,
+          "q_within_module": 0.7885
+        }
+      }
+    }
   }
 }

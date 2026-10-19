@@ -17,7 +17,7 @@ from itertools import combinations
 _ROOT = Path(__file__).resolve().parents[1]
 RES = str(_ROOT / "analysis" / "results" / "layer1")
 RAW = str(_ROOT / "analysis" / "data" / "raw")
-MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.2.md")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.3.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -119,7 +119,7 @@ numchk("interaction VZV p", "exact permutation P = 0.19", it_vz["p_perm_exact"])
 
 # ---- 检出基因交互检验（公平性校正；限制 mean CPM>1，排除 floor 稀释）----
 itd_hz = R["interaction_detected_only"]["HZexo_vs_CtrlExo"]
-present("detected-only interaction disclosed", "detected-gene P = 0.16")
+present("detected-only interaction disclosed", "detected-gene subset analysis (P = 0.16)")
 numchk("detected interaction HZ diff", "-0.072", itd_hz["diff_B_minus_A"])
 claim_le("detected interaction HZ p (non-sig <=0.20)", 0.20, itd_hz["p_perm_exact"])
 
@@ -230,6 +230,16 @@ numchk("SCN10A LFC", "-0.384", gv("SCN10A","HZexo_vs_CtrlExo","log2FC"))
 numchk("ASIC1 LFC", "-0.181", gv("ASIC1","HZexo_vs_CtrlExo","log2FC"))
 numchk("ASIC2 LFC", "-0.296", gv("ASIC2","HZexo_vs_CtrlExo","log2FC"))
 numchk("KCNS1 LFC", "-0.393", gv("KCNS1","HZexo_vs_CtrlExo","log2FC"))
+
+# ---- 基因级 module 内 BH 校正（Round-3 诚实化：防止回退到"全部显著"）----
+numchk("TRPV1 within-E1 q", "0.017", gv("TRPV1","HZexo_vs_CtrlExo","q_within_module"))
+claim_le("TRPV1 within-E1 q (survives FDR <=0.05)", 0.05, gv("TRPV1","HZexo_vs_CtrlExo","q_within_module"))
+claim_ge("KCNS1 within-E1 q (does NOT survive >=0.05)", 0.05, gv("KCNS1","HZexo_vs_CtrlExo","q_within_module"))
+claim_ge("SCN9A within-E1 q (does NOT survive >=0.05)", 0.05, gv("SCN9A","HZexo_vs_CtrlExo","q_within_module"))
+claim_ge("ASIC1 within-E1 q (does NOT survive >=0.05)", 0.05, gv("ASIC1","HZexo_vs_CtrlExo","q_within_module"))
+claim_ge("ASIC2 within-E1 q (does NOT survive >=0.05)", 0.05, gv("ASIC2","HZexo_vs_CtrlExo","q_within_module"))
+present("within-module BH disclosed", "within-E1")
+present("detected-gene subset vs multiplicity clarified", "subset analysis")
 
 # ---- 汇总 ----
 fails = [r for r in results if str(r[2]).startswith("FAIL")]

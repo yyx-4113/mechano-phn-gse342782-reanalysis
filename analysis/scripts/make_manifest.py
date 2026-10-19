@@ -49,7 +49,7 @@ out = {
     "generated": "2026-10-19",
     "algorithm": "sha256",
     "repository": "https://github.com/yyx-4113/mechano-phn-gse342782-reanalysis",
-    "tag": "v1.1.2",
+    "tag": "v1.1.3",
     "files": records,
 }
 with open(os.path.join(ROOT, "MANIFEST.json"), "w") as f:
