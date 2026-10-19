@@ -120,6 +120,42 @@
         "mean_log2cpm": 6.558381307148885
       }
     },
+    "P2RX3": {
+      "DirectInf": {
+        "mean_cpm": 806.840447961767,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 9.65130341051769
+      },
+      "SeraExo": {
+        "mean_cpm": 470.61471377428416,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 8.852731969283882
+      }
+    },
+    "SCN10A": {
+      "DirectInf": {
+        "mean_cpm": 7.227061598896451,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 2.995351685073049
+      },
+      "SeraExo": {
+        "mean_cpm": 0.5451247802252144,
+        "detect_frac_cpm1": 0.10526315789473684,
+        "mean_log2cpm": 0.6028007820161072
+      }
+    },
+    "TAC1": {
+      "DirectInf": {
+        "mean_cpm": 65.72713868726565,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 6.0401857684272615
+      },
+      "SeraExo": {
+        "mean_cpm": 68.91056770292596,
+        "detect_frac_cpm1": 1.0,
+        "mean_log2cpm": 6.067082338285681
+      }
+    },
     "COL1A1": {
       "DirectInf": {
         "mean_cpm": 0.8129151560765564,
@@ -147,52 +183,79 @@
   },
   "baseline": {
     "PIEZO1": {
-      "mock_mean_log2cpm": 1.8453723598379037,
-      "ctrl_exo_mean_log2cpm": 1.6306419004743609
+      "directinf_all_mean_log2cpm": 1.8453723598379037,
+      "directinf_mock_only_mean_log2cpm": 1.9472302189419703,
+      "seraexo_all_mean_log2cpm": 1.6306419004743609
     },
     "PIEZO2": {
-      "mock_mean_log2cpm": 7.940007131607389,
-      "ctrl_exo_mean_log2cpm": 7.323959278866266
+      "directinf_all_mean_log2cpm": 7.940007131607389,
+      "directinf_mock_only_mean_log2cpm": 8.011925960624646,
+      "seraexo_all_mean_log2cpm": 7.323959278866266
     },
     "TRPV4": {
-      "mock_mean_log2cpm": 0.30819290217034495,
-      "ctrl_exo_mean_log2cpm": 0.2393785115207988
+      "directinf_all_mean_log2cpm": 0.30819290217034495,
+      "directinf_mock_only_mean_log2cpm": 0.32756615806292716,
+      "seraexo_all_mean_log2cpm": 0.2393785115207988
     },
     "STOML3": {
-      "mock_mean_log2cpm": 0.010989341126896679,
-      "ctrl_exo_mean_log2cpm": 0.0
+      "directinf_all_mean_log2cpm": 0.010989341126896679,
+      "directinf_mock_only_mean_log2cpm": 0.010615757025604536,
+      "seraexo_all_mean_log2cpm": 0.0
     },
     "ITGB1": {
-      "mock_mean_log2cpm": 8.342215265472761,
-      "ctrl_exo_mean_log2cpm": 8.495322107497637
+      "directinf_all_mean_log2cpm": 8.342215265472761,
+      "directinf_mock_only_mean_log2cpm": 8.34424408101654,
+      "seraexo_all_mean_log2cpm": 8.495322107497637
     },
     "YAP1": {
-      "mock_mean_log2cpm": 1.3764805255406396,
-      "ctrl_exo_mean_log2cpm": 0.801435414712272
+      "directinf_all_mean_log2cpm": 1.3764805255406396,
+      "directinf_mock_only_mean_log2cpm": 1.46647372774246,
+      "seraexo_all_mean_log2cpm": 0.801435414712272
     },
     "LOX": {
-      "mock_mean_log2cpm": 0.48000109869904134,
-      "ctrl_exo_mean_log2cpm": 0.46640142996184125
+      "directinf_all_mean_log2cpm": 0.48000109869904134,
+      "directinf_mock_only_mean_log2cpm": 0.5069242759413753,
+      "seraexo_all_mean_log2cpm": 0.46640142996184125
     },
     "MMP9": {
-      "mock_mean_log2cpm": 0.1342737916600406,
-      "ctrl_exo_mean_log2cpm": 0.0015348913726499274
+      "directinf_all_mean_log2cpm": 0.1342737916600406,
+      "directinf_mock_only_mean_log2cpm": 0.0,
+      "seraexo_all_mean_log2cpm": 0.0015348913726499274
     },
     "SCN9A": {
-      "mock_mean_log2cpm": 8.31373523669272,
-      "ctrl_exo_mean_log2cpm": 8.017232994654224
+      "directinf_all_mean_log2cpm": 8.31373523669272,
+      "directinf_mock_only_mean_log2cpm": 8.390682172041183,
+      "seraexo_all_mean_log2cpm": 8.017232994654224
     },
     "TRPV1": {
-      "mock_mean_log2cpm": 6.9422029597697765,
-      "ctrl_exo_mean_log2cpm": 6.558381307148885
+      "directinf_all_mean_log2cpm": 6.9422029597697765,
+      "directinf_mock_only_mean_log2cpm": 7.016572713993469,
+      "seraexo_all_mean_log2cpm": 6.558381307148885
+    },
+    "P2RX3": {
+      "directinf_all_mean_log2cpm": 9.65130341051769,
+      "directinf_mock_only_mean_log2cpm": 9.692513580895636,
+      "seraexo_all_mean_log2cpm": 8.852731969283882
+    },
+    "SCN10A": {
+      "directinf_all_mean_log2cpm": 2.995351685073049,
+      "directinf_mock_only_mean_log2cpm": 3.047973199891201,
+      "seraexo_all_mean_log2cpm": 0.6028007820161072
+    },
+    "TAC1": {
+      "directinf_all_mean_log2cpm": 6.0401857684272615,
+      "directinf_mock_only_mean_log2cpm": 5.9098594118127865,
+      "seraexo_all_mean_log2cpm": 6.067082338285681
     },
     "COL1A1": {
-      "mock_mean_log2cpm": 0.7090743008339837,
-      "ctrl_exo_mean_log2cpm": 0.18407385644802948
+      "directinf_all_mean_log2cpm": 0.7090743008339837,
+      "directinf_mock_only_mean_log2cpm": 0.10253534564156325,
+      "seraexo_all_mean_log2cpm": 0.18407385644802948
     },
     "FN1": {
-      "mock_mean_log2cpm": 3.1090529694939932,
-      "ctrl_exo_mean_log2cpm": 2.1804782357019246
+      "directinf_all_mean_log2cpm": 3.1090529694939932,
+      "directinf_mock_only_mean_log2cpm": 2.95943782723398,
+      "seraexo_all_mean_log2cpm": 2.1804782357019246
     }
   },
   "panel_missing": {
@@ -214,6 +277,25 @@
       "RPS4"
     ]
   },
+  "alias_check": {
+    "M1_mechanogated_channels": {},
+    "M2_membrane_cytoskeleton": {},
+    "M3_ecm_integrin_hippo": {
+      "CYR61": "CCN1",
+      "CTGF": "CCN2"
+    },
+    "M4_mechano_effectors": {},
+    "E1_classical_nociceptor": {},
+    "N1_voltage_gated_control": {},
+    "N2_olfactory_control": {
+      "OR6A1": null,
+      "OR10A1": null,
+      "OR13C1": null
+    },
+    "N3_ribosomal_control": {
+      "RPS4": "RPS4X"
+    }
+  },
   "contrasts": {
     "HZexo_vs_CtrlExo": {
       "M1_mechanogated_channels": {
@@ -222,12 +304,25 @@
         "genes_total": 9,
         "mean_A(ctrl_exo)": 2.831050764380059,
         "mean_B(hz_exo)": 2.753095446329297,
-        "diff_B_minus_A": -0.07795531805076195,
+        "diff_B_minus_A": -0.07795531805076283,
+        "sd_A": 0.05342191827549989,
+        "sd_B": 0.10757302700101225,
+        "sd_pooled": 0.08492896293489842,
         "t": -1.7172121355498902,
         "p_ttest": 0.12087420329252929,
         "p_wilcoxon": 0.25932400932400934,
-        "p_perm": 0.1094,
-        "perm_percentile": 5.5,
+        "p_perm_exact": 0.11305361305361306,
+        "perm_percentile": 5.652680652680653,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.17163035441067104,
+          0.01571971830914541
+        ],
+        "ci95_welch": [
+          -0.18102480611673802,
+          0.02511417001521235
+        ],
+        "mde_80pct": 0.1385797822049611,
         "top_genes": [
           [
             "PIEZO1",
@@ -269,12 +364,25 @@
         "genes_total": 20,
         "mean_A(ctrl_exo)": 4.712977875026712,
         "mean_B(hz_exo)": 4.564653309572165,
-        "diff_B_minus_A": -0.14832456545454686,
+        "diff_B_minus_A": -0.14832456545454598,
+        "sd_A": 0.11943536411864683,
+        "sd_B": 0.15336225418005014,
+        "sd_pooled": 0.1374496038723649,
         "t": -2.01884796440879,
         "p_ttest": 0.06782606052429804,
         "p_wilcoxon": 0.07284382284382285,
-        "p_perm": 0.068,
-        "perm_percentile": 3.4000000000000004,
+        "p_perm_exact": 0.06818181818181818,
+        "perm_percentile": 3.4090909090909087,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.3057630338373147,
+          0.009113902928222728
+        ],
+        "ci95_welch": [
+          -0.3094734538626669,
+          0.012824322953574968
+        ],
+        "mde_80pct": 0.22427845001935778,
         "top_genes": [
           [
             "TLN2",
@@ -317,11 +425,24 @@
         "mean_A(ctrl_exo)": 3.343077422220358,
         "mean_B(hz_exo)": 3.294199373433031,
         "diff_B_minus_A": -0.04887804878732682,
+        "sd_A": 0.10584141433165427,
+        "sd_B": 0.1129805349631826,
+        "sd_pooled": 0.10946918805831125,
         "t": -0.8353259740941015,
         "p_ttest": 0.41992303587515856,
         "p_wilcoxon": 0.6200466200466201,
-        "p_perm": 0.416,
-        "perm_percentile": 21.0,
+        "p_perm_exact": 0.4219114219114219,
+        "perm_percentile": 21.095571095571096,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.15932317497477644,
+          0.061567077400122794
+        ],
+        "ci95_welch": [
+          -0.17642864150982487,
+          0.07867254393517123
+        ],
+        "mde_80pct": 0.17862241236718387,
         "top_genes": [
           [
             "COL2A1",
@@ -364,11 +485,24 @@
         "mean_A(ctrl_exo)": 6.0277805736730485,
         "mean_B(hz_exo)": 5.999936543777037,
         "diff_B_minus_A": -0.027844029896011868,
+        "sd_A": 0.07557485819519374,
+        "sd_B": 0.07452350681530902,
+        "sd_pooled": 0.07505102350826087,
         "t": -0.6940799423374943,
         "p_ttest": 0.5008509558648311,
         "p_wilcoxon": 0.45571095571095577,
-        "p_perm": 0.4598,
-        "perm_percentile": 23.16,
+        "p_perm_exact": 0.46153846153846156,
+        "perm_percentile": 23.076923076923077,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.10168694124610085,
+          0.04599888145407713
+        ],
+        "ci95_welch": [
+          -0.11525218883879244,
+          0.05956412904676871
+        ],
+        "mde_80pct": 0.12246180964209659,
         "top_genes": [
           [
             "CDC42",
@@ -410,12 +544,25 @@
         "genes_total": 18,
         "mean_A(ctrl_exo)": 3.6858194431050486,
         "mean_B(hz_exo)": 3.466182912530074,
-        "diff_B_minus_A": -0.21963653057497456,
+        "diff_B_minus_A": -0.2196365305749759,
+        "sd_A": 0.09565707441128084,
+        "sd_B": 0.1596830008491813,
+        "sd_pooled": 0.13162244611981072,
         "t": -3.1218256127955666,
         "p_ttest": 0.011079531716308759,
         "p_wilcoxon": 0.01748251748251748,
-        "p_perm": 0.0112,
-        "perm_percentile": 0.5599999999999999,
+        "p_perm_exact": 0.01282051282051282,
+        "perm_percentile": 0.641025641025641,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.39527630828645555,
+          -0.04399675286349619
+        ],
+        "ci95_welch": [
+          -0.37679910414731266,
+          -0.06247395700263911
+        ],
+        "mde_80pct": 0.21477019483388105,
         "top_genes": [
           [
             "TRPV1",
@@ -457,12 +604,25 @@
         "genes_total": 17,
         "mean_A(ctrl_exo)": 3.062045714575031,
         "mean_B(hz_exo)": 2.9062261134157765,
-        "diff_B_minus_A": -0.15581960115925453,
+        "diff_B_minus_A": -0.15581960115925408,
+        "sd_A": 0.17108063270856336,
+        "sd_B": 0.2112109306887518,
+        "sd_pooled": 0.1921960459145441,
         "t": -1.516741821891907,
         "p_ttest": 0.15631993815072273,
         "p_wilcoxon": 0.12820512820512822,
-        "p_perm": 0.1474,
-        "perm_percentile": 7.5,
+        "p_perm_exact": 0.15093240093240093,
+        "perm_percentile": 7.546620046620046,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.3671699496018646,
+          0.05553074728335658
+        ],
+        "ci95_welch": [
+          -0.3807310349768964,
+          0.06909183265838825
+        ],
+        "mde_80pct": 0.31360898877228327,
         "top_genes": [
           [
             "HCN1",
@@ -504,12 +664,25 @@
         "genes_total": 16,
         "mean_A(ctrl_exo)": 0.0809719486533652,
         "mean_B(hz_exo)": 0.058918381496652655,
-        "diff_B_minus_A": -0.022053567156712542,
+        "diff_B_minus_A": -0.02205356715671257,
+        "sd_A": 0.01354331805684566,
+        "sd_B": 0.011175960970391374,
+        "sd_pooled": 0.012416190389982611,
         "t": -3.3229553455947105,
         "p_ttest": 0.006356981284308102,
         "p_wilcoxon": 0.006993006993006993,
-        "p_perm": 0.0056,
-        "perm_percentile": 0.18,
+        "p_perm_exact": 0.005827505827505828,
+        "perm_percentile": 0.2913752913752914,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          -0.0389463372988436,
+          -0.005160797014581539
+        ],
+        "ci95_welch": [
+          -0.03657175120862285,
+          -0.007535383104802293
+        ],
+        "mde_80pct": 0.020259672326130462,
         "top_genes": [
           [
             "OR5A1",
@@ -552,11 +725,24 @@
         "mean_A(ctrl_exo)": 8.855873335930756,
         "mean_B(hz_exo)": 9.247314267642508,
         "diff_B_minus_A": 0.3914409317117524,
+        "sd_A": 0.15019560350230768,
+        "sd_B": 0.16189085078412038,
+        "sd_pooled": 0.15615275674644483,
         "t": 4.689759835630626,
         "p_ttest": 0.0005312974826489909,
         "p_wilcoxon": 0.002331002331002331,
-        "p_perm": 0.0006,
-        "perm_percentile": 99.96000000000001,
+        "p_perm_exact": 0.0017482517482517483,
+        "perm_percentile": 99.94172494172494,
+        "n_permutations": 3432,
+        "ci95_perm_inversion": [
+          0.1298208542119123,
+          0.6530610092115926
+        ],
+        "ci95_welch": [
+          0.2094685666357444,
+          0.5734132967877604
+        ],
+        "mde_80pct": 0.2547966473723959,
         "top_genes": [
           [
             "RPS7",
@@ -600,12 +786,25 @@
         "genes_total": 9,
         "mean_A(ctrl_exo)": 2.831050764380059,
         "mean_B(phn_exo)": 2.712081827745492,
-        "diff_B_minus_A": -0.11896893663456698,
+        "diff_B_minus_A": -0.11896893663456787,
+        "sd_A": 0.05342191827549989,
+        "sd_B": 0.05686301843100687,
+        "sd_pooled": 0.05516930404364014,
         "t": -3.663826017199297,
         "p_ttest": 0.0058465088891829445,
         "p_wilcoxon": 0.01767676767676768,
-        "p_perm": 0.0078,
-        "perm_percentile": 0.58,
+        "p_perm_exact": 0.008838383838383838,
+        "perm_percentile": 0.5050505050505051,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.21218849121810718,
+          -0.02796378781526067
+        ],
+        "ci95_welch": [
+          -0.1932227860363685,
+          -0.04471508723276724
+        ],
+        "mde_80pct": 0.10046390170933393,
         "top_genes": [
           [
             "PIEZO1",
@@ -647,12 +846,25 @@
         "genes_total": 20,
         "mean_A(ctrl_exo)": 4.712977875026712,
         "mean_B(phn_exo)": 4.534655863543614,
-        "diff_B_minus_A": -0.17832201148309768,
+        "diff_B_minus_A": -0.1783220114830959,
+        "sd_A": 0.11943536411864683,
+        "sd_B": 0.10577992278410332,
+        "sd_pooled": 0.11281444558735511,
         "t": -2.7270992364072675,
         "p_ttest": 0.02245418916492483,
         "p_wilcoxon": 0.030303030303030304,
-        "p_perm": 0.0284,
-        "perm_percentile": 1.46,
+        "p_perm_exact": 0.030303030303030304,
+        "perm_percentile": 1.5151515151515151,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.34114814257517156,
+          -0.019218612713349154
+        ],
+        "ci95_welch": [
+          -0.32528022473460483,
+          -0.03136379823158694
+        ],
+        "mde_80pct": 0.20543633038973583,
         "top_genes": [
           [
             "TLN2",
@@ -694,12 +906,25 @@
         "genes_total": 58,
         "mean_A(ctrl_exo)": 3.343077422220358,
         "mean_B(phn_exo)": 3.3263366479340966,
-        "diff_B_minus_A": -0.016740774286261306,
+        "diff_B_minus_A": -0.016740774286260862,
+        "sd_A": 0.10584141433165427,
+        "sd_B": 0.16576968363107158,
+        "sd_pooled": 0.13907191125254315,
         "t": -0.1987287703980459,
         "p_ttest": 0.8487226241350999,
         "p_wilcoxon": 0.5303030303030304,
-        "p_perm": 0.8378,
-        "perm_percentile": 43.3,
+        "p_perm_exact": 0.8295454545454546,
+        "perm_percentile": 41.792929292929294,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.166628026449044,
+          0.12420647199237655
+        ],
+        "ci95_welch": [
+          -0.22042311037045298,
+          0.18694156179793125
+        ],
+        "mde_80pct": 0.25325146047796393,
         "top_genes": [
           [
             "COL2A1",
@@ -742,11 +967,24 @@
         "mean_A(ctrl_exo)": 6.0277805736730485,
         "mean_B(phn_exo)": 5.951328531671232,
         "diff_B_minus_A": -0.07645204200181688,
+        "sd_A": 0.07557485819519374,
+        "sd_B": 0.07352922003298443,
+        "sd_pooled": 0.07455905508347957,
         "t": -1.7552025299641183,
         "p_ttest": 0.11339195698902069,
         "p_wilcoxon": 0.148989898989899,
-        "p_perm": 0.1084,
-        "perm_percentile": 6.140000000000001,
+        "p_perm_exact": 0.10732323232323232,
+        "perm_percentile": 5.681818181818182,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.16785418860938472,
+          0.016758962494208607
+        ],
+        "ci95_welch": [
+          -0.1751104159964024,
+          0.02220633199276864
+        ],
+        "mde_80pct": 0.13577284889297062,
         "top_genes": [
           [
             "MYH10",
@@ -788,12 +1026,25 @@
         "genes_total": 18,
         "mean_A(ctrl_exo)": 3.6858194431050486,
         "mean_B(phn_exo)": 3.4884176358150394,
-        "diff_B_minus_A": -0.19740180729000922,
+        "diff_B_minus_A": -0.19740180729001056,
+        "sd_A": 0.09565707441128084,
+        "sd_B": 0.06543122889060206,
+        "sd_pooled": 0.08194974557330754,
         "t": -4.244040883664265,
         "p_ttest": 0.0017057750755723237,
         "p_wilcoxon": 0.005050505050505051,
-        "p_perm": 0.004,
-        "perm_percentile": 0.22,
+        "p_perm_exact": 0.005050505050505051,
+        "perm_percentile": 0.25252525252525254,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.3439535260428127,
+          -0.052008127406081406
+        ],
+        "ci95_welch": [
+          -0.3010396058344158,
+          -0.09376400874560534
+        ],
+        "mde_80pct": 0.14923137652541738,
         "top_genes": [
           [
             "TRPV1",
@@ -836,11 +1087,24 @@
         "mean_A(ctrl_exo)": 3.062045714575031,
         "mean_B(phn_exo)": 2.8639212566690326,
         "diff_B_minus_A": -0.19812445790599842,
+        "sd_A": 0.17108063270856336,
+        "sd_B": 0.07068568966723289,
+        "sd_pooled": 0.13089127093067496,
         "t": -2.7526528002863975,
         "p_ttest": 0.023622647614317083,
         "p_wilcoxon": 0.10606060606060606,
-        "p_perm": 0.0352,
-        "perm_percentile": 2.52,
+        "p_perm_exact": 0.039141414141414144,
+        "perm_percentile": 2.525252525252525,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.3829567820142832,
+          -0.002416632282200709
+        ],
+        "ci95_welch": [
+          -0.36246789461095497,
+          -0.033781021201041844
+        ],
+        "mde_80pct": 0.2383544256238452,
         "top_genes": [
           [
             "KCND3",
@@ -882,12 +1146,25 @@
         "genes_total": 16,
         "mean_A(ctrl_exo)": 0.0809719486533652,
         "mean_B(phn_exo)": 0.07315855726133091,
-        "diff_B_minus_A": -0.007813391392034283,
+        "diff_B_minus_A": -0.007813391392034297,
+        "sd_A": 0.01354331805684566,
+        "sd_B": 0.01950713865565154,
+        "sd_pooled": 0.016792110089558374,
         "t": -0.7724727597133105,
         "p_ttest": 0.4662072693729955,
         "p_wilcoxon": 0.4318181818181819,
-        "p_perm": 0.4228,
-        "perm_percentile": 20.16,
+        "p_perm_exact": 0.42297979797979796,
+        "perm_percentile": 20.95959595959596,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          -0.025533626822461714,
+          0.010535576384844713
+        ],
+        "ci95_welch": [
+          -0.031950528137945244,
+          0.016323745353876654
+        ],
+        "mde_80pct": 0.03057861480716255,
         "top_genes": [
           [
             "OR5A1",
@@ -929,12 +1206,25 @@
         "genes_total": 18,
         "mean_A(ctrl_exo)": 8.855873335930756,
         "mean_B(phn_exo)": 9.433274741614085,
-        "diff_B_minus_A": 0.5774014056833288,
+        "diff_B_minus_A": 0.577401405683327,
+        "sd_A": 0.15019560350230768,
+        "sd_B": 0.17583922702988464,
+        "sd_pooled": 0.16352087492716294,
         "t": 5.953363495347053,
         "p_ttest": 0.0003690726162008788,
         "p_wilcoxon": 0.0025252525252525255,
-        "p_perm": 0.0002,
+        "p_perm_exact": 0.0012626262626262627,
         "perm_percentile": 100.0,
+        "n_permutations": 792,
+        "ci95_perm_inversion": [
+          0.19843463855093108,
+          0.9453716176224087
+        ],
+        "ci95_welch": [
+          0.35293363896600216,
+          0.8018691724006518
+        ],
+        "mde_80pct": 0.29777328880407694,
         "top_genes": [
           [
             "RPS7",
@@ -979,11 +1269,24 @@
         "mean_A(mock)": 2.8219876659091945,
         "mean_B(vzv)": 2.7716198061533572,
         "diff_B_minus_A": -0.05036785975583724,
+        "sd_A": 0.03751943706911382,
+        "sd_B": 0.03929483725116136,
+        "sd_pooled": 0.03841739444950979,
         "t": -2.270838338093671,
         "p_ttest": 0.04655764245345769,
         "p_wilcoxon": 0.04112554112554113,
-        "p_perm": 0.0514,
-        "perm_percentile": 2.54,
+        "p_perm_exact": 0.049783549783549784,
+        "perm_percentile": 2.4891774891774894,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.09984730893352783,
+          -0.0008884105781466062
+        ],
+        "ci95_welch": [
+          -0.09980293523914678,
+          -0.0009327842725277008
+        ],
+        "mde_80pct": 0.06898000379757886,
         "top_genes": [
           [
             "PIEZO1",
@@ -1026,11 +1329,24 @@
         "mean_A(mock)": 4.6679989567101625,
         "mean_B(vzv)": 4.630471091451864,
         "diff_B_minus_A": -0.037527865258298654,
+        "sd_A": 0.06491735578857491,
+        "sd_B": 0.05358618572432114,
+        "sd_pooled": 0.05952202274394688,
         "t": -1.092035625311178,
         "p_ttest": 0.30132144133293814,
         "p_wilcoxon": 0.30952380952380953,
-        "p_perm": 0.2866,
-        "perm_percentile": 14.84,
+        "p_perm_exact": 0.29653679653679654,
+        "perm_percentile": 14.826839826839826,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.10340517619987423,
+          0.028349445683276936
+        ],
+        "ci95_welch": [
+          -0.11447235420413797,
+          0.03941662368754066
+        ],
+        "mde_80pct": 0.1068742275146518,
         "top_genes": [
           [
             "FLNA",
@@ -1072,12 +1388,25 @@
         "genes_total": 58,
         "mean_A(mock)": 3.4793873315230948,
         "mean_B(vzv)": 3.4916945991840254,
-        "diff_B_minus_A": 0.012307267660930599,
+        "diff_B_minus_A": 0.012307267660931043,
+        "sd_A": 0.1197491619315721,
+        "sd_B": 0.10597719792122713,
+        "sd_pooled": 0.1130730477668061,
         "t": 0.18852249330931842,
         "p_ttest": 0.8542928255380309,
         "p_wilcoxon": 1.0,
-        "p_perm": 0.846,
-        "perm_percentile": 57.940000000000005,
+        "p_perm_exact": 0.8528138528138528,
+        "perm_percentile": 57.467532467532465,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.10729075265871127,
+          0.13190528798057338
+        ],
+        "ci95_welch": [
+          -0.1334437053239789,
+          0.15805824064584098
+        ],
+        "mde_80pct": 0.20302728428417993,
         "top_genes": [
           [
             "COL1A1",
@@ -1119,12 +1448,25 @@
         "genes_total": 25,
         "mean_A(mock)": 5.966316657433,
         "mean_B(vzv)": 5.91192175290219,
-        "diff_B_minus_A": -0.05439490453081053,
+        "diff_B_minus_A": -0.05439490453080964,
+        "sd_A": 0.03883349320832268,
+        "sd_B": 0.033927609506336984,
+        "sd_pooled": 0.036463151821910095,
         "t": -2.5838341891116707,
         "p_ttest": 0.027601784307870244,
         "p_wilcoxon": 0.06493506493506493,
-        "p_perm": 0.0242,
-        "perm_percentile": 1.3,
+        "p_perm_exact": 0.030303030303030304,
+        "perm_percentile": 1.5151515151515151,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.10500744476599408,
+          -0.0037823642956251943
+        ],
+        "ci95_welch": [
+          -0.10141653410717202,
+          -0.0073732749544472495
+        ],
+        "mde_80pct": 0.06547108119090954,
         "top_genes": [
           [
             "VIM",
@@ -1167,11 +1509,24 @@
         "mean_A(mock)": 3.9549525813970225,
         "mean_B(vzv)": 3.9554216696360225,
         "diff_B_minus_A": 0.00046908823899993735,
+        "sd_A": 0.05336629224239558,
+        "sd_B": 0.0797952636186754,
+        "sd_pooled": 0.06787947128430905,
         "t": 0.011969519617762806,
         "p_ttest": 0.9907190777533653,
         "p_wilcoxon": 1.0,
-        "p_perm": 0.9958,
-        "perm_percentile": 51.12,
+        "p_perm_exact": 0.9956709956709957,
+        "perm_percentile": 50.324675324675326,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.07060745694813983,
+          0.07154563342613975
+        ],
+        "ci95_welch": [
+          -0.08860968782141383,
+          0.08954786429941371
+        ],
+        "mde_80pct": 0.1218803683608228,
         "top_genes": [
           [
             "GRIN2B",
@@ -1213,12 +1568,25 @@
         "genes_total": 17,
         "mean_A(mock)": 3.24356068018782,
         "mean_B(vzv)": 3.2414626353432507,
-        "diff_B_minus_A": -0.0020980448445691025,
+        "diff_B_minus_A": -0.00209804484456777,
+        "sd_A": 0.045369686955352574,
+        "sd_B": 0.056468550230930094,
+        "sd_pooled": 0.05122062894776754,
         "t": -0.07094642026077094,
         "p_ttest": 0.9449030434595331,
         "p_wilcoxon": 0.6991341991341992,
-        "p_perm": 0.9882,
-        "perm_percentile": 49.16,
+        "p_perm_exact": 0.9891774891774892,
+        "perm_percentile": 49.458874458874455,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.057915678537518694,
+          0.05371958884838317
+        ],
+        "ci95_welch": [
+          -0.06840591029318752,
+          0.06420982060405198
+        ],
+        "mde_80pct": 0.09196873525545579,
         "top_genes": [
           [
             "KCNA1",
@@ -1260,12 +1628,25 @@
         "genes_total": 16,
         "mean_A(mock)": 0.074682744967143,
         "mean_B(vzv)": 0.09909133640635713,
-        "diff_B_minus_A": 0.02440859143921413,
+        "diff_B_minus_A": 0.024408591439214145,
+        "sd_A": 0.004411153237492833,
+        "sd_B": 0.051781449963125635,
+        "sd_pooled": 0.036747631441824434,
         "t": 1.150466543152276,
         "p_ttest": 0.3012818241812209,
         "p_wilcoxon": 1.0,
-        "p_perm": 0.3722,
-        "perm_percentile": 81.72,
+        "p_perm_exact": 0.38095238095238093,
+        "perm_percentile": 81.06060606060606,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.013115044551091234,
+          0.06193222742951953
+        ],
+        "ci95_welch": [
+          -0.0298956952617054,
+          0.0787128781401337
+        ],
+        "mde_80pct": 0.0659818759895473,
         "top_genes": [
           [
             "OR2A1",
@@ -1307,12 +1688,25 @@
         "genes_total": 18,
         "mean_A(mock)": 8.833175059650907,
         "mean_B(vzv)": 8.972483224043046,
-        "diff_B_minus_A": 0.13930816439213878,
+        "diff_B_minus_A": 0.13930816439214233,
+        "sd_A": 0.16089539415246457,
+        "sd_B": 0.25025604789503153,
+        "sd_pooled": 0.21037516175575152,
         "t": 1.1469453742666054,
         "p_ttest": 0.28255489591199107,
         "p_wilcoxon": 0.48484848484848486,
-        "p_perm": 0.3786,
-        "perm_percentile": 80.72,
+        "p_perm_exact": 0.38095238095238093,
+        "perm_percentile": 81.06060606060606,
+        "n_permutations": 924,
+        "ci95_perm_inversion": [
+          -0.06660389836298206,
+          0.34522022714726674
+        ],
+        "ci95_welch": [
+          -0.13777730586468828,
+          0.41639363464897294
+        ],
+        "mde_80pct": 0.3777372116138703,
         "top_genes": [
           [
             "RPS3",
@@ -1350,74 +1744,280 @@
       }
     }
   },
+  "bh_q": {
+    "HZexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": 0.1808857808857809,
+      "M2_membrane_cytoskeleton": 0.13636363636363635,
+      "M3_ecm_integrin_hippo": 0.46153846153846156,
+      "M4_mechano_effectors": 0.46153846153846156,
+      "E1_classical_nociceptor": 0.034188034188034185,
+      "N1_voltage_gated_control": 0.20124320124320125,
+      "N2_olfactory_control": 0.023310023310023312,
+      "N3_ribosomal_control": 0.013986013986013986
+    },
+    "PHNexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": 0.02356902356902357,
+      "M2_membrane_cytoskeleton": 0.06060606060606061,
+      "M3_ecm_integrin_hippo": 0.8295454545454546,
+      "M4_mechano_effectors": 0.14309764309764308,
+      "E1_classical_nociceptor": 0.020202020202020204,
+      "N1_voltage_gated_control": 0.06262626262626263,
+      "N2_olfactory_control": 0.4834054834054834,
+      "N3_ribosomal_control": 0.010101010101010102
+    },
+    "VZV_vs_Mock": {
+      "M1_mechanogated_channels": 0.19913419913419914,
+      "M2_membrane_cytoskeleton": 0.6095238095238095,
+      "M3_ecm_integrin_hippo": 0.9956709956709957,
+      "M4_mechano_effectors": 0.19913419913419914,
+      "E1_classical_nociceptor": 0.9956709956709957,
+      "N1_voltage_gated_control": 0.9956709956709957,
+      "N2_olfactory_control": 0.6095238095238095,
+      "N3_ribosomal_control": 0.6095238095238095
+    }
+  },
   "CCI": {
     "HZexo_vs_CtrlExo": {
       "contrast": "HZexo_vs_CtrlExo",
       "m1_n": 9,
       "e1_n": 18,
+      "rank_space": "all_43236_genes",
       "mean_CCI_A(ctrl_exo)": -5015.984126984125,
       "mean_CCI_B(hz_exo)": -4933.2619047619055,
       "diff_B_minus_A": 82.7222222222199,
       "p_ttest": 0.8314168495736247,
       "p_wilcoxon": 0.6200466200466201,
-      "p_perm": 0.8284,
-      "perm_percentile": 59.040000000000006
+      "p_perm_exact": 0.8327505827505828,
+      "n_permutations": 3432
     },
     "PHNexo_vs_CtrlExo": {
       "contrast": "PHNexo_vs_CtrlExo",
       "m1_n": 9,
       "e1_n": 18,
+      "rank_space": "all_43236_genes",
       "mean_CCI_A(ctrl_exo)": -5015.984126984125,
       "mean_CCI_B(phn_exo)": -5090.327777777777,
       "diff_B_minus_A": -74.34365079365125,
       "p_ttest": 0.8557170516308046,
       "p_wilcoxon": 1.0,
-      "p_perm": 0.855,
-      "perm_percentile": 41.46
+      "p_perm_exact": 0.851010101010101,
+      "n_permutations": 792
     },
     "VZV_vs_Mock": {
       "contrast": "VZV_vs_Mock",
       "m1_n": 9,
       "e1_n": 18,
+      "rank_space": "all_43236_genes",
       "mean_CCI_A(mock)": -5990.814814814814,
       "mean_CCI_B(vzv)": -6010.606481481482,
       "diff_B_minus_A": -19.79166666666788,
       "p_ttest": 0.9721922231260104,
       "p_wilcoxon": 1.0,
-      "p_perm": 0.9648,
-      "perm_percentile": 47.760000000000005
+      "p_perm_exact": 0.9653679653679653,
+      "n_permutations": 924
     }
   },
-  "bh_q": {
+  "interaction": {
     "HZexo_vs_CtrlExo": {
-      "M1_mechanogated_channels": 0.175,
-      "M2_membrane_cytoskeleton": 0.136,
-      "M3_ecm_integrin_hippo": 0.4598,
-      "M4_mechano_effectors": 0.4598,
-      "E1_classical_nociceptor": 0.0299,
-      "N1_voltage_gated_control": 0.1965,
-      "N2_olfactory_control": 0.0224,
-      "N3_ribosomal_control": 0.0048
-    },
-    "PHNexo_vs_CtrlExo": {
-      "M1_mechanogated_channels": 0.0208,
-      "M2_membrane_cytoskeleton": 0.0563,
-      "M3_ecm_integrin_hippo": 0.8378,
-      "M4_mechano_effectors": 0.1445,
-      "E1_classical_nociceptor": 0.016,
-      "N1_voltage_gated_control": 0.0563,
-      "N2_olfactory_control": 0.4832,
-      "N3_ribosomal_control": 0.0016
+      "contrast": "HZexo_vs_CtrlExo",
+      "modules": "E1_classical_nociceptor_minus_M1_mechanogated_channels",
+      "diff_B_minus_A": -0.14168121252421206,
+      "p_ttest": 0.003164443387767118,
+      "p_perm_exact": 0.0017482517482517483,
+      "n_permutations": 3432,
+      "module_diffs": {
+        "E1_classical_nociceptor": -0.2196365305749759,
+        "M1_mechanogated_channels": -0.07795531805076283
+      }
     },
     "VZV_vs_Mock": {
-      "M1_mechanogated_channels": 0.2056,
-      "M2_membrane_cytoskeleton": 0.6058,
-      "M3_ecm_integrin_hippo": 0.9958,
-      "M4_mechano_effectors": 0.1936,
-      "E1_classical_nociceptor": 0.9958,
-      "N1_voltage_gated_control": 0.9958,
-      "N2_olfactory_control": 0.6058,
-      "N3_ribosomal_control": 0.6058
+      "contrast": "VZV_vs_Mock",
+      "modules": "M1_mechanogated_channels_minus_E1_classical_nociceptor",
+      "diff_B_minus_A": -0.050836947994836734,
+      "p_ttest": 0.1993793497293579,
+      "p_perm_exact": 0.19264069264069264,
+      "n_permutations": 924,
+      "module_diffs": {
+        "M1_mechanogated_channels": -0.05036785975583724,
+        "E1_classical_nociceptor": 0.00046908823899993735
+      }
+    }
+  },
+  "sensitivity_detected_genes": {
+    "HZexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": {
+        "genes_used": 5,
+        "genes_total": 9,
+        "diff_B_minus_A": -0.17092549515785738,
+        "p_perm_exact": 0.04603729603729604
+      },
+      "M2_membrane_cytoskeleton": {
+        "genes_used": 16,
+        "genes_total": 20,
+        "diff_B_minus_A": -0.1695661496890768,
+        "p_perm_exact": 0.07226107226107226
+      },
+      "M3_ecm_integrin_hippo": {
+        "genes_used": 39,
+        "genes_total": 56,
+        "diff_B_minus_A": -0.08849644755471875,
+        "p_perm_exact": 0.24475524475524477
+      },
+      "M4_mechano_effectors": {
+        "genes_used": 24,
+        "genes_total": 25,
+        "diff_B_minus_A": -0.03649704960276168,
+        "p_perm_exact": 0.391025641025641
+      },
+      "E1_classical_nociceptor": {
+        "genes_used": 13,
+        "genes_total": 18,
+        "diff_B_minus_A": -0.24270662454605763,
+        "p_perm_exact": 0.01282051282051282
+      }
+    },
+    "PHNexo_vs_CtrlExo": {
+      "M1_mechanogated_channels": {
+        "genes_used": 5,
+        "genes_total": 9,
+        "diff_B_minus_A": -0.2610813443048414,
+        "p_perm_exact": 0.0012626262626262627
+      },
+      "M2_membrane_cytoskeleton": {
+        "genes_used": 16,
+        "genes_total": 20,
+        "diff_B_minus_A": -0.17898606308192022,
+        "p_perm_exact": 0.041666666666666664
+      },
+      "M3_ecm_integrin_hippo": {
+        "genes_used": 39,
+        "genes_total": 56,
+        "diff_B_minus_A": -0.04438853316357161,
+        "p_perm_exact": 0.6464646464646465
+      },
+      "M4_mechano_effectors": {
+        "genes_used": 24,
+        "genes_total": 25,
+        "diff_B_minus_A": -0.07694407696109451,
+        "p_perm_exact": 0.1111111111111111
+      },
+      "E1_classical_nociceptor": {
+        "genes_used": 13,
+        "genes_total": 18,
+        "diff_B_minus_A": -0.22213025073320747,
+        "p_perm_exact": 0.010101010101010102
+      }
+    },
+    "VZV_vs_Mock": {
+      "M1_mechanogated_channels": {
+        "genes_used": 5,
+        "genes_total": 9,
+        "diff_B_minus_A": -0.09996478860747171,
+        "p_perm_exact": 0.045454545454545456
+      },
+      "M2_membrane_cytoskeleton": {
+        "genes_used": 16,
+        "genes_total": 20,
+        "diff_B_minus_A": -0.05337187805239729,
+        "p_perm_exact": 0.17965367965367965
+      },
+      "M3_ecm_integrin_hippo": {
+        "genes_used": 41,
+        "genes_total": 56,
+        "diff_B_minus_A": -0.05400805074798409,
+        "p_perm_exact": 0.5432900432900433
+      },
+      "M4_mechano_effectors": {
+        "genes_used": 24,
+        "genes_total": 25,
+        "diff_B_minus_A": -0.05482592729878899,
+        "p_perm_exact": 0.0367965367965368
+      },
+      "E1_classical_nociceptor": {
+        "genes_used": 15,
+        "genes_total": 18,
+        "diff_B_minus_A": -0.024337476237046296,
+        "p_perm_exact": 0.5541125541125541
+      }
+    }
+  },
+  "sensitivity_m3_alias_ccn1_ccn2": {
+    "HZexo_vs_CtrlExo": {
+      "genes_used": 58,
+      "diff_B_minus_A": -0.04784387878489049,
+      "p_perm_exact": 0.4155011655011655
+    },
+    "PHNexo_vs_CtrlExo": {
+      "genes_used": 58,
+      "diff_B_minus_A": -0.019262537136064406,
+      "p_perm_exact": 0.8005050505050505
+    },
+    "VZV_vs_Mock": {
+      "genes_used": 58,
+      "diff_B_minus_A": 0.008880181927393593,
+      "p_perm_exact": 0.8896103896103896
+    }
+  },
+  "neuropeptide_observation": {
+    "HZexo_vs_CtrlExo": {
+      "TAC1": {
+        "mean_A": 5.864696868453793,
+        "mean_B": 6.082345672743175,
+        "diff_B_minus_A": 0.21764880428938227,
+        "p_ttest": 0.37706912285019395,
+        "mean_cpm_B": 70.7341826477753
+      },
+      "CALCA": {
+        "mean_A": 0.012717411128719191,
+        "mean_B": 0.03280020695377128,
+        "diff_B_minus_A": 0.02008279582505209,
+        "p_ttest": 0.3641320711173107,
+        "mean_cpm_B": 0.023584359394692524
+      },
+      "CALCB": {
+        "mean_A": 0.017356143879777314,
+        "mean_B": 0.026600330046264085,
+        "diff_B_minus_A": 0.00924418616648677,
+        "p_ttest": 0.6221023453327597,
+        "mean_cpm_B": 0.018863729429050475
+      },
+      "TACR1": {
+        "mean_A": 0.045579469087188275,
+        "mean_B": 0.05308559877387285,
+        "diff_B_minus_A": 0.0075061296866845775,
+        "p_ttest": 0.8017137515012852,
+        "mean_cpm_B": 0.03803854721729316
+      }
+    },
+    "PHNexo_vs_CtrlExo": {
+      "TAC1": {
+        "mean_A": 5.864696868453793,
+        "mean_B": 6.329053327809838,
+        "diff_B_minus_A": 0.4643564593560452,
+        "p_ttest": 0.035146097153121995,
+        "mean_cpm_B": 80.87776415578846
+      },
+      "CALCA": {
+        "mean_A": 0.012717411128719191,
+        "mean_B": 0.03733546374154766,
+        "diff_B_minus_A": 0.02461805261282847,
+        "p_ttest": 0.4599502060879736,
+        "mean_cpm_B": 0.027107821290662998
+      },
+      "CALCB": {
+        "mean_A": 0.017356143879777314,
+        "mean_B": 0.058090277116453023,
+        "diff_B_minus_A": 0.04073413323667571,
+        "p_ttest": 0.332466070087689,
+        "mean_cpm_B": 0.04237854732608245
+      },
+      "TACR1": {
+        "mean_A": 0.045579469087188275,
+        "mean_B": 0.026572488609867773,
+        "diff_B_minus_A": -0.019006980477320502,
+        "p_ttest": 0.47235169426814433,
+        "mean_cpm_B": 0.018745461700565753
+      }
     }
   }
 }

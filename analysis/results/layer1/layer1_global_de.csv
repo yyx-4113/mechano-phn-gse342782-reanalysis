@@ -1,0 +1,4 @@
+contrast,threshold,n_up,n_down,n_nominal_p_lt_0.05,n_genes
+HZexo_vs_CtrlExo,|log2FC|>0.5,129,174,3967,43236
+PHNexo_vs_CtrlExo,|log2FC|>0.5,568,125,6543,43236
+VZV_vs_Mock,|log2FC|>0.5,33,20,2768,43236

@@ -1,6 +1,10 @@
 {
-  "layer1_results.json": "992ec9ac0263e710d28b42224bad148c5bfab3ea3208f1dd6d6bf6aba8154cbe",
-  "layer1_module_scores.csv": "303122748fa9181d576460f5327377f03cf1ddbba5e3b69f571fe662799836c3",
+  "layer1_results.json": "a05ae2bff0d730d04261dffd608b4b43c6754c102fae9c94664379d4a0780295",
+  "layer1_module_scores.csv": "cc541dddcfd133e0f1648d200a3e6755e5bfd0f0da9398a07de5dd62e4b0728a",
+  "layer1_cci.csv": "b3a648757ced05e84059a0d6d7867ce7ccf65b62f25c359db9cfb3f726726e50",
+  "layer1_gene_level.csv": "dac8705ed95d31bf15a6b95c99f16452652f55b955c8f86700f11a08102c7d06",
+  "layer1_global_de.csv": "8f9d58b9e040dce815568e1b5d59e14aa6bcb21272b243a2f8a2be4e88cfffb2",
+  "layer1_diag.json": "27d4d99e2f9ffda074124c115b528a7c8dba61998bb4c3bfaa4845dd6fc49959",
   "inputs": {
     "DirectInf": "93aa468acfeab8a2045a09fb24b734627d630226e77573fd867d43e8ca87004e",
     "SeraExo": "21bdde38d8f812a680a22ec60bc2d52f101398d5d4bfef5a6e686aee726bfdff",
