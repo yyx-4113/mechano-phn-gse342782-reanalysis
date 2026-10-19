@@ -9,6 +9,13 @@ __pycache__/
 # Downloaded but unused raw data (not referenced by the manuscript)
 analysis/data/raw/GSE64345*
 
+# GitHub Actions release workflow: pushing workflow files requires the 'workflow'
+# OAuth scope, which the current gh token lacks. The file is kept on disk for
+# later enablement (via web UI or a token with workflow scope). The initial
+# deposit therefore ships without it; releases can be created manually with
+# `gh release create` (see GITHUB_DEPOSIT_SOP.md).
+.github/workflows/release.yml
+
 # Local editor / OS cruft
 .DS_Store
 Thumbs.db
