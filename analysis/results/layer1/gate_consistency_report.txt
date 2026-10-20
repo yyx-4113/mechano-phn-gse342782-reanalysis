@@ -222,7 +222,7 @@ PASS	cover-letter-consistent PHN definition in manuscript	expected=persisting at
 PASS	no 'cardinal symptom' overstatement	expected=common, clinically prominent feature
 PASS	DiDiD in conclusions	expected=route-by-program difference-in-differences (-0.193 log2CPM
 PASS	global-shift diagnostic bluntness caveat	expected=blunt instrument dominated by low-count genes
-PASS	data availability tag v1.1.7	expected=tag v1.1.7
+PASS	data availability tag v1.1.8	expected=tag v1.1.8
 PASS	registration re-anchored (no external registry)	expected=no external registry entry
 PASS	abstract M1 resolution-limit qualifier	expected=M1 was resolution-limited (P = 0.11; detected-gene subset P = 0.046)
 PASS	abstract route magnitude-not-direction	expected=no module-level E1 shift and a lesser TRPV1 decrease

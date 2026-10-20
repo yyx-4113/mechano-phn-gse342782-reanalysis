@@ -38,7 +38,7 @@ PASS  no placeholder/internal label 'Round 4'
 PASS  no placeholder/internal label 'internal benchmark'
 PASS  no 'pre-registered' branding in manuscript
 PASS  registration sentence states no external registry entry
-PASS  data availability cites tag v1.1.7  [looking for 'tag v1.1.7']
+PASS  data availability cites tag v1.1.8  [looking for 'tag v1.1.8']
 PASS  cover letter title matches manuscript title
 PASS  cover letter does not redefine PHN by its symptom
 PASS  cover letter has no pre-registered branding

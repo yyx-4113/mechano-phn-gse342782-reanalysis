@@ -9,8 +9,8 @@ Protocol v0.4 and the frozen panel (`mtp-frozen-2026-10-19`) were committed to t
 ```
 PROTOCOL_机械应力与PHN.md          # prospectively specified protocol (v0.4) incl. execution milestones
 manuscript/
-  manuscript_v1.1.7.md             # full manuscript (source of truth for text; current version)
-  manuscript_v1.1.7.docx           # submission file (Times New Roman 12 pt, figures embedded)
+  manuscript_v1.1.8.md             # full manuscript (source of truth for text; current version)
+  manuscript_v1.1.8.docx           # submission file (Times New Roman 12 pt, figures embedded)
   archive/                         # superseded manuscript versions (excluded from release packaging)
   build_docx.py                    # md -> docx builder
   cover_letter_JPR.md              # cover letter
@@ -33,7 +33,7 @@ analysis/
   data/raw/                        # GEO inputs (gzip-integrity verified)
   results/layer1/
     layer1_results.json            # all statistics (incl. BH q-values)
-    layer1_round2_additions.json   # post hoc robustness analyses deposited for the v1.1.7 revision
+    layer1_round2_additions.json   # post hoc robustness analyses deposited for the Round-2 (v1.1.7) revision
     layer1_module_scores.csv       # per-contrast per-module table
     layer1_cci.csv                 # CCI results
     layer1_gene_level.csv          # per-gene per-contrast table (incl. within-module BH q)
@@ -52,7 +52,7 @@ python analysis/scripts/layer1_mechano.py        # regenerates all Layer-1 stati
 python analysis/scripts/layer1_diag.py           # regenerates gene-level + global-shift audit
 python analysis/scripts/layer1_extra_checks.py   # E1-N1 benchmark + injury panel + TRPV1 by route
 python analysis/scripts/layer1_norm_robustness.py# median-of-ratios robustness
-python analysis/scripts/layer1_round2_additions.py # v1.1.7 post hoc robustness analyses
+python analysis/scripts/layer1_round2_additions.py # Round-2 post hoc robustness analyses
 python analysis/scripts/gen_manifest.py           # refreshes MANIFEST.json (run last)
 python analysis/verify_round2/verify_round2.py    # editor independent verification (must exit 0)
 python analysis/scripts/fig_layer1.py            # Fig 2a, 2b, 2d
