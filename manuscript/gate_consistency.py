@@ -5,8 +5,8 @@ v1.1.0 修订：
   - 键名 p_perm -> p_perm_exact（精确枚举）；
   - 移除硬编码 PIEZO2 p=0.1816（改从 layer1_gene_level.csv 派生）；
   - 覆盖扩展：MDE / Welch & perm CI / 交互检验 P / 检出基因敏感性 / 模块覆盖率 / 全局 DE。
-v1.1.8 修订（降 AI 痕迹润色后）：
-  - MD 指向 manuscript_v1.1.8.md；data availability tag 断言改为 v1.1.8；
+v1.1.9 修订（降 AI 痕迹润色后）：
+  - MD 指向 manuscript_v1.1.9.md；data availability tag 断言改为 v1.1.9；
   - 润色仅改措辞（54 处 em-dash 全部改写；robust/Critically/We emphasize 等
     AI 痕迹词处置），数字/引文/论点零变更（numeric set-diff 双向为空），
     故全部数值断言沿用，无需改期望值。
@@ -38,7 +38,7 @@ from itertools import combinations
 _ROOT = Path(__file__).resolve().parents[1]
 RES = str(_ROOT / "analysis" / "results" / "layer1")
 RAW = str(_ROOT / "analysis" / "data" / "raw")
-MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.8.md")
+MD  = str(_ROOT / "manuscript" / "manuscript_v1.1.9.md")
 
 text = open(MD, encoding="utf-8").read().replace("−", "-")
 R = json.load(open(os.path.join(RES, "layer1_results.json")))
@@ -446,7 +446,7 @@ present("cover-letter-consistent PHN definition in manuscript", "persisting at l
 present("no 'cardinal symptom' overstatement", "common, clinically prominent feature")
 present("DiDiD in conclusions", "route-by-program difference-in-differences (-0.193 log2CPM")
 present("global-shift diagnostic bluntness caveat", "blunt instrument dominated by low-count genes")
-present("data availability tag v1.1.8", "tag v1.1.8")
+present("data availability tag v1.1.9", "tag v1.1.9")
 present("registration re-anchored (no external registry)", "no external registry entry")
 present("abstract M1 resolution-limit qualifier", "M1 was resolution-limited (P = 0.11; detected-gene subset P = 0.046)")
 present("abstract route magnitude-not-direction", "no module-level E1 shift and a lesser TRPV1 decrease")

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """JPR (Dove Press) submission-compliance gate.
-v1.1.8 修订（降 AI 痕迹润色后）：
-  - MD_PATH 指向 manuscript_v1.1.8.md；VERSION 更新为 v1.1.8；
+v1.1.9 修订（降 AI 痕迹润色后）：
+  - MD_PATH 指向 manuscript_v1.1.9.md；VERSION 更新为 v1.1.9；
   - 润色未改任何数字/引文/论点（numeric set-diff v1.1.7→v1.1.8 双向为空；
     摘要词数仍为 294，≤300），故全部断言沿用。
 v1.1.7 修订（Round-2 审稿后）：
@@ -33,10 +33,10 @@ import sys
 from pathlib import Path
 
 _ROOT = Path(__file__).resolve().parents[1]
-MD_PATH = _ROOT / "manuscript" / "manuscript_v1.1.8.md"
+MD_PATH = _ROOT / "manuscript" / "manuscript_v1.1.9.md"
 LETTER_PATH = _ROOT / "manuscript" / "cover_letter_JPR.md"
 README_PATH = _ROOT / "README.md"
-VERSION = "v1.1.8"
+VERSION = "v1.1.9"
 
 PASS = 0
 FAIL = 0

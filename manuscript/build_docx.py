@@ -3,8 +3,8 @@
 """manuscript .md -> .docx (Times New Roman 12pt, heading levels, tables, figures).
 遵循用户约定：cover/manuscript 生成 Times New Roman 12pt；不使用花哨模板。
 v1.1.0 修订：修正图插入层级（### 3.x 也是 h3），支持 markdown 表格渲染（Table 1）。
-v1.1.8 修订：
-  - MD/OUT 指向 manuscript_v1.1.8（降 AI 痕迹润色版；数字/引文/题注不变）。
+v1.1.9 修订：
+  - MD/OUT 指向 manuscript_v1.1.9（降 AI 痕迹润色版；数字/引文/题注不变）。
 v1.1.7 修订：
   - MD/OUT 指向 manuscript_v1.1.7；
   - 图件改由 md 中的题注 blockquote 驱动插入（md 是题注的唯一来源，避免双份题注）；
@@ -19,9 +19,9 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # 路径相对仓库根（manuscript/ 上溯一级），避免绝对路径不可移植
 _ROOT = Path(__file__).resolve().parents[1]
-MD = str(_ROOT / "manuscript" / "manuscript_v1.1.8.md")
+MD = str(_ROOT / "manuscript" / "manuscript_v1.1.9.md")
 FIG = str(_ROOT / "analysis" / "results" / "layer1" / "fig")
-OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.8.docx")
+OUT = str(_ROOT / "manuscript" / "manuscript_v1.1.9.docx")
 
 # 题注前缀 -> (图文件, 宽度 inch)。题注 blockquote 在 md 中的位置即插图位置。
 FIG_MAP = {

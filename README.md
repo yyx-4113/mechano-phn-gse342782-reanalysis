@@ -9,8 +9,8 @@ Protocol v0.4 and the frozen panel (`mtp-frozen-2026-10-19`) were committed to t
 ```
 PROTOCOL_机械应力与PHN.md          # prospectively specified protocol (v0.4) incl. execution milestones
 manuscript/
-  manuscript_v1.1.8.md             # full manuscript (source of truth for text; current version)
-  manuscript_v1.1.8.docx           # submission file (Times New Roman 12 pt, figures embedded)
+  manuscript_v1.1.9.md             # full manuscript (source of truth for text; current version)
+  manuscript_v1.1.9.docx           # submission file (Times New Roman 12 pt, figures embedded)
   archive/                         # superseded manuscript versions (excluded from release packaging)
   build_docx.py                    # md -> docx builder
   cover_letter_JPR.md              # cover letter

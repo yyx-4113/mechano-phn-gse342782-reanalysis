@@ -2,7 +2,7 @@
 """Generate the root SHA-256 MANIFEST.json over all deposited reproducibility
 artifacts (working tree).
 
-Usage: python analysis/scripts/make_manifest.py <tag>   (default: v1.1.8)
+Usage: python analysis/scripts/make_manifest.py <tag>   (default: v1.1.9)
 
 Excludes: .workbuddy/, __pycache__/, *.pyc, manuscript/archive/ (superseded
 manuscript versions), reviewer scratch dirs (analysis/scratch_*, _B3_audit/),
@@ -14,7 +14,7 @@ by the release SHA-256 file and the git tag).
 import hashlib, json, os, sys, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-TAG = sys.argv[1] if len(sys.argv) > 1 else "v1.1.8"
+TAG = sys.argv[1] if len(sys.argv) > 1 else "v1.1.9"
 GENERATED = datetime.date.today().isoformat()
 
 EXCLUDE_DIRS = {".workbuddy", "__pycache__", ".git", "archive", ".tmpcheck",
